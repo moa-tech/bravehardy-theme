@@ -1,0 +1,168 @@
+{% doc %}
+  @prompt
+    Create a new Promostrip that copies previous style but allows you to adjust the text size., I need top vertical padding.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-promo-strip-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+    text-align: center;
+    padding-top: {{ block.settings.padding_top }}px;
+    padding-bottom: {{ block.settings.padding_bottom }}px;
+    padding-left: {{ block.settings.padding_horizontal }}px;
+    padding-right: {{ block.settings.padding_horizontal }}px;
+    width: 100%;
+  }
+
+  .ai-promo-strip-content-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .ai-promo-strip-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size }}px;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .ai-promo-strip-text-{{ ai_gen_id }} a {
+    color: {{ block.settings.link_color }};
+    text-decoration: underline;
+  }
+
+  .ai-promo-strip-text-{{ ai_gen_id }} a:hover {
+    opacity: 0.8;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-promo-strip-{{ ai_gen_id }} {
+      padding-top: {{ block.settings.padding_top | times: 0.8 }}px;
+      padding-bottom: {{ block.settings.padding_bottom | times: 0.8 }}px;
+      padding-left: {{ block.settings.padding_horizontal | times: 0.8 }}px;
+      padding-right: {{ block.settings.padding_horizontal | times: 0.8 }}px;
+    }
+
+    .ai-promo-strip-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-promo-strip-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-promo-strip-content-{{ ai_gen_id }}">
+    {% if block.settings.promo_text != blank %}
+      <div class="ai-promo-strip-text-{{ ai_gen_id }}">
+        {{ block.settings.promo_text }}
+      </div>
+    {% else %}
+      <div class="ai-promo-strip-text-{{ ai_gen_id }}">
+        Add your promotional message here
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Promo strip",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "promo_text",
+      "label": "Promotional text",
+      "default": "<p>Free shipping on orders over R500</p>"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f55a00"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 600,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "label": "Maximum content width",
+      "default": 1200
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promo strip"
+    }
+  ]
+}
+{% endschema %}

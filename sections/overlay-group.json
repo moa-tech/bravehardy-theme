@@ -1,0 +1,159 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "aside",
+  "name": "Overlay group",
+  "sections": {
+    "4e6334c2-7bdd-4ab8-bd02-9a0517c0b900": {
+      "type": "pop-up",
+      "blocks": {
+        "sections--16994978201847__4e6334c2-7bdd-4ab8-bd02-9a0517c0b900-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Here's 10% off!",
+            "heading_size": "h4"
+          }
+        },
+        "sections--16994978201847__4e6334c2-7bdd-4ab8-bd02-9a0517c0b900-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribe to our newsletter to receive your discount</p>",
+            "text_size": ""
+          }
+        },
+        "sections--16994978201847__4e6334c2-7bdd-4ab8-bd02-9a0517c0b900-newsletter-signup-1": {
+          "type": "newsletter-signup",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "sections--16994978201847__4e6334c2-7bdd-4ab8-bd02-9a0517c0b900-heading-1",
+        "sections--16994978201847__4e6334c2-7bdd-4ab8-bd02-9a0517c0b900-text-1",
+        "sections--16994978201847__4e6334c2-7bdd-4ab8-bd02-9a0517c0b900-newsletter-signup-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "trigger": "delay",
+        "delay": 5,
+        "show_to_guests_only": true,
+        "show_on_mobile": true,
+        "dismiss_days": 30,
+        "position": "justify-center items-center",
+        "text_align": "text-center",
+        "padding": "large",
+        "shrink_width": false,
+        "heading_color": "#070707",
+        "text_color": "#070707",
+        "bg_color": "#ffffff",
+        "bg_grad": "",
+        "tint_opacity": 0
+      }
+    },
+    "cart-drawer": {
+      "type": "cart-drawer",
+      "settings": {
+        "show_cart_page_link": true,
+        "show_backorder_text": true,
+        "show_vendor": true,
+        "position_cart_summary": "bottom",
+        "stick_footer": true,
+        "show_order_note": true,
+        "show_shipping_text_notice": true,
+        "show_additional_checkout_buttons": true,
+        "show_checkout_button": true,
+        "cart_terms_page": "",
+        "show_shipping_calculator": false,
+        "shipping_calculator_default_country": "United States",
+        "promoted_products_visibility": "always",
+        "promoted_products_heading": "Promoted products",
+        "promoted_products_list": [],
+        "promoted_products_layout": "carousel",
+        "show_media_promotion": false,
+        "media_promotion_visibility": "always",
+        "link_url": "",
+        "media_promotion_min_height": 150,
+        "content": "<p>Promotion text</p>",
+        "text_type_scale": "1em",
+        "text_width": 400,
+        "text_alignment": "justify-center items-center text-center",
+        "button_label": "",
+        "button_style": "btn btn--secondary",
+        "text_color": "#ffffff",
+        "tint_color": "#000000",
+        "tint_opacity": 20
+      }
+    },
+    "product-compare": {
+      "type": "product-compare",
+      "blocks": {
+        "compare-1": {
+          "type": "image",
+          "settings": {
+            "show_line": false
+          }
+        },
+        "compare-2": {
+          "type": "vendor",
+          "settings": {
+            "show_line": false
+          }
+        },
+        "compare-3": {
+          "type": "title",
+          "settings": {
+            "show_line": false
+          }
+        },
+        "compare-4": {
+          "type": "price",
+          "settings": {
+            "show_line": false
+          }
+        },
+        "compare-5": {
+          "type": "description",
+          "settings": {
+            "truncate_description": false,
+            "words_to_show": 20,
+            "show_line": false
+          }
+        },
+        "compare-6": {
+          "type": "variants",
+          "settings": {
+            "show_line": false
+          }
+        },
+        "c6f1b876-30c7-4f73-b768-c1fc6990cb00": {
+          "type": "metafield",
+          "settings": {
+            "metafields": "Warranty:custom.warranty\nMaterial:custom.material\nCountry of Origin:custom.country_of_origin",
+            "line": "dotted"
+          }
+        }
+      },
+      "block_order": [
+        "compare-1",
+        "compare-2",
+        "compare-3",
+        "compare-4",
+        "compare-5",
+        "compare-6",
+        "c6f1b876-30c7-4f73-b768-c1fc6990cb00"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "4e6334c2-7bdd-4ab8-bd02-9a0517c0b900",
+    "cart-drawer",
+    "product-compare"
+  ]
+}

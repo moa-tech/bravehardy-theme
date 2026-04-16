@@ -1,0 +1,729 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_page_title": false,
+        "heading_align": "text-start"
+      }
+    },
+    "421e7d85-4176-4cab-9243-54404d8a4f20": {
+      "type": "image-banner",
+      "blocks": {
+        "subheading_qfMnTR": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "HELLO,"
+          }
+        },
+        "template--16994979152119__421e7d85-4176-4cab-9243-54404d8a4f20-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Brave Hardy",
+            "heading_size": "h1",
+            "heading_h1": true
+          }
+        },
+        "template--16994979152119__421e7d85-4176-4cab-9243-54404d8a4f20-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Life is too short for gear that gives up before you do, especially when you’re deep in the Cederberg or setting up camp under the stars. Brave Hardy is run by real people who actually use this stuff, offering a no-nonsense range of equipment built for local conditions and heavy use. We handle the technical details so you can focus on your big adventure outside.</p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "subheading_qfMnTR",
+        "template--16994979152119__421e7d85-4176-4cab-9243-54404d8a4f20-heading-1",
+        "template--16994979152119__421e7d85-4176-4cab-9243-54404d8a4f20-text-1"
+      ],
+      "settings": {
+        "image_desktop": "shopify://shop_images/bravehardy_mug.png",
+        "url": "",
+        "height_mode": "fixed",
+        "fixed_height_desktop": 900,
+        "fixed_height_mobile": 350,
+        "overlay_position": "justify-center items-center",
+        "overlay_text_align": "text-center",
+        "mob_center_text": false,
+        "mobile_stacked": false,
+        "color_scheme": "white",
+        "full_width": true,
+        "transparent_content_color": "#ffffff",
+        "tint_color": "#000000",
+        "tint_opacity": 60,
+        "prevent_animation": false
+      }
+    },
+    "rich_text_nqF9r3": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_8KW3ip": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Subheading"
+          }
+        },
+        "heading_JawVFm": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Rich text headline",
+            "heading_size": "h2",
+            "heading_h1": false
+          }
+        },
+        "text_pEDBdy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We get it. That feeling of not being prepared, the knot in your stomach when the trail gets tough – we've been there. And you know what? That's where the magic happens. It's in those moments of uncertainty that you discover your true grit, your inner Brave Hardy.</p>",
+            "enlarge_text": true
+          }
+        },
+        "button_rarxe6": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_1_label": "Optional button",
+            "button_1_link": "",
+            "button_1_style": "btn--primary",
+            "button_2_label": "Optional button",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_8KW3ip",
+        "heading_JawVFm",
+        "text_pEDBdy",
+        "button_rarxe6"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_position": "justify-center",
+        "text_align": "text-center",
+        "mob_center_text": true,
+        "wide": false,
+        "color_scheme": "1",
+        "full_width": true,
+        "prevent_animation": false
+      }
+    },
+    "f4d544e1-8a7e-496e-b3c4-8b7089e6e76d": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16994979152119__f4d544e1-8a7e-496e-b3c4-8b7089e6e76d-subheading-1": {
+          "type": "subheading",
+          "settings": {
+            "text": "HELLO, WE ARE BRAVE HARDY"
+          }
+        },
+        "template--16994979152119__f4d544e1-8a7e-496e-b3c4-8b7089e6e76d-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why 'Brave Hardy'?",
+            "heading_size": "h2",
+            "heading_h1": false
+          }
+        },
+        "template--16994979152119__f4d544e1-8a7e-496e-b3c4-8b7089e6e76d-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Because ‘getting out there’ is an antidote to the mundane, an escape hatch from the ordinary. We didn't start this as just another startup; we birthed it from the restless spirit that craves for untrodden paths and uncharted territories.</p><p>We’re on a mission – to make premium outdoor gear accessible, because your next big adventure shouldn't be hindered by second-rate equipment.</p><p>We get it. That feeling of not being prepared, the knot in your stomach when the trail gets tough – we've been there. And you know what? That's where the magic happens. It's in those moments of uncertainty that you discover your true grit, your inner Brave Hardy.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16994979152119__f4d544e1-8a7e-496e-b3c4-8b7089e6e76d-subheading-1",
+        "template--16994979152119__f4d544e1-8a7e-496e-b3c4-8b7089e6e76d-heading-1",
+        "template--16994979152119__f4d544e1-8a7e-496e-b3c4-8b7089e6e76d-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_position": "justify-center",
+        "text_align": "text-center",
+        "mob_center_text": true,
+        "wide": false,
+        "color_scheme": "1",
+        "full_width": true,
+        "prevent_animation": false
+      }
+    },
+    "media_with_text_P487J3": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_9gJbqb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Forged by Humans",
+            "heading_size": "h3",
+            "heading_h1": false
+          }
+        },
+        "text_yRXRKL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>After founding Yuppiechef in 2006 and selling it in 2021, we launched Brave Hardy: an outdoor distribution and retail company.</p><p>We carry the same commitment to quality and service that defined our work with kitchenware; but now, we're taking it into the bush.</p><p>Join us as we build a premium outdoor brand that equips, inspires, and backs every kind of outside adventure.</p><p><strong>– Shane & Andrew</strong></p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_9gJbqb",
+        "text_yRXRKL"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/andrew_shane.png",
+        "video_external": "",
+        "video_description": "",
+        "video_autoplay": false,
+        "layout": "left",
+        "image_fit": "contain",
+        "media_width": 50,
+        "media_scale": 100,
+        "text_align": "text-start",
+        "color_scheme": "none",
+        "only_content_color_scheme": false
+      }
+    },
+    "rich_text_BWJ9GA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4FCMQX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Gear for life outside.",
+            "heading_size": "h2",
+            "heading_h1": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_4FCMQX"
+      ],
+      "settings": {
+        "text_position": "justify-center",
+        "text_align": "text-center",
+        "mob_center_text": true,
+        "wide": false,
+        "color_scheme": "1",
+        "full_width": true,
+        "prevent_animation": false
+      }
+    },
+    "7f1da0ce-25ce-4a87-ad12-e714ac38bfeb": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16994979152119__7f1da0ce-25ce-4a87-ad12-e714ac38bfeb-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Adventure Awaits: Shop Premium Gear",
+            "heading_size": "h1",
+            "heading_h1": false
+          }
+        },
+        "template--16994979152119__7f1da0ce-25ce-4a87-ad12-e714ac38bfeb-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dive into our handpicked selection of top-grade gear, where every stitch is a promise of durability, and every detail is a celebration of outdoor adventure.</p>",
+            "enlarge_text": true
+          }
+        },
+        "template--16994979152119__7f1da0ce-25ce-4a87-ad12-e714ac38bfeb-button-1": {
+          "type": "button",
+          "settings": {
+            "button_1_label": "View All Brands",
+            "button_1_link": "shopify://collections",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--16994979152119__7f1da0ce-25ce-4a87-ad12-e714ac38bfeb-heading-1",
+        "template--16994979152119__7f1da0ce-25ce-4a87-ad12-e714ac38bfeb-text-1",
+        "template--16994979152119__7f1da0ce-25ce-4a87-ad12-e714ac38bfeb-button-1"
+      ],
+      "settings": {
+        "image_desktop": "shopify://shop_images/Bravehardy_overlanding.jpg",
+        "url": "",
+        "height_mode": "fixed",
+        "fixed_height_desktop": 900,
+        "fixed_height_mobile": 350,
+        "overlay_position": "justify-center items-center",
+        "overlay_text_align": "text-center",
+        "mob_center_text": false,
+        "mobile_stacked": false,
+        "color_scheme": "white",
+        "full_width": true,
+        "transparent_content_color": "#ffffff",
+        "tint_color": "#000000",
+        "tint_opacity": 40,
+        "prevent_animation": false
+      }
+    },
+    "e305da54-fee3-473d-aef2-14fc4d9062f3": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16994979152119__e305da54-fee3-473d-aef2-14fc4d9062f3-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Proud importer and retailer of these brands in South Africa.",
+            "heading_size": "h2",
+            "heading_h1": false
+          }
+        },
+        "template--16994979152119__e305da54-fee3-473d-aef2-14fc4d9062f3-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cape Town-based outdoor brand distribution company specialising in Camping, Hiking and Overlanding products.</p>",
+            "enlarge_text": true
+          }
+        },
+        "6430db79-043d-401c-b6ab-0db5d819a72a": {
+          "type": "button",
+          "settings": {
+            "button_1_label": "Wholesale Enquiries",
+            "button_1_link": "shopify://pages/contact",
+            "button_1_style": "btn--primary",
+            "button_2_label": "",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--16994979152119__e305da54-fee3-473d-aef2-14fc4d9062f3-heading-1",
+        "template--16994979152119__e305da54-fee3-473d-aef2-14fc4d9062f3-text-1",
+        "6430db79-043d-401c-b6ab-0db5d819a72a"
+      ],
+      "settings": {
+        "text_position": "justify-center",
+        "text_align": "text-center",
+        "mob_center_text": true,
+        "wide": false,
+        "color_scheme": "none",
+        "full_width": true,
+        "prevent_animation": false
+      }
+    },
+    "dcecc287-d741-41a0-ac5d-93ee17586fc5": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_f4YneN": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Beavercraft_Logo_1.png",
+            "url": "shopify://collections/beavercraft",
+            "logo_width": 260,
+            "text": "Beavercraft"
+          }
+        },
+        "logo_JLkGyT": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Kelty_Logo.png",
+            "url": "shopify://collections/kelty",
+            "logo_width": 260,
+            "text": "Kelty"
+          }
+        },
+        "logo_NfeLYF": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Omnia_Logo.png",
+            "url": "shopify://collections/omnia",
+            "logo_width": 260,
+            "text": "Omnia Oven"
+          }
+        },
+        "logo_DCnQFD": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/OneTigris_Logo.png",
+            "url": "shopify://collections/onetigris",
+            "logo_width": 260,
+            "text": "OneTigris"
+          }
+        },
+        "template--16994979152119__dcecc287-d741-41a0-ac5d-93ee17586fc5-logo-1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Petromax_Logo.png",
+            "url": "shopify://collections/petromax",
+            "logo_width": 260,
+            "text": "Petromax"
+          }
+        },
+        "template--16994979152119__dcecc287-d741-41a0-ac5d-93ee17586fc5-logo-2": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/TTTM_Logo.png",
+            "url": "shopify://collections/ticket-to-the-moon",
+            "logo_width": 260,
+            "text": "Ticket To The Moon"
+          }
+        },
+        "logo_exyXAx": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Toaks_Logo.png",
+            "url": "shopify://collections/toaks",
+            "logo_width": 260,
+            "text": "Toaks"
+          }
+        },
+        "logo_hC9WLn": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Tangia_Logo.png",
+            "url": "shopify://collections/trangia",
+            "logo_width": 260,
+            "text": "Trangia"
+          }
+        }
+      },
+      "block_order": [
+        "logo_f4YneN",
+        "logo_JLkGyT",
+        "logo_NfeLYF",
+        "logo_DCnQFD",
+        "template--16994979152119__dcecc287-d741-41a0-ac5d-93ee17586fc5-logo-1",
+        "template--16994979152119__dcecc287-d741-41a0-ac5d-93ee17586fc5-logo-2",
+        "logo_exyXAx",
+        "logo_hC9WLn"
+      ],
+      "settings": {
+        "title": "",
+        "heading_align": "text-center",
+        "button_label": "",
+        "button_link": "shopify://collections",
+        "layout": "grid",
+        "spacing": 32,
+        "logo_grid_align": "justify-center",
+        "color_scheme": "none",
+        "full_width": true
+      }
+    },
+    "7ab7a144-c7e5-4db9-b912-c4fc3872ed23": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16922418118903__7ab7a144-c7e5-4db9-b912-c4fc3872ed23-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "#bravehardy",
+            "heading_size": "h1",
+            "heading_h1": false
+          }
+        },
+        "template--16922418118903__7ab7a144-c7e5-4db9-b912-c4fc3872ed23-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "template--16922418118903__7ab7a144-c7e5-4db9-b912-c4fc3872ed23-heading-1",
+        "template--16922418118903__7ab7a144-c7e5-4db9-b912-c4fc3872ed23-text-1"
+      ],
+      "settings": {
+        "image_desktop": "shopify://shop_images/bravehardy_tattoohand.jpg",
+        "url": "",
+        "height_mode": "fixed",
+        "fixed_height_desktop": 900,
+        "fixed_height_mobile": 350,
+        "overlay_position": "justify-center items-center",
+        "overlay_text_align": "text-center",
+        "mob_center_text": false,
+        "mobile_stacked": false,
+        "color_scheme": "white",
+        "full_width": true,
+        "transparent_content_color": "#ffffff",
+        "tint_color": "#000000",
+        "tint_opacity": 40,
+        "prevent_animation": false
+      }
+    },
+    "featured_product_dciE7K": {
+      "type": "featured-product",
+      "blocks": {
+        "vendor_sku_FkFi6q": {
+          "type": "vendor-sku",
+          "settings": {
+            "show_vendor": true,
+            "show_sku": true,
+            "show_barcode": false
+          }
+        },
+        "title_ejHRnt": {
+          "type": "title",
+          "settings": {
+            "show_weight": false
+          }
+        },
+        "price_9cFqDt": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false
+          }
+        },
+        "divider_JytU9a": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        },
+        "variant_picker_PUJG6t": {
+          "type": "variant-picker",
+          "settings": {
+            "selector_style": "buttons",
+            "enable_dynamic_availability": true,
+            "dynamic_availability_downwards": false,
+            "show_backorder_text": true,
+            "enable_size_chart": false,
+            "size_chart_variant": "Size",
+            "size_chart_page": ""
+          }
+        },
+        "buy_buttons_HJGdpx": {
+          "type": "buy-buttons",
+          "settings": {
+            "show_qty_selector": true,
+            "enable_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "divider_JFpbE9": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        },
+        "view_more_button_LzCFaW": {
+          "type": "view-more-button",
+          "settings": {
+            "button_label": "Full details",
+            "text_align": "text-start"
+          }
+        }
+      },
+      "block_order": [
+        "vendor_sku_FkFi6q",
+        "title_ejHRnt",
+        "price_9cFqDt",
+        "divider_JytU9a",
+        "variant_picker_PUJG6t",
+        "buy_buttons_HJGdpx",
+        "divider_JFpbE9",
+        "view_more_button_LzCFaW"
+      ],
+      "settings": {
+        "product": "brave-hardy-fitted-trucker-cap",
+        "select_first_variant": true,
+        "media_ratio": "natural",
+        "media_crop": "none",
+        "media_width": 50,
+        "enable_video_looping": false,
+        "enable_zoom": true,
+        "zoom_mode": "hover",
+        "hover_zoom": "large",
+        "color_scheme": "none",
+        "border_color": "rgba(0,0,0,0)",
+        "bg_color": "#f4f4f4"
+      }
+    },
+    "featured_product_GpVwUG": {
+      "type": "featured-product",
+      "blocks": {
+        "vendor_sku_kTnrzM": {
+          "type": "vendor-sku",
+          "settings": {
+            "show_vendor": true,
+            "show_sku": true,
+            "show_barcode": false
+          }
+        },
+        "title_fQUBa3": {
+          "type": "title",
+          "settings": {
+            "show_weight": false
+          }
+        },
+        "price_NLDpTN": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false
+          }
+        },
+        "divider_tGaEj6": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        },
+        "variant_picker_bbfKGL": {
+          "type": "variant-picker",
+          "settings": {
+            "selector_style": "buttons",
+            "enable_dynamic_availability": true,
+            "dynamic_availability_downwards": false,
+            "show_backorder_text": true,
+            "enable_size_chart": false,
+            "size_chart_variant": "Size",
+            "size_chart_page": ""
+          }
+        },
+        "buy_buttons_YAYNDe": {
+          "type": "buy-buttons",
+          "settings": {
+            "show_qty_selector": true,
+            "enable_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "divider_dWDn6h": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        },
+        "view_more_button_Fc4kGh": {
+          "type": "view-more-button",
+          "settings": {
+            "button_label": "Full details",
+            "text_align": "text-start"
+          }
+        }
+      },
+      "block_order": [
+        "vendor_sku_kTnrzM",
+        "title_fQUBa3",
+        "price_NLDpTN",
+        "divider_tGaEj6",
+        "variant_picker_bbfKGL",
+        "buy_buttons_YAYNDe",
+        "divider_dWDn6h",
+        "view_more_button_Fc4kGh"
+      ],
+      "settings": {
+        "product": "brave-hardy-flexfit-adjustable-snapback-cap",
+        "select_first_variant": true,
+        "media_ratio": "natural",
+        "media_crop": "none",
+        "media_width": 50,
+        "enable_video_looping": false,
+        "enable_zoom": true,
+        "zoom_mode": "hover",
+        "hover_zoom": "large",
+        "color_scheme": "none",
+        "border_color": "rgba(0,0,0,0)",
+        "bg_color": "#f4f4f4"
+      }
+    },
+    "1699339887887cfaab": {
+      "type": "apps",
+      "blocks": {
+        "5f53f38b-1152-4915-b831-9e4907bba188": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "5f53f38b-1152-4915-b831-9e4907bba188"
+      ],
+      "settings": {
+        "full_width": true
+      }
+    },
+    "5b259416-8f30-481e-9005-02131cfa7725": {
+      "type": "newsletter",
+      "blocks": {
+        "template--16880100114679__5b259416-8f30-481e-9005-02131cfa7725-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h4"
+          }
+        },
+        "template--16880100114679__5b259416-8f30-481e-9005-02131cfa7725-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For big offers, brave stories, events and more.</p>",
+            "enlarge_text": false
+          }
+        },
+        "template--16880100114679__5b259416-8f30-481e-9005-02131cfa7725-form-1": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--16880100114679__5b259416-8f30-481e-9005-02131cfa7725-heading-1",
+        "template--16880100114679__5b259416-8f30-481e-9005-02131cfa7725-text-1",
+        "template--16880100114679__5b259416-8f30-481e-9005-02131cfa7725-form-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "overlay_position": "justify-center",
+        "text_align": "text-center",
+        "color_scheme": "1",
+        "full_width": true,
+        "transparent_content_color": "#ffffff",
+        "tint_color": "#000000",
+        "tint_opacity": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "421e7d85-4176-4cab-9243-54404d8a4f20",
+    "rich_text_nqF9r3",
+    "f4d544e1-8a7e-496e-b3c4-8b7089e6e76d",
+    "media_with_text_P487J3",
+    "rich_text_BWJ9GA",
+    "7f1da0ce-25ce-4a87-ad12-e714ac38bfeb",
+    "e305da54-fee3-473d-aef2-14fc4d9062f3",
+    "dcecc287-d741-41a0-ac5d-93ee17586fc5",
+    "7ab7a144-c7e5-4db9-b912-c4fc3872ed23",
+    "featured_product_dciE7K",
+    "featured_product_GpVwUG",
+    "1699339887887cfaab",
+    "5b259416-8f30-481e-9005-02131cfa7725"
+  ]
+}

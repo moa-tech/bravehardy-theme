@@ -1,0 +1,1061 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product-labels": {
+          "type": "product-labels",
+          "settings": {
+            "show_variant_icon": true
+          }
+        },
+        "vendor-sku": {
+          "type": "vendor-sku",
+          "settings": {
+            "show_vendor": true,
+            "show_sku": true,
+            "show_barcode": false
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "show_weight": false
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false
+          }
+        },
+        "79df34e4-3803-490c-8c69-02e5fdef4e87": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "message-3": {
+          "type": "message",
+          "settings": {
+            "icon": "none",
+            "title": "<p>{{ product.metafields.custom.product_flash_message.value }}</p>",
+            "close": "once",
+            "show_over_media": false,
+            "visibility_duration": 7,
+            "bg_color": "#e4edfa",
+            "text_color": "#1a66d2"
+          }
+        },
+        "88317077-8fa8-42dd-97d7-32017a1d7892": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.teaser.value }}</p>"
+          }
+        },
+        "divider-0": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        },
+        "variant-picker": {
+          "type": "variant-picker",
+          "settings": {
+            "selector_style": "buttons",
+            "enable_dynamic_availability": true,
+            "dynamic_availability_downwards": false,
+            "show_backorder_text": true,
+            "enable_size_chart": true,
+            "size_chart_variant": "Size",
+            "size_chart_page": "{{ product.metafields.custom.size_guide.value }}"
+          }
+        },
+        "106c48d0-4740-40c4-b873-f59a1f7b349f": {
+          "type": "inventory-status",
+          "settings": {
+            "show_indicator_bar": false,
+            "show_urgency_message": true,
+            "text_very_low": "<p>- ships immediately from our warehouse</p>",
+            "text_low": "<p>- ships immediately from our warehouse</p>",
+            "text_normal": "<p>- ships immediately from our warehouse</p>",
+            "text_no_stock": "",
+            "text_no_stock_backordered": "<p>Backordered</p>"
+          }
+        },
+        "divider-1": {
+          "type": "divider",
+          "disabled": true,
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        },
+        "buy-buttons": {
+          "type": "buy-buttons",
+          "settings": {
+            "show_qty_selector": true,
+            "enable_dynamic_checkout": false,
+            "show_pickup_availability": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "wishlist_engine_product_page_ThMUJ3": {
+          "type": "shopify://apps/se-wishlist-engine/blocks/Product-Page/8f7c0857-8e71-463d-a168-8e133094753b",
+          "settings": {}
+        },
+        "3c93edd0-d463-49ab-902a-1b95fc3dbc98": {
+          "type": "message",
+          "settings": {
+            "icon": "none",
+            "title": "{{ product.metafields.custom.product_message | metafield_tag }}",
+            "close": "none",
+            "show_over_media": false,
+            "visibility_duration": 7,
+            "bg_color": "#e4edfa",
+            "text_color": "#1a66d2"
+          }
+        },
+        "64843cd4-2908-4a07-9392-cee6ba65a8b0": {
+          "type": "product-signup",
+          "disabled": true,
+          "settings": {
+            "unavailable_only": true,
+            "heading": "Notify Me",
+            "text": "<p>Sign up to be notified when in stock</p>",
+            "divider": false
+          }
+        },
+        "message-1": {
+          "type": "message",
+          "disabled": true,
+          "settings": {
+            "icon": "clock",
+            "title": "<p><strong>Popular right now<br/></strong>Lots of people have looked at this recently</p>",
+            "close": "once",
+            "show_over_media": true,
+            "visibility_duration": 4,
+            "bg_color": "#f7b618",
+            "text_color": "#090302"
+          }
+        },
+        "message-2": {
+          "type": "message",
+          "disabled": true,
+          "settings": {
+            "icon": "price_tag",
+            "title": "<p><strong>Selling fast!<br/></strong>Grab yours while you can</p>",
+            "close": "once",
+            "show_over_media": true,
+            "visibility_duration": 5,
+            "bg_color": "#f7b618",
+            "text_color": "#090302"
+          }
+        },
+        "collapsible-content-1": {
+          "type": "collapsible-content",
+          "disabled": true,
+          "settings": {
+            "heading": "Care information",
+            "icon": "heart",
+            "text": "<p>Display general product information or specific product information using metafields.</p>",
+            "page": "",
+            "open": false
+          }
+        },
+        "065c37e2-603e-4744-95cb-9a31fffe8a8b": {
+          "type": "complementary",
+          "settings": {
+            "heading": "Goes well with:",
+            "products_to_show": 4,
+            "layout": "list"
+          }
+        },
+        "collapsible-content-2": {
+          "type": "collapsible-content",
+          "settings": {
+            "heading": "Delivery and Shipping",
+            "icon": "truck",
+            "text": "<p>All stock is held at our warehouse and ships immediately. Delivery by courier to your door. R75 delivery charge for all orders.</p>",
+            "page": "",
+            "open": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "show_twitter": true,
+            "show_facebook": true,
+            "show_pinterest": true
+          }
+        },
+        "9407a532-3b2a-438a-bf6c-24b07a509b1d": {
+          "type": "collapsible-content",
+          "settings": {
+            "heading": "Payment & Security",
+            "icon": "credit_card",
+            "text": "<p>Payment can be made via Credit Card or EFT. Your payment information is processed securely. We do not store credit card details nor have access to your credit card information.</p>",
+            "page": "",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "product-labels",
+        "vendor-sku",
+        "title",
+        "price",
+        "79df34e4-3803-490c-8c69-02e5fdef4e87",
+        "message-3",
+        "88317077-8fa8-42dd-97d7-32017a1d7892",
+        "divider-0",
+        "variant-picker",
+        "106c48d0-4740-40c4-b873-f59a1f7b349f",
+        "divider-1",
+        "buy-buttons",
+        "wishlist_engine_product_page_ThMUJ3",
+        "3c93edd0-d463-49ab-902a-1b95fc3dbc98",
+        "64843cd4-2908-4a07-9392-cee6ba65a8b0",
+        "message-1",
+        "message-2",
+        "collapsible-content-1",
+        "065c37e2-603e-4744-95cb-9a31fffe8a8b",
+        "collapsible-content-2",
+        "share",
+        "9407a532-3b2a-438a-bf6c-24b07a509b1d"
+      ],
+      "settings": {
+        "stick_on_scroll": true,
+        "select_first_variant": true,
+        "sticky_atc_panel": false,
+        "sticky_atc_position": "end",
+        "sticky_atc_mobile": false,
+        "media_layout": "slider",
+        "media_size": "default",
+        "media_ratio": "1",
+        "media_crop": "none",
+        "enable_video_looping": false,
+        "enable_zoom": true,
+        "zoom_mode": "hover",
+        "enable_lightbox_mobile": false,
+        "hover_zoom": "large",
+        "stacked_scroll": "always",
+        "underline_active": true,
+        "media_arrows": "desktop",
+        "show_slide_count": true,
+        "media_thumbs": "desktop",
+        "lightbox_thumbnails": true,
+        "thumb_ratio": "1",
+        "thumb_crop": "none",
+        "border_color": "#eeeeee",
+        "bg_color": "#f4f4f4",
+        "enable_media_grouping": false,
+        "media_grouping_option": "Color,Colour,Couleur,Farbe"
+      }
+    },
+    "details": {
+      "type": "product-details",
+      "blocks": {
+        "highlight-text": {
+          "type": "highlight-text",
+          "settings": {
+            "title": "{{ product.metafields.custom.product_highlight_title.value }}",
+            "text": "<p>{{ product.metafields.custom.product_highlight_text.value }}</p>"
+          }
+        },
+        "tabs": {
+          "type": "tabs",
+          "settings": {
+            "style": "collapsible",
+            "open_first": true,
+            "show_description": true,
+            "show_reviews": false,
+            "custom_reviews": "",
+            "show_specification": false,
+            "spec_metafields": "",
+            "spec_right_align": false,
+            "spec_show_empty_metafields": false,
+            "spec_empty_field_text": "-",
+            "tab_1_title": "Features",
+            "tab_1_text": "{{ product.metafields.custom.features | metafield_tag }}",
+            "tab_1_page": "",
+            "tab_2_title": "Specifications",
+            "tab_2_text": "{{ product.metafields.custom.specifications | metafield_tag }}",
+            "tab_2_page": "",
+            "tab_3_title": "",
+            "tab_3_text": "",
+            "tab_3_page": ""
+          }
+        },
+        "payment-methods": {
+          "type": "payment-methods",
+          "disabled": true,
+          "settings": {
+            "title": "Payment & Security",
+            "title1": "Payment methods",
+            "show_payment_icons": true,
+            "text1": "<p>Your payment information is processed securely. We do not store credit card details nor have access to your credit card information.</p>",
+            "title2": "",
+            "text2": ""
+          }
+        }
+      },
+      "block_order": [
+        "highlight-text",
+        "tabs",
+        "payment-methods"
+      ],
+      "settings": {}
+    },
+    "product-features": {
+      "type": "product-features",
+      "blocks": {
+        "product-features-feature-0": {
+          "type": "feature",
+          "settings": {
+            "heading": "Feature name",
+            "text": "<p>Add some text describing the product feature.</p>",
+            "content_align": "text-start",
+            "hotspot_x": 28,
+            "hotspot_y": 38
+          }
+        },
+        "product-features-feature-1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Feature name",
+            "text": "<p>Add some text describing the product feature.</p>",
+            "content_align": "text-start",
+            "hotspot_x": 60,
+            "hotspot_y": 29
+          }
+        },
+        "product-features-feature-2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Feature name",
+            "text": "<p>Add some text describing the product feature.</p>",
+            "content_align": "text-start",
+            "hotspot_x": 73,
+            "hotspot_y": 54
+          }
+        },
+        "product-features-feature-3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Feature name",
+            "text": "<p>Add some text describing the product feature.</p>",
+            "content_align": "text-start",
+            "hotspot_x": 50,
+            "hotspot_y": 66
+          }
+        }
+      },
+      "block_order": [
+        "product-features-feature-0",
+        "product-features-feature-1",
+        "product-features-feature-2",
+        "product-features-feature-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "product": "",
+        "show_content": true,
+        "layout": "text_first",
+        "text_align": "text-center",
+        "mob_center_text": false,
+        "heading_size": "h1",
+        "enlarge_text": false,
+        "title": "Product features",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "hotspot_color": "#070707",
+        "color_scheme": "none",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "09bda34d-a138-425a-a4cf-f47654616cbc": {
+      "type": "video",
+      "blocks": {
+        "template--16880100278519__09bda34d-a138-425a-a4cf-f47654616cbc-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.video_title.value }}",
+            "heading_size": "h1",
+            "heading_h1": false
+          }
+        },
+        "template--16880100278519__09bda34d-a138-425a-a4cf-f47654616cbc-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.video_description | metafield_tag }}",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "template--16880100278519__09bda34d-a138-425a-a4cf-f47654616cbc-heading-1",
+        "template--16880100278519__09bda34d-a138-425a-a4cf-f47654616cbc-text-1"
+      ],
+      "settings": {
+        "video_shopify": "{{ product.metafields.custom.video.value }}",
+        "video_external": "",
+        "video_description": "",
+        "video_size": "lg",
+        "video_autoplay": true,
+        "text_align": "text-center",
+        "color_scheme": "1"
+      }
+    },
+    "product-comparison-grid": {
+      "type": "product-comparison-grid",
+      "blocks": {
+        "comparison-product-1": {
+          "type": "product",
+          "settings": {
+            "show_image": true,
+            "show_title": true,
+            "show_button": true
+          }
+        },
+        "4146861a-f224-497b-a33d-f1cfb2e0128f": {
+          "type": "metafield",
+          "settings": {
+            "title": "Description",
+            "metafield_key": "custom.teaser"
+          }
+        },
+        "91f96f36-4cff-4bee-9f91-619d9e2bb428": {
+          "type": "metafield",
+          "settings": {
+            "title": "Features",
+            "metafield_key": "custom.features"
+          }
+        },
+        "comparison-vendor-2": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "comparison-price-3": {
+          "type": "price",
+          "settings": {}
+        },
+        "comparison-description-4": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "truncate_description": false,
+            "words_to_show": 20
+          }
+        },
+        "003c7681-bb64-4939-b102-494af8d4aef9": {
+          "type": "variants",
+          "disabled": true,
+          "settings": {}
+        },
+        "21d2f193-5594-4282-bd67-0742b4b0db99": {
+          "type": "metafield",
+          "settings": {
+            "title": "Weight",
+            "metafield_key": "custom.weight"
+          }
+        },
+        "136b072a-5b48-413e-9168-79fa336623a6": {
+          "type": "metafield",
+          "disabled": true,
+          "settings": {
+            "title": "Dimensions",
+            "metafield_key": "custom.dimensions"
+          }
+        },
+        "f04d4a94-1af0-4ab4-99e8-143c19714d61": {
+          "type": "variant_option",
+          "settings": {
+            "title": "Colour"
+          }
+        },
+        "419c2b31-0fe5-46ed-b7d2-a30221f5ae59": {
+          "type": "variant_option",
+          "disabled": true,
+          "settings": {
+            "title": "Size"
+          }
+        },
+        "75739590-5179-4f39-86ad-67780970f500": {
+          "type": "metafield",
+          "disabled": true,
+          "settings": {
+            "title": "Material",
+            "metafield_key": "custom.material"
+          }
+        },
+        "017be920-2630-45b9-a22c-682e2f881811": {
+          "type": "metafield",
+          "settings": {
+            "title": "Specifications",
+            "metafield_key": "custom.specifications"
+          }
+        }
+      },
+      "block_order": [
+        "comparison-product-1",
+        "4146861a-f224-497b-a33d-f1cfb2e0128f",
+        "91f96f36-4cff-4bee-9f91-619d9e2bb428",
+        "comparison-vendor-2",
+        "comparison-price-3",
+        "comparison-description-4",
+        "003c7681-bb64-4939-b102-494af8d4aef9",
+        "21d2f193-5594-4282-bd67-0742b4b0db99",
+        "136b072a-5b48-413e-9168-79fa336623a6",
+        "f04d4a94-1af0-4ab4-99e8-143c19714d61",
+        "419c2b31-0fe5-46ed-b7d2-a30221f5ae59",
+        "75739590-5179-4f39-86ad-67780970f500",
+        "017be920-2630-45b9-a22c-682e2f881811"
+      ],
+      "settings": {
+        "heading": "Product comparison grid",
+        "text": "",
+        "heading_align": "text-center",
+        "view_more_label": "View more",
+        "view_more_link": "",
+        "product_list": "{{ product.metafields.custom.comparison_matrix_products.value }}",
+        "empty_field_text": "-",
+        "image_ratio": "shortest",
+        "image_crop": "center",
+        "num_rows": 6,
+        "color_scheme": "none",
+        "highlight_row": false
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "collection-list-collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection-list-collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection-list-collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection-list-collection-4": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection-list-collection-5": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection-list-collection-6": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection-list-collection-1",
+        "collection-list-collection-2",
+        "collection-list-collection-3",
+        "collection-list-collection-4",
+        "collection-list-collection-5",
+        "collection-list-collection-6"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Our Collections",
+        "heading_align": "text-start",
+        "button_label": "",
+        "button_link": "",
+        "layout": "carousel",
+        "card_size": "small",
+        "use_product_image": false,
+        "circle_image": true,
+        "show_border": true,
+        "color_scheme": "none",
+        "full_width": true
+      }
+    },
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "image-banner-heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1",
+            "heading_h1": false
+          }
+        },
+        "image-banner-text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "enlarge_text": true
+          }
+        },
+        "image-banner-button": {
+          "type": "button",
+          "settings": {
+            "button_1_label": "Optional button",
+            "button_1_link": "",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "Optional button",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "image-banner-heading",
+        "image-banner-text",
+        "image-banner-button"
+      ],
+      "disabled": true,
+      "settings": {
+        "url": "",
+        "height_mode": "fixed",
+        "fixed_height_desktop": 640,
+        "fixed_height_mobile": 480,
+        "overlay_position": "justify-center items-center",
+        "overlay_text_align": "text-center",
+        "mob_center_text": false,
+        "mobile_stacked": false,
+        "color_scheme": "white",
+        "full_width": false,
+        "transparent_content_color": "#ffffff",
+        "tint_color": "#000000",
+        "tint_opacity": 40,
+        "prevent_animation": false
+      }
+    },
+    "media_with_text_rBWPLP": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_nfknF9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Braai with the Atago",
+            "heading_size": "h3",
+            "heading_h1": false
+          }
+        },
+        "text_PrPm7q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Petromax Atago comes with a high-quality and durable stainless-steel grill, which is ideal for braaing meat, fish, and vegetables. The grill is also the perfect 'stovetop' for the <a href=\"/products/petromax-tea-and-coffee-percolator-perkomax\" title=\"Perkomax Coffee/Tea Percolator\">Perkomax Percolator</a> and the <a href=\"/products/petromax-dutch-oven\" title=\"Dutch Oven\">Dutch Oven</a>.</p><p>The coals are safely contained in the Atago which means you leave no trace after cooking.</p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_nfknF9",
+        "text_PrPm7q"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Petromax_Atago_13copie_1400x_1145b84b-3e6a-4f28-ada9-673a6c220782.webp",
+        "video_external": "",
+        "video_description": "",
+        "video_autoplay": false,
+        "layout": "left",
+        "image_fit": "contain",
+        "media_width": 50,
+        "media_scale": 100,
+        "text_align": "text-start",
+        "color_scheme": "none",
+        "only_content_color_scheme": false
+      }
+    },
+    "media_with_text_7ftHhm": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_dQEfXw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bake with the Atago",
+            "heading_size": "h3",
+            "heading_h1": false
+          }
+        },
+        "text_GfxD3A": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair with the <a href=\"/products/petromax-dutch-oven\" title=\"Dutch Oven\">Petromax Dutch Oven</a> and prepare a variety of savoury dishes, from succulent meat dishes to hearty stews and bread bakes, with incredible efficiency. You’ll need no more than six briquettes for bottom heat, depending on the size of your Dutch Oven. <a href=\"/products/petromax-dutch-oven\" title=\"Dutch Oven\">The FT6 Dutch Oven</a> fits perfectly within the Atago, while smaller cast-iron pots can also be positioned inside. Use the grilling plate for larger Dutch Ovens and frying pans that don't fit directly inside.</p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_dQEfXw",
+        "text_GfxD3A"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/5_atago_ft6.webp",
+        "video_external": "",
+        "video_description": "",
+        "video_autoplay": false,
+        "layout": "right",
+        "image_fit": "contain",
+        "media_width": 50,
+        "media_scale": 100,
+        "text_align": "text-start",
+        "color_scheme": "none",
+        "only_content_color_scheme": false
+      }
+    },
+    "media_with_text_d7DWXR": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_e4AFhN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Gather around the Atago",
+            "heading_size": "h3",
+            "heading_h1": false
+          }
+        },
+        "text_GtWrKG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Petromax Atago can be used as a fire pit to light a cozy campfire after cooking. Its round shape makes it easier to stack firewood, which makes it particularly easy to use as a fire bowl and fire pit.</p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_e4AFhN",
+        "text_GtWrKG"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/atago_-_firepit.jpg",
+        "video_external": "",
+        "video_description": "",
+        "video_autoplay": false,
+        "layout": "left",
+        "image_fit": "contain",
+        "media_width": 50,
+        "media_scale": 100,
+        "text_align": "text-start",
+        "color_scheme": "none",
+        "only_content_color_scheme": false
+      }
+    },
+    "media_with_text_JwPTDB": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_7gcnXH": {
+          "type": "heading",
+          "settings": {
+            "heading": "How easy is it to set up the Atago?",
+            "heading_size": "h3",
+            "heading_h1": false
+          }
+        },
+        "text_qg4c73": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Atago can be setup for use with just one movement. After use, the Atago can be collapsed down again just as quickly. Its compact size of just 14cm when folded allows for space-saving storage, which is a must when storage space really matters.</p><p>The three fixed folding legs are very stable and will adapt to most uneven surfaces. </p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_7gcnXH",
+        "text_qg4c73"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Atago_Mechanismus-Machinery-Mecanisme.webp",
+        "video_external": "",
+        "video_description": "",
+        "video_autoplay": false,
+        "layout": "right",
+        "image_fit": "contain",
+        "media_width": 50,
+        "media_scale": 100,
+        "text_align": "text-start",
+        "color_scheme": "none",
+        "only_content_color_scheme": false
+      }
+    },
+    "rich_text_Gf3tUV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WBdEEa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Transport & Protect your Atago Grill",
+            "heading_size": "h2",
+            "heading_h1": false
+          }
+        },
+        "text_y7YXnn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Easily carry and protect your Petromax Atago Grill with the right-sized bag. Crafted from high-quality ripstop fabric, featuring sturdy handles for optimal carrying comfort.</p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_WBdEEa",
+        "text_y7YXnn"
+      ],
+      "settings": {
+        "text_position": "justify-center",
+        "text_align": "text-center",
+        "mob_center_text": true,
+        "wide": false,
+        "color_scheme": "1",
+        "full_width": true,
+        "prevent_animation": false
+      }
+    },
+    "featured_product_bQ3Fn3": {
+      "type": "featured-product",
+      "blocks": {
+        "vendor_sku_ARtBRy": {
+          "type": "vendor-sku",
+          "settings": {
+            "show_vendor": true,
+            "show_sku": true,
+            "show_barcode": false
+          }
+        },
+        "title_n8cdm3": {
+          "type": "title",
+          "settings": {
+            "show_weight": false
+          }
+        },
+        "price_9DAxT7": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": true
+          }
+        },
+        "divider_jKfWXM": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        },
+        "variant_picker_9Uak8c": {
+          "type": "variant-picker",
+          "settings": {
+            "selector_style": "buttons",
+            "enable_dynamic_availability": true,
+            "dynamic_availability_downwards": false,
+            "show_backorder_text": true,
+            "enable_size_chart": false,
+            "size_chart_variant": "Size",
+            "size_chart_page": ""
+          }
+        },
+        "buy_buttons_6baVYV": {
+          "type": "buy-buttons",
+          "settings": {
+            "show_qty_selector": true,
+            "enable_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "divider_dWLDei": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        },
+        "view_more_button_xrzWCp": {
+          "type": "view-more-button",
+          "settings": {
+            "button_label": "Full details",
+            "text_align": "text-start"
+          }
+        }
+      },
+      "block_order": [
+        "vendor_sku_ARtBRy",
+        "title_n8cdm3",
+        "price_9DAxT7",
+        "divider_jKfWXM",
+        "variant_picker_9Uak8c",
+        "buy_buttons_6baVYV",
+        "divider_dWLDei",
+        "view_more_button_xrzWCp"
+      ],
+      "settings": {
+        "product": "transport-bag-for-atago",
+        "select_first_variant": true,
+        "media_ratio": "natural",
+        "media_crop": "none",
+        "media_width": 50,
+        "enable_video_looping": false,
+        "enable_zoom": true,
+        "zoom_mode": "hover",
+        "hover_zoom": "large",
+        "color_scheme": "none",
+        "border_color": "rgba(0,0,0,0)",
+        "bg_color": "#f4f4f4"
+      }
+    },
+    "1704530231fd5fdbc4": {
+      "type": "apps",
+      "blocks": {
+        "61d2badd-9c3f-469f-b127-595779a51c43": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "61d2badd-9c3f-469f-b127-595779a51c43"
+      ],
+      "settings": {
+        "full_width": false
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "heading_align": "text-start",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "products_to_show": 8
+      }
+    },
+    "20ec0198-f61d-45da-9bec-c12bef287ba0": {
+      "type": "recently-viewed",
+      "settings": {
+        "heading": "Recently viewed",
+        "heading_align": "text-start",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "limit": 8
+      }
+    },
+    "04f12cc2-9ece-49c9-8b64-91c4c3163790": {
+      "type": "pop-up",
+      "blocks": {
+        "template--16994977579255__04f12cc2-9ece-49c9-8b64-91c4c3163790-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "GET 10% OFF!",
+            "heading_size": "h1"
+          }
+        },
+        "template--16994977579255__04f12cc2-9ece-49c9-8b64-91c4c3163790-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribe to our newsletter to receive your discount:</p>",
+            "text_size": ""
+          }
+        },
+        "template--16994977579255__04f12cc2-9ece-49c9-8b64-91c4c3163790-newsletter-signup-1": {
+          "type": "newsletter-signup",
+          "settings": {}
+        },
+        "8fc0c1aa-f1eb-49bc-a402-0ab6026731f8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/bravehardy_mug.png",
+            "image_position_desktop": "left",
+            "image_position_mobile": "top"
+          }
+        },
+        "1858ecd4-64fc-4e78-9359-9ac6cc33aa80": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_1_label": "Close",
+            "button_1_style": "btn btn--primary",
+            "button_1_link": "",
+            "btn_1_bg_color": "#555555",
+            "btn_1_text_color": "#ffffff",
+            "button_2_label": "",
+            "button_2_style": "btn btn--secondary",
+            "button_2_link": "",
+            "btn_2_bg_color": "#070707",
+            "btn_2_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--16994977579255__04f12cc2-9ece-49c9-8b64-91c4c3163790-heading-1",
+        "template--16994977579255__04f12cc2-9ece-49c9-8b64-91c4c3163790-text-1",
+        "template--16994977579255__04f12cc2-9ece-49c9-8b64-91c4c3163790-newsletter-signup-1",
+        "8fc0c1aa-f1eb-49bc-a402-0ab6026731f8",
+        "1858ecd4-64fc-4e78-9359-9ac6cc33aa80"
+      ],
+      "disabled": true,
+      "settings": {
+        "trigger": "delay",
+        "delay": 5,
+        "show_to_guests_only": true,
+        "show_on_mobile": true,
+        "dismiss_days": 30,
+        "position": "justify-center items-center",
+        "text_align": "text-center",
+        "padding": "large",
+        "shrink_width": false,
+        "heading_color": "#090302",
+        "text_color": "#090302",
+        "bg_color": "#f7b618",
+        "bg_grad": "",
+        "tint_opacity": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "details",
+    "product-features",
+    "09bda34d-a138-425a-a4cf-f47654616cbc",
+    "product-comparison-grid",
+    "collection-list",
+    "image-banner",
+    "media_with_text_rBWPLP",
+    "media_with_text_7ftHhm",
+    "media_with_text_d7DWXR",
+    "media_with_text_JwPTDB",
+    "rich_text_Gf3tUV",
+    "featured_product_bQ3Fn3",
+    "1704530231fd5fdbc4",
+    "recommendations",
+    "20ec0198-f61d-45da-9bec-c12bef287ba0",
+    "04f12cc2-9ece-49c9-8b64-91c4c3163790"
+  ]
+}

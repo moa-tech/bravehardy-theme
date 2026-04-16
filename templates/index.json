@@ -1,0 +1,1792 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_qXwADt": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Lifesystems_2_1.jpg",
+            "image_mobile": "shopify://shop_images/42170-heatshield-thermal-blanket-double-7.webp",
+            "url": "shopify://collections/lifesystems",
+            "overlay_position": "justify-center items-center",
+            "overlay_text_align": "text-center",
+            "mob_center_text": false,
+            "subheading": "LIFESYSTEMS",
+            "heading": "Outdoor Safety & Survival Equipment",
+            "heading_size": "h0",
+            "heading_h1": false,
+            "text": "<p>Practical survival gear and travel safety essentials built for tough conditions</p>",
+            "enlarge_text": true,
+            "button_1_label": "SHOP NOW",
+            "button_1_link": "shopify://collections/lifesystems",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary",
+            "transparent_content_color": "#ffffff",
+            "countdown_show": false,
+            "countdown_end_date": "",
+            "countdown_end_time": "",
+            "countdown_end_text": "",
+            "enlarge_end_text": false,
+            "countdown_hide_on_end": false,
+            "use_custom_colors": false,
+            "count_color": "#ffffff",
+            "bg_color": "#070707",
+            "bg_grad": ""
+          }
+        },
+        "slide_gwCRxc": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/OneTigris_Chairs_-_Banner_3.jpg",
+            "url": "shopify://collections/onetigris",
+            "overlay_position": "justify-center items-center",
+            "overlay_text_align": "text-center",
+            "mob_center_text": false,
+            "subheading": "ONETIGRIS",
+            "heading": "Chairs Built Tough",
+            "heading_size": "h0",
+            "heading_h1": false,
+            "text": "<p>Compact, Foldable & Easy To Carry</p>",
+            "enlarge_text": true,
+            "button_1_label": "Shop Now",
+            "button_1_link": "shopify://collections/onetigris",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary",
+            "transparent_content_color": "#ffffff",
+            "countdown_show": false,
+            "countdown_end_date": "",
+            "countdown_end_time": "",
+            "countdown_end_text": "",
+            "enlarge_end_text": false,
+            "countdown_hide_on_end": false,
+            "use_custom_colors": false,
+            "count_color": "#ffffff",
+            "bg_color": "#070707",
+            "bg_grad": ""
+          }
+        },
+        "slide_hQ8Rqz": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/OneTigris_Stellar_2_Tent.jpg",
+            "url": "shopify://products/stella-2-person-backpacking-tent",
+            "overlay_position": "justify-center items-center",
+            "overlay_text_align": "text-center",
+            "mob_center_text": false,
+            "subheading": "ONETIGRIS",
+            "heading": "Stella 2 Person Backpacking Tent",
+            "heading_size": "h0",
+            "heading_h1": false,
+            "text": "<p>Built for year-round adventures, the Stella offers fast setup, storm-ready protection, and room for two.</p>",
+            "enlarge_text": true,
+            "button_1_label": "FIND OUT MORE",
+            "button_1_link": "shopify://products/stella-2-person-backpacking-tent",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary",
+            "transparent_content_color": "#ffffff",
+            "countdown_show": false,
+            "countdown_end_date": "",
+            "countdown_end_time": "",
+            "countdown_end_text": "",
+            "enlarge_end_text": false,
+            "countdown_hide_on_end": false,
+            "use_custom_colors": false,
+            "count_color": "#ffffff",
+            "bg_color": "#070707",
+            "bg_grad": ""
+          }
+        },
+        "slide_8kt8DR": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Omnia_-_Banner_2.jpg",
+            "image_mobile": "shopify://shop_images/Mountains_Outdoor.jpg",
+            "url": "shopify://collections/omnia",
+            "overlay_position": "justify-center items-center",
+            "overlay_text_align": "text-center",
+            "mob_center_text": false,
+            "subheading": "OMNIA OVEN",
+            "heading": "Turn your Gas Stove into an Oven",
+            "heading_size": "h0",
+            "heading_h1": false,
+            "text": "<p>Bake, cook and heat just like in a traditional oven.</p>",
+            "enlarge_text": true,
+            "button_1_label": "SHOP NOW",
+            "button_1_link": "shopify://collections/omnia",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary",
+            "transparent_content_color": "#ffffff",
+            "countdown_show": false,
+            "countdown_end_date": "",
+            "countdown_end_time": "",
+            "countdown_end_text": "",
+            "enlarge_end_text": false,
+            "countdown_hide_on_end": false,
+            "use_custom_colors": false,
+            "count_color": "#ffffff",
+            "bg_color": "#070707",
+            "bg_grad": ""
+          }
+        },
+        "slide_7EKFiH": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Hydroflask_1.jpg",
+            "url": "shopify://products/hydro-flask-wide-mouth-32oz-straw-cap-bottle-946ml",
+            "overlay_position": "justify-center items-center",
+            "overlay_text_align": "text-center",
+            "mob_center_text": false,
+            "subheading": "HYDRO FLASK",
+            "heading": "Wide Mouth Straw Cap Bottle, 946ml",
+            "heading_size": "h0",
+            "heading_h1": false,
+            "text": "<p>Wide enough for ice, easy to fill, easy to drink.</p>",
+            "enlarge_text": true,
+            "button_1_label": "Shop Now",
+            "button_1_link": "shopify://products/hydro-flask-wide-mouth-32oz-straw-cap-bottle-946ml",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary",
+            "transparent_content_color": "#ffffff",
+            "countdown_show": false,
+            "countdown_end_date": "",
+            "countdown_end_time": "",
+            "countdown_end_text": "",
+            "enlarge_end_text": false,
+            "countdown_hide_on_end": false,
+            "use_custom_colors": false,
+            "count_color": "#ffffff",
+            "bg_color": "#070707",
+            "bg_grad": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_qXwADt",
+        "slide_gwCRxc",
+        "slide_hQ8Rqz",
+        "slide_8kt8DR",
+        "slide_7EKFiH"
+      ],
+      "settings": {
+        "height_mode": "fixed",
+        "fixed_height_desktop": 800,
+        "fixed_height_mobile": 350,
+        "mobile_stacked": false,
+        "nav_style": "slideshow_nav_lines",
+        "pagination_color": "#ffffff",
+        "nav_position": "justify-center",
+        "transition": "fade",
+        "autoplay": true,
+        "slider_pause": true,
+        "autoplay_speed": 7,
+        "color_scheme": "3",
+        "full_width": true,
+        "tint_color": "#000000",
+        "tint_opacity": 15,
+        "accessibility_info": "",
+        "prevent_animation": true
+      }
+    },
+    "icons_with_text_XRMQHC": {
+      "type": "icons-with-text",
+      "blocks": {
+        "item_C9xcDY": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "heading": "Courier Delivery",
+            "text": "<p>Throughout South Africa</p>",
+            "link": "shopify://policies/shipping-policy"
+          }
+        },
+        "item_RXacVW": {
+          "type": "item",
+          "settings": {
+            "icon": "lock",
+            "heading": "Secure Payments",
+            "text": "<p>Credit Card, Apple Pay, EFT</p>",
+            "link": ""
+          }
+        },
+        "item_xGizqL": {
+          "type": "item",
+          "settings": {
+            "icon": "return",
+            "heading": "Easy Returns",
+            "text": "<p>Hassle free returns policy</p>",
+            "link": "shopify://policies/refund-policy"
+          }
+        },
+        "item_fFUBaR": {
+          "type": "item",
+          "settings": {
+            "icon": "chat_bubble",
+            "heading": "Helpful Support",
+            "text": "<p>Real people on chat or email</p>",
+            "link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "item_C9xcDY",
+        "item_RXacVW",
+        "item_xGizqL",
+        "item_fFUBaR"
+      ],
+      "name": "Icons with text",
+      "settings": {
+        "heading": "",
+        "heading_align": "text-start",
+        "icon_size": 48,
+        "title_type_scale": "small",
+        "text_type_scale": "small",
+        "icon_position": "beside",
+        "mobile_stack": false,
+        "section_height": "small",
+        "color_scheme": "2",
+        "full_width": true,
+        "dividers": "none",
+        "prevent_animation": false
+      }
+    },
+    "rich_text_rmniq3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_PgWWEL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Outdoor, Camping & Hiking Gear - South Africa's Premium Outdoor Store",
+            "heading_size": "h2",
+            "heading_h1": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_PgWWEL"
+      ],
+      "settings": {
+        "text_position": "justify-center",
+        "text_align": "text-center",
+        "mob_center_text": true,
+        "wide": true,
+        "color_scheme": "none",
+        "full_width": true,
+        "prevent_animation": false
+      }
+    },
+    "featured_product_QVp63g": {
+      "type": "featured-product",
+      "blocks": {
+        "vendor_sku_hbYePR": {
+          "type": "vendor-sku",
+          "settings": {
+            "show_vendor": true,
+            "show_sku": true,
+            "show_barcode": false
+          }
+        },
+        "title_mcHzQN": {
+          "type": "title",
+          "settings": {
+            "show_weight": false
+          }
+        },
+        "price_fkKjUi": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": true
+          }
+        },
+        "divider_FeN9Tm": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        },
+        "variant_picker_kA6rjM": {
+          "type": "variant-picker",
+          "settings": {
+            "selector_style": "buttons",
+            "enable_dynamic_availability": true,
+            "dynamic_availability_downwards": false,
+            "show_backorder_text": true,
+            "enable_size_chart": false,
+            "size_chart_variant": "Size",
+            "size_chart_page": ""
+          }
+        },
+        "buy_buttons_64W8Pg": {
+          "type": "buy-buttons",
+          "settings": {
+            "show_qty_selector": true,
+            "enable_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "divider_bYCmE4": {
+          "type": "divider",
+          "disabled": true,
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        },
+        "view_more_button_cdYt6R": {
+          "type": "view-more-button",
+          "settings": {
+            "button_label": "Full details",
+            "text_align": "text-start"
+          }
+        }
+      },
+      "block_order": [
+        "vendor_sku_hbYePR",
+        "title_mcHzQN",
+        "price_fkKjUi",
+        "divider_FeN9Tm",
+        "variant_picker_kA6rjM",
+        "buy_buttons_64W8Pg",
+        "divider_bYCmE4",
+        "view_more_button_cdYt6R"
+      ],
+      "settings": {
+        "product": "brave-hardy-suzuki-jimny-spare-wheel-cover",
+        "select_first_variant": true,
+        "media_ratio": "1",
+        "media_crop": "none",
+        "media_width": 50,
+        "enable_video_looping": false,
+        "enable_zoom": false,
+        "zoom_mode": "hover",
+        "hover_zoom": "large",
+        "color_scheme": "none",
+        "border_color": "rgba(0,0,0,0)",
+        "bg_color": "#f4f4f4"
+      }
+    },
+    "media_grid_dedKQa": {
+      "type": "media-grid",
+      "blocks": {
+        "media_eTzPb8": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/ft9-t_3__WEB.jpg",
+            "link_url": "shopify://products/petromax-dutch-oven",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Potjies</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-center items-center",
+            "text_alignment": "text-center",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media_9UKWFg": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/atago-firepit.jpg",
+            "link_url": "shopify://collections/fire-braai",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Fire & Braai</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-center items-center",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media_HFLXmx": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/CE-ZDY06-CB-1600-2000-2.jpg",
+            "link_url": "shopify://collections/camp-furniture",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Camp Furniture</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-center items-center",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media_bDymfT": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/BackcountryCuisineAustralia-13_00b5eb0f-a344-4fee-8f0d-6e7fd4484213.jpg",
+            "link_url": "shopify://collections/food",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Hiking Meals</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-center items-center",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media_UjgEzf": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Kelty_S23_SantafeLifestyle_85.jpg",
+            "link_url": "shopify://collections/backpacks",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Backpacks</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-center items-center",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media_UdKy4i": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/CE-HZP01-DG-4-1.jpg",
+            "link_url": "shopify://collections/tents-shelters",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Tents & Shelters</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-center items-center",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media_4Ey9t3": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/2_6eca8e98-09f6-4161-9975-cf80d5b96a65.jpg",
+            "link_url": "shopify://collections/sleep-systems",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Sleep Systems</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-center items-center",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media_Xcfckn": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/original-pro-hammock-ticket-to-the-moon-tttm-tmpro2424-841467.jpg",
+            "link_url": "shopify://collections/ticket-to-the-moon",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Hammocks</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-center items-center",
+            "text_alignment": "text-center",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media_9hyc3W": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Leatherman_Skeletool_Fishing_Fish_Outdoors_Outdoor_1.jpg",
+            "link_url": "shopify://collections/gadgets-gear",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Gadgets & Gear</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-center items-center",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 30
+          }
+        },
+        "media_aQe4Bf": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/24669122BEL_ALT03_ChefRoll.jpg",
+            "link_url": "shopify://collections/storage-maintenance",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Storage & Organisation</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-center items-center",
+            "text_alignment": "text-center",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media_gcabJe": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/DSC07826.jpg",
+            "link_url": "shopify://collections/lighting",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Lighting</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-center items-center",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 30
+          }
+        },
+        "media_VeeDFt": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/beavercraft_banner.jpg",
+            "link_url": "shopify://collections/beavercraft",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Carving Tools</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-center items-center",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        }
+      },
+      "block_order": [
+        "media_eTzPb8",
+        "media_9UKWFg",
+        "media_HFLXmx",
+        "media_bDymfT",
+        "media_UjgEzf",
+        "media_UdKy4i",
+        "media_4Ey9t3",
+        "media_Xcfckn",
+        "media_9hyc3W",
+        "media_aQe4Bf",
+        "media_gcabJe",
+        "media_VeeDFt"
+      ],
+      "settings": {
+        "title": "",
+        "heading_align": "text-start",
+        "button_label": "",
+        "button_link": "",
+        "gallery_cols_max": 4,
+        "mobile_carousel": true,
+        "gallery_cols_min": "1",
+        "fixed_height_desktop": 180,
+        "fixed_height_mobile": 300,
+        "section_color_scheme": "1",
+        "color_scheme": "white",
+        "transparent_content_color": "#ffffff"
+      }
+    },
+    "featured_collection_hErbzL": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Latest Gear",
+        "heading_align": "text-start",
+        "show_view_all": true,
+        "collection": "all",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "products_to_show": 24,
+        "show_highlight_products": true,
+        "show_promo_info": false,
+        "image_ratio": "fill",
+        "promo_title": "A headline to grab attention",
+        "content": "<p>Use this card with an image to highlight your collections or introduce a promotion.</p>",
+        "link_url": "",
+        "button_label": "Button",
+        "color_scheme": "none",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "featured_collection_yhH8RU": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Trangia",
+        "heading_align": "text-start",
+        "show_view_all": true,
+        "collection": "trangia",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "products_to_show": 8,
+        "show_highlight_products": true,
+        "show_promo_info": false,
+        "image_ratio": "fill",
+        "promo_title": "",
+        "content": "<p>OneTigris specialises in high-performance camping gear designed for durability, functionality, and ease of use in demanding outdoor environments.</p>",
+        "link_url": "shopify://collections/trangia",
+        "button_label": "VIEW RANGE",
+        "color_scheme": "none",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "featured_collection_tGnEpq": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_align": "text-end",
+        "show_view_all": true,
+        "collection": "kelty",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "medium",
+        "products_to_show": 8,
+        "show_highlight_products": true,
+        "show_promo_info": true,
+        "image_ratio": "fill",
+        "promo_title": "Kelty",
+        "content": "<p>Kelty has been inspiring outdoor adventures for over 70 years with durable, innovative gear. From backpacks to tents, their products blend comfort and functionality, making every outdoor journey unforgettable.</p>",
+        "link_url": "shopify://collections/kelty",
+        "button_label": "View Range",
+        "color_scheme": "1",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "featured_collection_93pAAi": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_align": "text-end",
+        "show_view_all": true,
+        "collection": "toaks",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "medium",
+        "products_to_show": 8,
+        "show_highlight_products": true,
+        "show_promo_info": true,
+        "image_ratio": "fill",
+        "promo_title": "Toaks Titanium",
+        "content": "<p>TOAKS comes from the latest in technology and design, making it among the lightest, strongest, and most packable on the market.</p>",
+        "link_url": "shopify://collections/toaks",
+        "button_label": "View Range",
+        "color_scheme": "1",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_align": "text-end",
+        "show_view_all": true,
+        "collection": "ticket-to-the-moon",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "medium",
+        "products_to_show": 8,
+        "show_highlight_products": true,
+        "show_promo_info": true,
+        "image_ratio": "fill",
+        "promo_title": "{{ section.settings.collection.title }}",
+        "content": "<p>Ticket To The Moon is the original manufacturer of the camping hammock, since 1996.</p>",
+        "link_url": "shopify://collections/ticket-to-the-moon",
+        "button_label": "View Range",
+        "color_scheme": "1",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "7a43afd5-ee2f-4bff-9ad2-6b370d4a4bf2": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_align": "text-end",
+        "show_view_all": true,
+        "collection": "petromax",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "medium",
+        "products_to_show": 8,
+        "show_highlight_products": true,
+        "show_promo_info": true,
+        "image_ratio": "fill",
+        "promo_title": "Petromax",
+        "content": "<p><strong>Exclusive to Brave Hardy</strong></p><p>As a traditional German brand, the name Petromax has stood for self-sufficiency and independence in the open air since 1910.</p>",
+        "link_url": "shopify://collections/petromax",
+        "button_label": "View Range",
+        "color_scheme": "1",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "banner-heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1",
+            "heading_h1": false
+          }
+        },
+        "banner-text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "enlarge_text": true
+          }
+        },
+        "banner-button": {
+          "type": "button",
+          "settings": {
+            "button_1_label": "Optional Button",
+            "button_1_link": "/",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "Optional Button",
+            "button_2_link": "/",
+            "button_2_style": "btn btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "banner-heading",
+        "banner-text",
+        "banner-button"
+      ],
+      "disabled": true,
+      "settings": {
+        "url": "",
+        "height_mode": "auto",
+        "fixed_height_desktop": 600,
+        "fixed_height_mobile": 350,
+        "overlay_position": "justify-center items-center",
+        "overlay_text_align": "text-center",
+        "mob_center_text": false,
+        "mobile_stacked": false,
+        "color_scheme": "white",
+        "full_width": true,
+        "transparent_content_color": "#ffffff",
+        "tint_color": "#000000",
+        "tint_opacity": 40,
+        "prevent_animation": false
+      }
+    },
+    "media-grid": {
+      "type": "media-grid",
+      "blocks": {
+        "media-0": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/TICKET_TO_THE_MOON-HAMOCK-LIFESTYLE-HONEYMOON_1_-Wildfamily.Life.jpg",
+            "link_url": "",
+            "columns": 2,
+            "rows": 2,
+            "subheading": "TTTM",
+            "title": "<p>A hammock for everyone</p>",
+            "heading_size": "h4",
+            "button_label": "View Range",
+            "button_link": "shopify://collections/hammocks",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--secondary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media-1": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Ayyiex-77.jpg",
+            "link_url": "",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Upcycled Sling Bag</p>",
+            "heading_size": "h5",
+            "button_label": "Shop",
+            "button_link": "shopify://products/ticket-to-the-moon-upcycled-sling-bag",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--secondary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media-2": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/TICKET_TO_THE_MOON_TMPBP05_LIFESTYLE_4.jpg",
+            "link_url": "",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Backpack Plus</p>",
+            "heading_size": "h5",
+            "button_label": "Shop",
+            "button_link": "shopify://products/ticket-to-the-moon-backpack-plus-25l",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--secondary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media-3": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/travel-cube-ticket-to-the-moon-tttm-tmtcm0824-325414.jpg",
+            "link_url": "",
+            "columns": 2,
+            "rows": 1,
+            "subheading": "STAY ORGANISED",
+            "title": "<p>Travel Packing Cubes</p>",
+            "heading_size": "h5",
+            "button_label": "Shop",
+            "button_link": "shopify://products/ticket-to-the-moon-travel-cube",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--secondary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        }
+      },
+      "block_order": [
+        "media-0",
+        "media-1",
+        "media-2",
+        "media-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_align": "text-start",
+        "button_label": "",
+        "button_link": "",
+        "gallery_cols_max": 4,
+        "mobile_carousel": false,
+        "gallery_cols_min": "1",
+        "fixed_height_desktop": 180,
+        "fixed_height_mobile": 300,
+        "section_color_scheme": "1",
+        "color_scheme": "white",
+        "transparent_content_color": "#ffffff"
+      }
+    },
+    "product-features": {
+      "type": "product-features",
+      "blocks": {
+        "feature-0": {
+          "type": "feature",
+          "settings": {
+            "heading": "100% Silk Nylon fabric",
+            "text": "<p>The 10-year manufacturer’s warranty covers any defects in workmanship and materials on all Ticket To The Moon products.</p>",
+            "content_align": "text-start",
+            "hotspot_x": 20,
+            "hotspot_y": 45
+          }
+        },
+        "feature-1": {
+          "type": "feature",
+          "settings": {
+            "heading": "Side Storage Pocket",
+            "text": "<p>So that nothing can get lost. For keys, glasses etc.</p>",
+            "content_align": "text-start",
+            "hotspot_x": 50,
+            "hotspot_y": 63
+          }
+        },
+        "feature-2": {
+          "type": "feature",
+          "settings": {
+            "heading": "Built to last",
+            "text": "<p>Featuring triple stitching, this is a genuinely durable and reliable travel companion.</p>",
+            "content_align": "text-start",
+            "hotspot_x": 64,
+            "hotspot_y": 42
+          }
+        },
+        "39ae429c-d0df-47ea-826a-87ed17d15424": {
+          "type": "feature",
+          "settings": {
+            "heading": "Hammock Shaped Storage Bag",
+            "text": "<p>If you take the hammock with you on your travels, you can even use it as a neck cushion.</p>",
+            "content_align": "text-start",
+            "hotspot_x": 90,
+            "hotspot_y": 41
+          }
+        }
+      },
+      "block_order": [
+        "feature-0",
+        "feature-1",
+        "feature-2",
+        "39ae429c-d0df-47ea-826a-87ed17d15424"
+      ],
+      "disabled": true,
+      "settings": {
+        "product": "ticket-to-the-moon-original-hammock",
+        "show_content": true,
+        "layout": "text_first",
+        "text_align": "text-center",
+        "mob_center_text": false,
+        "heading_size": "h1",
+        "enlarge_text": false,
+        "image": "shopify://shop_images/TICKET_TO_THE_MOON_TMO3914_STUDIO_v1.png",
+        "title": "The Original Camping Hammock",
+        "description": "<p>What makes the Ticket To The Moon hammock a favourite around the world?</p>",
+        "button_label": "View Hammock Range",
+        "button_link": "shopify://collections/hammocks",
+        "hotspot_color": "#f7b618",
+        "color_scheme": "none",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "featured-product": {
+      "type": "featured-product",
+      "blocks": {
+        "product-labels-1": {
+          "type": "product-labels",
+          "settings": {
+            "show_variant_icon": true
+          }
+        },
+        "title-2": {
+          "type": "title",
+          "settings": {
+            "show_weight": false
+          }
+        },
+        "rating-3": {
+          "type": "rating",
+          "settings": {}
+        },
+        "price-4": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false
+          }
+        },
+        "description-5": {
+          "type": "description",
+          "settings": {
+            "show_as_collapsible_content": false,
+            "text": "<p>The Petromax Atago is your all-in-one solution for outdoor cooking, featuring a grill, oven, stove, and fire bowl.</p><p>Thanks to its unique extension-retraction mechanism, the Atago is ready to use in an instant and folds to a height of just 15 cm. It's perfect for camping and overlanding, especially when paired with the Transport Bag.<br/></p>",
+            "icon": "none",
+            "open": false
+          }
+        },
+        "divider-6": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        },
+        "variant-picker-7": {
+          "type": "variant-picker",
+          "settings": {
+            "selector_style": "buttons",
+            "enable_dynamic_availability": true,
+            "dynamic_availability_downwards": false,
+            "show_backorder_text": true,
+            "enable_size_chart": false,
+            "size_chart_variant": "Size",
+            "size_chart_page": ""
+          }
+        },
+        "buy-buttons-8": {
+          "type": "buy-buttons",
+          "settings": {
+            "show_qty_selector": true,
+            "enable_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "divider-9": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        }
+      },
+      "block_order": [
+        "product-labels-1",
+        "title-2",
+        "rating-3",
+        "price-4",
+        "description-5",
+        "divider-6",
+        "variant-picker-7",
+        "buy-buttons-8",
+        "divider-9"
+      ],
+      "disabled": true,
+      "settings": {
+        "product": "petromax-atago",
+        "select_first_variant": true,
+        "media_ratio": "1",
+        "media_crop": "none",
+        "media_width": 50,
+        "enable_video_looping": false,
+        "enable_zoom": true,
+        "zoom_mode": "hover",
+        "hover_zoom": "large",
+        "color_scheme": "1",
+        "border_color": "rgba(0,0,0,0)",
+        "bg_color": "#ffffff"
+      }
+    },
+    "product-comparison-grid": {
+      "type": "product-comparison-grid",
+      "blocks": {
+        "comparison-product-1": {
+          "type": "product",
+          "settings": {
+            "show_image": true,
+            "show_title": true,
+            "show_button": true
+          }
+        },
+        "comparison-vendor-2": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "comparison-price-3": {
+          "type": "price",
+          "settings": {}
+        },
+        "comparison-description-4": {
+          "type": "description",
+          "settings": {
+            "truncate_description": false,
+            "words_to_show": 20
+          }
+        }
+      },
+      "block_order": [
+        "comparison-product-1",
+        "comparison-vendor-2",
+        "comparison-price-3",
+        "comparison-description-4"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Product comparison grid",
+        "text": "<p>Add content here to explain a bit about the range of products on offer and which ones may be most suitable for your customers.</p>",
+        "heading_align": "text-center",
+        "view_more_label": "View more",
+        "view_more_link": "",
+        "product_list": [],
+        "empty_field_text": "-",
+        "image_ratio": "shortest",
+        "image_crop": "center",
+        "num_rows": 0,
+        "color_scheme": "none",
+        "highlight_row": false
+      }
+    },
+    "logo_list_LqmA7Q": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_rzxHMP": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Aeropress_Logo.png",
+            "url": "shopify://collections/aeropress",
+            "logo_width": 150,
+            "text": "AeroPress"
+          }
+        },
+        "logo_aXVDeH": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Back_Country_Logo.png",
+            "url": "shopify://collections/back-country-cuisine",
+            "logo_width": 150,
+            "text": "Back Country"
+          }
+        },
+        "logo_NMcYhk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Beavercraft_Logo_1.png",
+            "url": "shopify://collections/beavercraft",
+            "logo_width": 150,
+            "text": "Beavercraft"
+          }
+        },
+        "logo_RDRBM9": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Black_Diamond_Logo.png",
+            "url": "shopify://collections/black-diamond",
+            "logo_width": 150,
+            "text": "Black Diamond"
+          }
+        },
+        "logo_8qLwqL": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Brave_Hardy_Logo_3.png",
+            "url": "shopify://collections/brave-hardy",
+            "logo_width": 150,
+            "text": "Brave Hardy"
+          }
+        },
+        "logo_qG664K": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Feuerhand_Logo.png",
+            "url": "shopify://collections/feuerhand",
+            "logo_width": 150,
+            "text": "Feuerhand"
+          }
+        },
+        "logo_mpNWaG": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Firemaple_Logo.png",
+            "url": "shopify://collections/fire-maple",
+            "logo_width": 150,
+            "text": "Fire Maple"
+          }
+        },
+        "logo_bY7Ek6": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/GSI_Logo.png",
+            "url": "shopify://collections/gsi-outdoors",
+            "logo_width": 150,
+            "text": "GSI Outdoors"
+          }
+        },
+        "logo_ciDUzA": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Hungry_Hiker_Logo.png",
+            "url": "shopify://collections/hungry-hiker",
+            "logo_width": 150,
+            "text": "Hungry Hiker"
+          }
+        },
+        "logo_NdmiyA": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Hydroflask_Logo.png",
+            "url": "shopify://collections/hydro-flask",
+            "logo_width": 150,
+            "text": "Hydro Flask"
+          }
+        },
+        "logo_geN4da": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Jetboil_Logo.png",
+            "url": "shopify://collections/jetboil",
+            "logo_width": 150,
+            "text": "Jetboil"
+          }
+        },
+        "logo_WtBnyP": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Kelty_Logo.png",
+            "url": "shopify://collections/kelty",
+            "logo_width": 150,
+            "text": "Kelty"
+          }
+        },
+        "logo_keCaDH": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Leatherman_Logo.png",
+            "url": "shopify://collections/leatherman",
+            "logo_width": 150,
+            "text": "Leatherman"
+          }
+        },
+        "logo_t9YGWr": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Leuchtturm1917_Logo.png",
+            "url": "shopify://collections/leuchtturm1917",
+            "logo_width": 150,
+            "text": "Leuchtturm1917"
+          }
+        },
+        "logo_FwEgta": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Lifestraw_Logo_839e90c1-9319-4c1d-8b37-40aab1745999.png",
+            "url": "shopify://collections/lifestraw",
+            "logo_width": 150,
+            "text": "LifeStraw"
+          }
+        },
+        "logo_eycAMT": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Nemo_Logo_9840915d-8c6b-4c73-b81a-c895076bf8b8.png",
+            "url": "shopify://collections/nemo",
+            "logo_width": 150,
+            "text": "Nemo"
+          }
+        },
+        "logo_yYWExF": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Nikwax.png",
+            "url": "shopify://collections/nikwax",
+            "logo_width": 150,
+            "text": "Nikwax"
+          }
+        },
+        "logo_WMbbV7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Omnia_Logo.png",
+            "url": "shopify://collections/omnia",
+            "logo_width": 150,
+            "text": "Omnia"
+          }
+        },
+        "logo_ammDd7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/OneTigris_Logo.png",
+            "url": "shopify://collections/onetigris",
+            "logo_width": 150,
+            "text": "OneTigris"
+          }
+        },
+        "logo_GWmmfV": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Opinel_Logo.png",
+            "url": "shopify://collections/opinel",
+            "logo_width": 150,
+            "text": "Opinel"
+          }
+        },
+        "logo_YVrm3D": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Outdoor_Elements_Logo.png",
+            "url": "shopify://collections/outdoor-elements",
+            "logo_width": 150,
+            "text": "Outdoor Elements"
+          }
+        },
+        "logo_rLVntB": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Petromax_Logo_c59250de-00c4-44af-8254-a9c58d2033e3.png",
+            "url": "shopify://collections/petromax",
+            "logo_width": 150,
+            "text": "Petromax"
+          }
+        },
+        "logo_8xeFDr": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Primus_Logo.png",
+            "url": "shopify://collections/primus",
+            "logo_width": 150,
+            "text": "Primus"
+          }
+        },
+        "logo_R7R6pa": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Scrubba_Logo.png",
+            "url": "shopify://collections/scrubba",
+            "logo_width": 150,
+            "text": "Scrubba Washbag"
+          }
+        },
+        "logo_8reC8b": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Sea_To_Summit_Logo_ded93eb7-8a97-42aa-86a1-9f0c7262e4d4.png",
+            "url": "shopify://collections/sea-to-summit",
+            "logo_width": 150,
+            "text": "Sea To Summit"
+          }
+        },
+        "logo_TVUQLx": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Silva_Logo.png",
+            "url": "shopify://collections/silva",
+            "logo_width": 150,
+            "text": "Silva"
+          }
+        },
+        "logo_qUrYxJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Slingsby_Maps_Logo.png",
+            "url": "shopify://collections/slingsby-maps",
+            "logo_width": 150,
+            "text": "Slingsby Maps"
+          }
+        },
+        "logo_4jTxVQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Southland_Coffee.png",
+            "url": "shopify://collections/southland-coffee",
+            "logo_width": 150,
+            "text": "Southland Coffee"
+          }
+        },
+        "logo_x8K9mm": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Stanley_Logo.png",
+            "url": "shopify://collections/stanley",
+            "logo_width": 150,
+            "text": "Stanley"
+          }
+        },
+        "logo_PTahbH": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Tankwa_Logo.png",
+            "url": "shopify://collections/tankwa",
+            "logo_width": 150,
+            "text": "Tankwa Mats"
+          }
+        },
+        "logo_FTa8ym": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Thermopro_Logo.png",
+            "url": "shopify://collections/thermopro",
+            "logo_width": 150,
+            "text": "ThermoPro"
+          }
+        },
+        "logo_jYh3HB": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/TTTM_Logo_aea7c885-f264-4239-9c8f-d3535698276e.png",
+            "url": "shopify://collections/ticket-to-the-moon",
+            "logo_width": 150,
+            "text": "Ticket To The Moon"
+          }
+        },
+        "logo_mLLewD": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Toaks_Logo.png",
+            "url": "shopify://collections/toaks",
+            "logo_width": 150,
+            "text": "Toaks"
+          }
+        },
+        "logo_MrmGyx": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Tracks_4_Africa_Logo.png",
+            "url": "shopify://collections/tracks4africa",
+            "logo_width": 150,
+            "text": "Tracks4Africa"
+          }
+        },
+        "logo_fQTWWM": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Tangia_Logo.png",
+            "url": "shopify://collections/trangia",
+            "logo_width": 150,
+            "text": "Trangia"
+          }
+        },
+        "logo_rjTUXB": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Wacaco_Logo_1.png",
+            "url": "shopify://collections/wacaco",
+            "logo_width": 150,
+            "text": "Wacaco"
+          }
+        }
+      },
+      "block_order": [
+        "logo_rzxHMP",
+        "logo_aXVDeH",
+        "logo_NMcYhk",
+        "logo_RDRBM9",
+        "logo_8qLwqL",
+        "logo_qG664K",
+        "logo_mpNWaG",
+        "logo_bY7Ek6",
+        "logo_ciDUzA",
+        "logo_NdmiyA",
+        "logo_geN4da",
+        "logo_WtBnyP",
+        "logo_keCaDH",
+        "logo_t9YGWr",
+        "logo_FwEgta",
+        "logo_eycAMT",
+        "logo_yYWExF",
+        "logo_WMbbV7",
+        "logo_ammDd7",
+        "logo_GWmmfV",
+        "logo_YVrm3D",
+        "logo_rLVntB",
+        "logo_8xeFDr",
+        "logo_R7R6pa",
+        "logo_8reC8b",
+        "logo_TVUQLx",
+        "logo_qUrYxJ",
+        "logo_4jTxVQ",
+        "logo_x8K9mm",
+        "logo_PTahbH",
+        "logo_FTa8ym",
+        "logo_jYh3HB",
+        "logo_mLLewD",
+        "logo_MrmGyx",
+        "logo_fQTWWM",
+        "logo_rjTUXB"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_align": "text-start",
+        "button_label": "",
+        "button_link": "",
+        "layout": "grid",
+        "spacing": 32,
+        "logo_grid_align": "justify-center",
+        "color_scheme": "none",
+        "full_width": true
+      }
+    },
+    "media_with_text_7A66jq": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_Q8yGX4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Who are we?",
+            "heading_size": "h3",
+            "heading_h1": false
+          }
+        },
+        "text_UrwMAd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We started Brave Hardy after selling our business, Yuppiechef, in 2021. Now, we've flipped the switch on a new crazy adventure with Brave Hardy, an outdoor distribution and retail company founded in 2023.</p>",
+            "enlarge_text": true
+          }
+        },
+        "button_NitzTa": {
+          "type": "button",
+          "settings": {
+            "button_label": "More About US",
+            "button_link": "shopify://pages/about-us",
+            "button_style": "btn btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Q8yGX4",
+        "text_UrwMAd",
+        "button_NitzTa"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/andrew_shane.png",
+        "video_external": "",
+        "video_description": "",
+        "video_autoplay": false,
+        "layout": "left",
+        "image_fit": "contain",
+        "media_width": 50,
+        "media_scale": 100,
+        "text_align": "text-start",
+        "color_scheme": "1",
+        "only_content_color_scheme": false
+      }
+    },
+    "testimonials_YXetqj": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_BXKz6P": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>Products I ordered are top class. The whole process from ordering to delivery was perfect, no hassle at all.</p>",
+            "author": "Chris B.",
+            "author_info": "April 2025",
+            "show_star_rating": true,
+            "star_rating": 5
+          }
+        },
+        "testimonial_rWBRKc": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>Excellent! I wish everything in South Africa was as good as your services! Thank you.</p>",
+            "author": "Yolande Van D",
+            "author_info": "8 Jan 2025",
+            "show_star_rating": true,
+            "star_rating": 5
+          }
+        },
+        "testimonial_cJ9aXJ": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>My Dutch oven is absolutely fabulous at this moment I'm baking a sourdough bread on coals. Best buy ever. Best service and swift delivery also. Thank you very much 👍😊</p>",
+            "author": "Inalize L",
+            "author_info": "Jan 2025",
+            "show_star_rating": true,
+            "star_rating": 5
+          }
+        },
+        "testimonial_8mqG6f": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>I ordered a gas stove, toaks titanium pot and gas cannister. Items arrived quickly and well packed. Great communication throughout the process, and high quality products.</p>",
+            "author": "Roger P",
+            "author_info": "Oct 2024",
+            "show_star_rating": true,
+            "star_rating": 5
+          }
+        },
+        "testimonial_yVRHxP": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>quick easy service and speedy delivery</p>",
+            "author": "Louis F",
+            "author_info": "Aug 2024",
+            "show_star_rating": true,
+            "star_rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_BXKz6P",
+        "testimonial_rWBRKc",
+        "testimonial_cJ9aXJ",
+        "testimonial_8mqG6f",
+        "testimonial_yVRHxP"
+      ],
+      "settings": {
+        "heading": "What our customers are saying",
+        "show_quotes": true,
+        "testimonial_size": "h5",
+        "text_position": "justify-center",
+        "text_align": "text-center justify-center",
+        "nav_style": "arrows",
+        "transition": "slide-fade",
+        "autoplay": true,
+        "slider_pause": false,
+        "autoplay_speed": 9,
+        "color_scheme": "1",
+        "full_width": true
+      }
+    },
+    "rich_text_tcdCn3": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_x8dGbG": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": ""
+          }
+        },
+        "heading_pqPgMU": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "What our customers are saying",
+            "heading_size": "h3",
+            "heading_h1": false
+          }
+        },
+        "text_6URQ7i": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>We’re proud to have earned <strong>70+ Five-Star reviews</strong> from customers who trust our gear and love our service. <br/>Your feedback means the world to us!</p>",
+            "enlarge_text": true
+          }
+        },
+        "button_cz4JQd": {
+          "type": "button",
+          "settings": {
+            "button_1_label": "READ ALL GOOGLE REVIEWS",
+            "button_1_link": "https://www.google.com/storepages?q=bravehardy.com&c=ZA",
+            "button_1_style": "btn--primary",
+            "button_2_label": "",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_x8dGbG",
+        "heading_pqPgMU",
+        "text_6URQ7i",
+        "button_cz4JQd"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_position": "justify-center",
+        "text_align": "text-center",
+        "mob_center_text": true,
+        "wide": false,
+        "color_scheme": "1",
+        "full_width": true,
+        "prevent_animation": true
+      }
+    },
+    "171448965465b283c7": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_p8LA9r": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_p8LA9r"
+      ],
+      "settings": {
+        "full_width": true
+      }
+    },
+    "rich_text_pQrahU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RQma7n": {
+          "type": "heading",
+          "settings": {
+            "heading": "Gear for life outside.",
+            "heading_size": "h2",
+            "heading_h1": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_RQma7n"
+      ],
+      "settings": {
+        "text_position": "justify-center",
+        "text_align": "text-center",
+        "mob_center_text": true,
+        "wide": false,
+        "color_scheme": "none",
+        "full_width": true,
+        "prevent_animation": false
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "icons_with_text_XRMQHC",
+    "rich_text_rmniq3",
+    "featured_product_QVp63g",
+    "media_grid_dedKQa",
+    "featured_collection_hErbzL",
+    "featured_collection_yhH8RU",
+    "featured_collection_tGnEpq",
+    "featured_collection_93pAAi",
+    "featured-collection",
+    "7a43afd5-ee2f-4bff-9ad2-6b370d4a4bf2",
+    "image-banner",
+    "media-grid",
+    "product-features",
+    "featured-product",
+    "product-comparison-grid",
+    "logo_list_LqmA7Q",
+    "media_with_text_7A66jq",
+    "testimonials_YXetqj",
+    "rich_text_tcdCn3",
+    "171448965465b283c7",
+    "rich_text_pQrahU"
+  ]
+}

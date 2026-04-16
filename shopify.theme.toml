@@ -1,0 +1,6 @@
+# Brave Hardy (108fdd-3) — use from this repo root.
+# Run: shopify theme dev | shopify theme pull | shopify theme push
+# Docs: https://shopify.dev/docs/storefronts/themes/tools/cli/environments
+
+[environments.default]
+store = "108fdd-3"

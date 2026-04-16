@@ -1,0 +1,597 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "0eaadff1-ed54-41ae-b175-6fe1053fa0e5": {
+      "type": "image-banner",
+      "blocks": {
+        "subheading_TarpwD": {
+          "type": "subheading",
+          "settings": {
+            "text": "EXCLUSIVE TO BRAVE HARDY"
+          }
+        },
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.title }}",
+            "heading_size": "h1",
+            "heading_h1": true
+          }
+        },
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "{{ collection.metafields.custom.short_description | metafield_tag }}",
+            "enlarge_text": true
+          }
+        },
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_1_label": "Optional button",
+            "button_1_link": "",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "Optional button",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_TarpwD",
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-heading-1",
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-text-1",
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-button-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_desktop": "{{ collection.metafields.custom.banner_image.value }}",
+        "url": "",
+        "height_mode": "fixed",
+        "fixed_height_desktop": 500,
+        "fixed_height_mobile": 350,
+        "overlay_position": "justify-center items-center",
+        "overlay_text_align": "text-center",
+        "mob_center_text": false,
+        "mobile_stacked": false,
+        "color_scheme": "white",
+        "full_width": true,
+        "transparent_content_color": "#ffffff",
+        "tint_color": "#000000",
+        "tint_opacity": 40,
+        "prevent_animation": false
+      }
+    },
+    "collection-banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_title": true,
+        "show_product_count": true,
+        "show_collection_description": true,
+        "text_align": "items-center text-center",
+        "collection_image": "none",
+        "use_product_image": false,
+        "text_width": "standard",
+        "color_scheme": "default"
+      }
+    },
+    "collection_list_dj9yPc": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_6rrLK3": {
+          "type": "collection",
+          "settings": {
+            "collection": "petromax-cookware",
+            "image": "shopify://shop_images/Feuertopf_dutch_Oven_ft9_3_5a34664f-e313-4361-87f0-1e784561d080_1.webp"
+          }
+        },
+        "collection_6a4HGh": {
+          "type": "collection",
+          "settings": {
+            "collection": "petromax-fire-grill",
+            "image": "shopify://shop_images/atago_-_firepit.jpg"
+          }
+        },
+        "collection_Y4p9cE": {
+          "type": "collection",
+          "settings": {
+            "collection": "petromax-coffee-tea",
+            "image": "shopify://shop_images/perkomax-coffeetea-percolator-petromax-pm-per-9-s-962544.jpg"
+          }
+        },
+        "collection_ErUa3b": {
+          "type": "collection",
+          "settings": {
+            "collection": "petromax-dinnerware-utensils",
+            "image": "shopify://shop_images/za2_4.jpg"
+          }
+        },
+        "collection_YQXb6b": {
+          "type": "collection",
+          "settings": {
+            "collection": "petromax-storage-accessories",
+            "image": "shopify://shop_images/transport-bag-for-dutch-oven-petromax-pm-ft-ta-m-571323.jpg"
+          }
+        },
+        "collection_i9EeN3": {
+          "type": "collection",
+          "settings": {
+            "collection": "petromax-lanterns",
+            "image": "shopify://shop_images/radi-126-c-detail-waermeaufsatz-gluehen-1080x1080.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "collection_6rrLK3",
+        "collection_6a4HGh",
+        "collection_Y4p9cE",
+        "collection_ErUa3b",
+        "collection_YQXb6b",
+        "collection_i9EeN3"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "",
+        "heading_align": "text-start",
+        "button_label": "",
+        "button_link": "",
+        "layout": "carousel",
+        "card_size": "small",
+        "use_product_image": false,
+        "circle_image": true,
+        "show_border": false,
+        "color_scheme": "1",
+        "full_width": true
+      }
+    },
+    "collection-products": {
+      "type": "main-collection-products",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 50,
+        "card_size_mobile": "small",
+        "card_size": "medium",
+        "show_layout_toggle": true,
+        "enable_filtering": true,
+        "filters_open_lg": true,
+        "stick_on_scroll": true,
+        "show_filter_counts": true,
+        "expand_filters": true,
+        "max_filter_options": 50,
+        "enable_sorting": true,
+        "sort_show_featured": false,
+        "sort_show_best": true,
+        "sort_show_alpha": true,
+        "sort_show_price": true,
+        "sort_show_date": true,
+        "sort_first": true
+      }
+    },
+    "featured_collection_R3qL4B": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Cookware",
+        "heading_align": "text-start",
+        "show_view_all": true,
+        "collection": "petromax-cookware",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "products_to_show": 24,
+        "show_highlight_products": true,
+        "show_promo_info": false,
+        "image_ratio": "fill",
+        "promo_title": "",
+        "content": "",
+        "link_url": "",
+        "button_label": "",
+        "color_scheme": "1",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "featured_collection_aGUdY9": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Fire & Grill",
+        "heading_align": "text-start",
+        "show_view_all": true,
+        "collection": "petromax-fire-grill",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "products_to_show": 24,
+        "show_highlight_products": true,
+        "show_promo_info": false,
+        "image_ratio": "fill",
+        "promo_title": "A headline to grab attention",
+        "content": "<p>Use this card with an image to highlight your collections or introduce a promotion.</p>",
+        "link_url": "",
+        "button_label": "Button",
+        "color_scheme": "2",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "featured_collection_n4bYXn": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Coffee & Tea",
+        "heading_align": "text-start",
+        "show_view_all": true,
+        "collection": "petromax-coffee-tea",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "products_to_show": 24,
+        "show_highlight_products": true,
+        "show_promo_info": false,
+        "image_ratio": "fill",
+        "promo_title": "A headline to grab attention",
+        "content": "<p>Use this card with an image to highlight your collections or introduce a promotion.</p>",
+        "link_url": "",
+        "button_label": "Button",
+        "color_scheme": "2",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "featured_collection_ihXBtN": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Dinnerware & Utensils",
+        "heading_align": "text-start",
+        "show_view_all": true,
+        "collection": "petromax-dinnerware-utensils",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "products_to_show": 24,
+        "show_highlight_products": true,
+        "show_promo_info": false,
+        "image_ratio": "fill",
+        "promo_title": "A headline to grab attention",
+        "content": "<p>Use this card with an image to highlight your collections or introduce a promotion.</p>",
+        "link_url": "",
+        "button_label": "Button",
+        "color_scheme": "2",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "featured_collection_8dQAnq": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Storage & Accessories",
+        "heading_align": "text-start",
+        "show_view_all": true,
+        "collection": "petromax-storage-accessories",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "products_to_show": 24,
+        "show_highlight_products": true,
+        "show_promo_info": false,
+        "image_ratio": "fill",
+        "promo_title": "A headline to grab attention",
+        "content": "<p>Use this card with an image to highlight your collections or introduce a promotion.</p>",
+        "link_url": "",
+        "button_label": "Button",
+        "color_scheme": "2",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "featured_collection_dXzYXf": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Lanterns",
+        "heading_align": "text-start",
+        "show_view_all": true,
+        "collection": "petromax-lanterns",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "products_to_show": 24,
+        "show_highlight_products": true,
+        "show_promo_info": false,
+        "image_ratio": "fill",
+        "promo_title": "A headline to grab attention",
+        "content": "<p>Use this card with an image to highlight your collections or introduce a promotion.</p>",
+        "link_url": "",
+        "button_label": "Button",
+        "color_scheme": "2",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "f63369e8-b12a-4f6c-a4e6-ad528fe80958": {
+      "type": "product-comparison-grid",
+      "blocks": {
+        "template--17177354698999__f63369e8-b12a-4f6c-a4e6-ad528fe80958-product-1": {
+          "type": "product",
+          "settings": {
+            "show_image": true,
+            "show_title": true,
+            "show_button": true
+          }
+        },
+        "1998a18e-c86b-4d43-945e-393790ab75c5": {
+          "type": "metafield",
+          "settings": {
+            "title": "Description",
+            "metafield_key": "custom.teaser"
+          }
+        },
+        "template--17177354698999__f63369e8-b12a-4f6c-a4e6-ad528fe80958-price-1": {
+          "type": "price",
+          "settings": {}
+        },
+        "77e00e95-afa3-42c0-94a2-764e6597b1de": {
+          "type": "weight",
+          "settings": {}
+        },
+        "a687fe76-8ed6-4a67-8d51-b6bd77a17f33": {
+          "type": "variant_option",
+          "settings": {
+            "title": "Colour"
+          }
+        },
+        "a195695b-b5c7-40e0-83e5-2f1093dbfcd9": {
+          "type": "metafield",
+          "settings": {
+            "title": "Specifications",
+            "metafield_key": "custom.specifications"
+          }
+        },
+        "645bca16-bb34-4eaf-8c66-5bca695c1e82": {
+          "type": "metafield",
+          "settings": {
+            "title": "Features",
+            "metafield_key": "custom.features"
+          }
+        }
+      },
+      "block_order": [
+        "template--17177354698999__f63369e8-b12a-4f6c-a4e6-ad528fe80958-product-1",
+        "1998a18e-c86b-4d43-945e-393790ab75c5",
+        "template--17177354698999__f63369e8-b12a-4f6c-a4e6-ad528fe80958-price-1",
+        "77e00e95-afa3-42c0-94a2-764e6597b1de",
+        "a687fe76-8ed6-4a67-8d51-b6bd77a17f33",
+        "a195695b-b5c7-40e0-83e5-2f1093dbfcd9",
+        "645bca16-bb34-4eaf-8c66-5bca695c1e82"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Product Comparison",
+        "text": "",
+        "heading_align": "text-center",
+        "view_more_label": "View details",
+        "view_more_link": "",
+        "product_list": "{{ collection.metafields.custom.comparison_matrix_products.value }}",
+        "empty_field_text": "-",
+        "image_ratio": "shortest",
+        "image_crop": "center",
+        "num_rows": 5,
+        "color_scheme": "none",
+        "highlight_row": false
+      }
+    },
+    "1704635614694d2551": {
+      "type": "apps",
+      "blocks": {
+        "61148900-7098-4034-93e9-d48b04bd1687": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "61148900-7098-4034-93e9-d48b04bd1687"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "d67a6710-0290-42eb-beb9-31f4be56f675": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "{{ section.settings.collection.title }}",
+        "heading_align": "text-start",
+        "show_view_all": true,
+        "collection": "{{ collection.metafields.custom.secondary_collection.value }}",
+        "layout": "grid",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "products_to_show": 24,
+        "show_highlight_products": true,
+        "show_promo_info": false,
+        "image_ratio": "fill",
+        "promo_title": "A headline to grab attention",
+        "content": "<p>Use this card with an image to highlight your collections or introduce a promotion.</p>",
+        "link_url": "",
+        "button_label": "Button",
+        "color_scheme": "2",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "media_grid_8bPm3a": {
+      "type": "media-grid",
+      "blocks": {
+        "media_GcnPTH": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Z7A4223.jpg",
+            "link_url": "shopify://products/petromax-atago",
+            "columns": 2,
+            "rows": 2,
+            "subheading": "",
+            "title": "<p>Atago Grill & Fire Pit</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 25
+          }
+        },
+        "media_JVLzyC": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/dutch-oven-petromax-pm-ft6-t-367913.jpg",
+            "link_url": "shopify://products/petromax-dutch-oven",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Potjie</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 25
+          }
+        },
+        "media_nWeYeT": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Petromax_Feuerrohr_frh100_4.webp",
+            "link_url": "shopify://products/petromax-fire-blow-pipe",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Fire Blow Pipe</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 25
+          }
+        },
+        "media_jnafqd": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/perkomax-coffeetea-percolator-petromax-pm-per-9-s-962544.jpg",
+            "link_url": "shopify://products/petromax-tea-and-coffee-percolator-perkomax",
+            "columns": 2,
+            "rows": 1,
+            "subheading": "",
+            "title": "<p>Perkomax Percolator</p>",
+            "heading_size": "h5",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 25
+          }
+        }
+      },
+      "block_order": [
+        "media_GcnPTH",
+        "media_JVLzyC",
+        "media_nWeYeT",
+        "media_jnafqd"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_align": "text-start",
+        "button_label": "",
+        "button_link": "",
+        "gallery_cols_max": 4,
+        "mobile_carousel": false,
+        "gallery_cols_min": "1",
+        "fixed_height_desktop": 180,
+        "fixed_height_mobile": 300,
+        "section_color_scheme": "1",
+        "color_scheme": "white",
+        "transparent_content_color": "#ffffff"
+      }
+    },
+    "media_with_text_tE9eYd": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_f7R9pf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Petromax Story",
+            "heading_size": "h3",
+            "heading_h1": false
+          }
+        },
+        "text_6kPLTg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Since 1910, Petromax has fueled a passion for adventure with our top-tier outdoor living, cooking, and lighting gear. From the legendary Dutch Oven to durable firepits and grills, their products are built for the brave. Crafted for resistance, durability, and versatility - because they're adventurers, just like you. </p><p>Berlin's MaxGraetz developed the renowned high-pressure lamp, giving birth to the Petromax brand. Named after Graetz's nickname, \"Petroleum Maxe,\" the brand has been dedicated to bringing independence to everyday life through innovative technology and a passion for fire. </p><p>Today, Petromax remains true to this vision, inspiring outdoor cooking and experiences. </p>",
+            "enlarge_text": false
+          }
+        },
+        "button_kDG6Ut": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Optional button",
+            "button_link": "",
+            "button_style": "btn btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_f7R9pf",
+        "text_6kPLTg",
+        "button_kDG6Ut"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/petromax_DU.png",
+        "video_external": "",
+        "video_description": "",
+        "video_autoplay": false,
+        "layout": "left",
+        "image_fit": "contain",
+        "media_width": 50,
+        "media_scale": 100,
+        "text_align": "text-start",
+        "color_scheme": "none",
+        "only_content_color_scheme": false
+      }
+    }
+  },
+  "order": [
+    "0eaadff1-ed54-41ae-b175-6fe1053fa0e5",
+    "collection-banner",
+    "collection_list_dj9yPc",
+    "collection-products",
+    "featured_collection_R3qL4B",
+    "featured_collection_aGUdY9",
+    "featured_collection_n4bYXn",
+    "featured_collection_ihXBtN",
+    "featured_collection_8dQAnq",
+    "featured_collection_dXzYXf",
+    "f63369e8-b12a-4f6c-a4e6-ad528fe80958",
+    "1704635614694d2551",
+    "d67a6710-0290-42eb-beb9-31f4be56f675",
+    "media_grid_8bPm3a",
+    "media_with_text_tE9eYd"
+  ]
+}

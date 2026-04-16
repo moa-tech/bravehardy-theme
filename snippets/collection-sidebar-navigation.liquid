@@ -1,0 +1,130 @@
+{% doc %}
+  Renders child collection links for the current collection from the main menu.
+
+  @param {collection} collection - The current collection object
+  @param {boolean} [expand_filters] - Whether the disclosure should be open by default
+  @param {number} [max_filter_options] - Maximum visible child links before collapsing
+
+  @example
+  {% render 'collection-sidebar-navigation',
+    collection: collection,
+    expand_filters: section.settings.expand_filters,
+    max_filter_options: section.settings.max_filter_options
+  %}
+{% enddoc %}
+
+{%- liquid
+  assign current_menu_link = blank
+  assign main_menu = linklists['main-menu']
+
+  if main_menu != blank
+    for top_link in main_menu.links
+      if top_link.type == 'collection_link'
+        if top_link.object
+          if top_link.object.handle == collection.handle
+            assign current_menu_link = top_link
+            break
+          endif
+        endif
+      endif
+
+      for child_link in top_link.links
+        if child_link.type == 'collection_link'
+          if child_link.object
+            if child_link.object.handle == collection.handle
+              assign current_menu_link = child_link
+              break
+            endif
+          endif
+        endif
+
+        for grandchild_link in child_link.links
+          if grandchild_link.type == 'collection_link'
+            if grandchild_link.object
+              if grandchild_link.object.handle == collection.handle
+                assign current_menu_link = grandchild_link
+                break
+              endif
+            endif
+          endif
+        endfor
+
+        if current_menu_link != blank
+          break
+        endif
+      endfor
+
+      if current_menu_link != blank
+        break
+      endif
+    endfor
+  endif
+-%}
+
+{%- if current_menu_link != blank and current_menu_link.links.size > 0 -%}
+  <details-disclosure>
+    <details class="filter disclosure" id="filter-subcategories"{% if expand_filters %} open{% endif %}>
+      <summary class="filter__toggle">
+        <div class="flex justify-between items-center">
+          <span class="flex-auto font-bold">{{ 'products.filtering.subcategories' | t }}</span>
+          <span class="disclosure__toggle">
+            {%- if settings.disclosure_toggle == 'plus' -%}
+              {% render 'icon-plus' %}
+            {%- else -%}
+              {% render 'icon-chevron-down' %}
+            {%- endif -%}
+          </span>
+        </div>
+      </summary>
+      <div class="disclosure__panel has-motion">
+        <div class="disclosure__content">
+          <div class="filter__content">
+            <ul role="list">
+              {%- for child_link in current_menu_link.links -%}
+                <li{% if forloop.index > max_filter_options %} class="js-hidden"{% endif %}>
+                  <a
+                    href="{{ child_link.url }}"
+                    class="filter__label flex items-start w-full m-0 text-current js-preserve-collection-filters"
+                    {% if settings.preload_links %} data-no-instant{% endif %}
+                  >
+                    <span class="flex-auto">{{ child_link.title | escape }}</span>
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+
+          <div class="disclosure__show-more flex relative items-center">
+            {%- if current_menu_link.links.size > max_filter_options -%}
+              <button type="button" class="filter__more link text-current text-sm js-show-more">
+                {{- 'products.filtering.show_more' | t -}}
+              </button>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </details>
+  </details-disclosure>
+{%- endif -%}
+
+{% javascript %}
+  (() => {
+    const childLinks = document.querySelectorAll('.js-preserve-collection-filters');
+
+    if (!childLinks.length) return;
+
+    const params = new URLSearchParams(window.location.search);
+    params.delete('page');
+
+    const queryString = params.toString();
+    if (!queryString) return;
+
+    childLinks.forEach((link) => {
+      const url = new URL(link.href, window.location.origin);
+      params.forEach((value, key) => {
+        url.searchParams.set(key, value);
+      });
+      link.href = url.pathname + url.search + url.hash;
+    });
+  })();
+{% endjavascript %}

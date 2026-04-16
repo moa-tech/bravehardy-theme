@@ -1,0 +1,70 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_title": true,
+        "show_product_count": true,
+        "show_collection_description": true,
+        "text_align": "items-center text-center",
+        "collection_image": "none",
+        "use_product_image": false,
+        "text_width": "wide",
+        "color_scheme": "default"
+      }
+    },
+    "collection-products": {
+      "type": "main-collection-products",
+      "settings": {
+        "products_per_page": 24,
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "show_layout_toggle": true,
+        "enable_filtering": true,
+        "filters_open_lg": true,
+        "stick_on_scroll": true,
+        "show_filter_counts": true,
+        "expand_filters": true,
+        "max_filter_options": 10,
+        "enable_sorting": true,
+        "sort_show_featured": false,
+        "sort_show_best": true,
+        "sort_show_alpha": true,
+        "sort_show_price": true,
+        "sort_show_date": true,
+        "sort_first": true
+      }
+    },
+    "1770200266623b6a0e": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_aac40b4_AmxnqL": {
+          "type": "ai_gen_block_aac40b4",
+          "settings": {
+            "desktop_height": 30,
+            "mobile_height": 30
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_aac40b4_AmxnqL"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "collection-banner",
+    "collection-products",
+    "1770200266623b6a0e"
+  ]
+}

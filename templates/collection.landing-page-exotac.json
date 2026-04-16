@@ -1,0 +1,267 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "0eaadff1-ed54-41ae-b175-6fe1053fa0e5": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.title }}",
+            "heading_size": "h1",
+            "heading_h1": false
+          }
+        },
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ collection.metafields.custom.short_description | metafield_tag }}</p>",
+            "enlarge_text": true
+          }
+        },
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_1_label": "Optional button",
+            "button_1_link": "",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "Optional button",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-heading-1",
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-text-1",
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-button-1"
+      ],
+      "settings": {
+        "image_desktop": "{{ collection.metafields.custom.banner_image.value }}",
+        "url": "",
+        "height_mode": "fixed",
+        "fixed_height_desktop": 500,
+        "fixed_height_mobile": 350,
+        "overlay_position": "justify-center items-center",
+        "overlay_text_align": "text-center",
+        "mob_center_text": false,
+        "mobile_stacked": false,
+        "color_scheme": "white",
+        "full_width": true,
+        "transparent_content_color": "#ffffff",
+        "tint_color": "#000000",
+        "tint_opacity": 40,
+        "prevent_animation": false
+      }
+    },
+    "collection-banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_title": true,
+        "show_product_count": true,
+        "show_collection_description": true,
+        "text_align": "text-start",
+        "collection_image": "none",
+        "use_product_image": false,
+        "text_width": "standard",
+        "color_scheme": "default"
+      }
+    },
+    "collection-products": {
+      "type": "main-collection-products",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 16,
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "show_layout_toggle": true,
+        "enable_filtering": true,
+        "filters_open_lg": true,
+        "stick_on_scroll": true,
+        "show_filter_counts": true,
+        "expand_filters": true,
+        "max_filter_options": 7,
+        "enable_sorting": true,
+        "sort_first": true
+      }
+    },
+    "d67a6710-0290-42eb-beb9-31f4be56f675": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_align": "text-start",
+        "show_view_all": false,
+        "collection": "exotac",
+        "layout": "grid",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "products_to_show": 24,
+        "show_promo_info": true,
+        "image_ratio": "fill",
+        "promo_title": "Firestarters",
+        "content": "<p>These firestarters all have one thing in common: Ferrocerium.  This is a combination of rare-earth metals that create an immense shower of sparks when scraped with a sharp object.</p><p>They work when wet and are almost indestructible.</p>",
+        "link_url": "",
+        "button_label": "",
+        "color_scheme": "1",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "f63369e8-b12a-4f6c-a4e6-ad528fe80958": {
+      "type": "product-comparison-grid",
+      "blocks": {
+        "template--17177354698999__f63369e8-b12a-4f6c-a4e6-ad528fe80958-product-1": {
+          "type": "product",
+          "settings": {
+            "show_image": true,
+            "show_title": true,
+            "show_button": true
+          }
+        },
+        "1998a18e-c86b-4d43-945e-393790ab75c5": {
+          "type": "metafield",
+          "settings": {
+            "title": "Description",
+            "metafield_key": "custom.teaser"
+          }
+        },
+        "template--17177354698999__f63369e8-b12a-4f6c-a4e6-ad528fe80958-price-1": {
+          "type": "price",
+          "settings": {}
+        },
+        "77e00e95-afa3-42c0-94a2-764e6597b1de": {
+          "type": "weight",
+          "settings": {}
+        },
+        "a687fe76-8ed6-4a67-8d51-b6bd77a17f33": {
+          "type": "variant_option",
+          "settings": {
+            "title": "Colour"
+          }
+        },
+        "a195695b-b5c7-40e0-83e5-2f1093dbfcd9": {
+          "type": "metafield",
+          "settings": {
+            "title": "Specifications",
+            "metafield_key": "custom.specifications"
+          }
+        },
+        "645bca16-bb34-4eaf-8c66-5bca695c1e82": {
+          "type": "metafield",
+          "settings": {
+            "title": "Features",
+            "metafield_key": "custom.features"
+          }
+        }
+      },
+      "block_order": [
+        "template--17177354698999__f63369e8-b12a-4f6c-a4e6-ad528fe80958-product-1",
+        "1998a18e-c86b-4d43-945e-393790ab75c5",
+        "template--17177354698999__f63369e8-b12a-4f6c-a4e6-ad528fe80958-price-1",
+        "77e00e95-afa3-42c0-94a2-764e6597b1de",
+        "a687fe76-8ed6-4a67-8d51-b6bd77a17f33",
+        "a195695b-b5c7-40e0-83e5-2f1093dbfcd9",
+        "645bca16-bb34-4eaf-8c66-5bca695c1e82"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Product Comparison",
+        "text": "",
+        "heading_align": "text-center",
+        "view_more_label": "View details",
+        "view_more_link": "",
+        "product_list": "{{ collection.metafields.custom.comparison_matrix_products.value }}",
+        "empty_field_text": "-",
+        "image_ratio": "shortest",
+        "image_crop": "center",
+        "num_rows": 5,
+        "color_scheme": "none",
+        "highlight_row": false
+      }
+    },
+    "1704635614694d2551": {
+      "type": "apps",
+      "blocks": {
+        "61148900-7098-4034-93e9-d48b04bd1687": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "61148900-7098-4034-93e9-d48b04bd1687"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "media_with_text_tE9eYd": {
+      "type": "media-with-text",
+      "blocks": {
+        "heading_f7R9pf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Providing Safe, Comfortable, High Quality Products",
+            "heading_size": "h3",
+            "heading_h1": false
+          }
+        },
+        "text_6kPLTg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As a family-owned small business headquartered just outside of Atlanta, Georgia, Exotac has focused on merging sleek, attractive design with exceptional functionality in their outdoor products. With a commitment to engineering excellence, the company stays true to its roots by prioritising quality and innovation in everything they produce. </p><p>This dedication to both form and function has helped Exotac establish itself as a trusted name in the outdoor gear industry.</p>",
+            "enlarge_text": true
+          }
+        },
+        "button_kDG6Ut": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Optional button",
+            "button_link": "",
+            "button_style": "btn btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_f7R9pf",
+        "text_6kPLTg",
+        "button_kDG6Ut"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/titanlight-lifestyle-2.jpg",
+        "video_external": "",
+        "video_description": "",
+        "video_autoplay": false,
+        "layout": "left",
+        "image_fit": "contain",
+        "media_width": 50,
+        "media_scale": 100,
+        "text_align": "text-start",
+        "color_scheme": "none",
+        "only_content_color_scheme": false
+      }
+    }
+  },
+  "order": [
+    "0eaadff1-ed54-41ae-b175-6fe1053fa0e5",
+    "collection-banner",
+    "collection-products",
+    "d67a6710-0290-42eb-beb9-31f4be56f675",
+    "f63369e8-b12a-4f6c-a4e6-ad528fe80958",
+    "1704635614694d2551",
+    "media_with_text_tE9eYd"
+  ]
+}

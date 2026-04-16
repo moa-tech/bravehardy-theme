@@ -1,0 +1,115 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "settings": {
+        "title": "Our Brands",
+        "description": "<p>Dive into our handpicked selection of top-grade gear, where every stitch is a promise of durability, and every detail is a celebration of outdoor adventure.</p>",
+        "text_align": "items-center text-center",
+        "display_type": "selected",
+        "selected_collections": [
+          "aeropress",
+          "back-country-cuisine",
+          "beavercraft",
+          "bialetti",
+          "black-diamond",
+          "brave-hardy",
+          "feuerhand",
+          "fire-maple",
+          "govino",
+          "gsi-outdoors",
+          "hungry-hiker",
+          "hydro-flask",
+          "jetboil",
+          "kelty",
+          "leatherman",
+          "ledlenser",
+          "leuchtturm1917",
+          "lifestraw",
+          "lifesystems",
+          "lifeventure",
+          "omnia",
+          "onetigris",
+          "opinel",
+          "outdoor-elements",
+          "nemo",
+          "nikwax",
+          "petromax",
+          "primus",
+          "scrubba",
+          "sea-to-summit",
+          "silva",
+          "slingsby-maps",
+          "southland-coffee",
+          "stanley",
+          "tankwa",
+          "thermopro",
+          "ticket-to-the-moon",
+          "timemore",
+          "toaks",
+          "tracks4africa",
+          "trangia",
+          "wacaco"
+        ],
+        "collections_per_page": 50,
+        "card_size": "small",
+        "use_product_image": false
+      }
+    },
+    "rich_text_ed7RNn": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_efWxYQ": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Subheading"
+          }
+        },
+        "heading_wr8dgC": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Rich text headline",
+            "heading_size": "h2",
+            "heading_h1": false
+          }
+        },
+        "text_eA8q3Y": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We really love the gear we’ve put together here. It’s the kind of stuff we actually use when we head out ourselves.</p><p>If you’re starting your morning at camp, you’ll probably be reaching for the <a href=\"/collections/aeropress\" title=\"AeroPress\"><strong>AeroPress</strong></a>, <a href=\"/collections/bialetti\" title=\"Bialetti\"><strong>Bialetti</strong></a>, or <a href=\"/collections/timemore\" title=\"Timemore\"><strong>Timemore</strong></a>. Maybe a quick <a href=\"/collections/southland-coffee\" title=\"Southland Coffee\"><strong>Southland Coffee</strong></a> pour-over while you're heating water on a <a href=\"/collections/trangia\" title=\"Trangia\"><strong>Trangia</strong> </a>or stove. For meals, we’ve got <a href=\"/collections/back-country-cuisine\" title=\"Back Country Cuisine\"><strong>Back Country Cuisine</strong></a> and <a href=\"/collections/hungry-hiker\" title=\"Hungry Hiker\"><strong>Hungry Hiker</strong></a>—really good fuel for when you’re miles from anywhere. You can even bake a proper dinner in an <a href=\"/collections/omnia\" title=\"Omnia\"><strong>Omnia</strong></a> oven or use <a href=\"/collections/gsi-outdoors\" title=\"GSI Outdoors\"><strong>GSI Outdoors</strong></a> and <a href=\"/collections/wacaco\" title=\"Wacaco\"><strong>Wacaco</strong></a> for those little comforts that make a trip.</p><p>When it’s time to set up for the night, we trust <a href=\"/collections/kelty\" title=\"Kelty\"><strong>Kelty</strong></a>, <a href=\"/collections/nemo\" title=\"Nemo\"><strong>NEMO</strong></a>, and <a href=\"/collections/onetigris\" title=\"OneTigris\"><strong>OneTigris</strong></a> for solid shelters. You can hang out in a <a href=\"/collections/ticket-to-the-moon\" title=\"Ticket to the Moon\"><strong>Ticket to the Moon</strong></a> hammock or get cozy with <a href=\"/collections/sea-to-summit\" title=\"Sea To Summit\"><strong>Sea To Summit</strong></a> and <a href=\"/collections/stanley\" title=\"Stanley\"><strong>Stanley</strong></a> essentials. Lighting is a big deal, so we keep things bright with <a href=\"/collections/black-diamond\" title=\"Black Diamond\"><strong>Black Diamond</strong></a>, and those classic <a href=\"/collections/feuerhand\" title=\"Feuerhand\"><strong>Feuerhand</strong></a> lanterns. For the heavy lifting around the fire, <a href=\"/collections/petromax\" title=\"Petromax\"><strong>Petromax</strong></a>, <a href=\"/collections/fire-maple\" title=\"Fire Maple\"><strong>Fire Maple</strong></a>, and <a href=\"/collections/jetboil\" title=\"Jetboil\"><strong>Jetboil</strong></a> are absolute workhorses.</p><p>We’ve made sure the basics are covered, too. <a href=\"/collections/hydro-flask\" title=\"Hydro Flask\"><strong>Hydro Flask</strong></a> for cold water, <a href=\"/collections/lifestraw\" title=\"LifeStraw\"><strong>LifeStraw</strong></a> for the safe kind, and <a href=\"/collections/scrubba\" title=\"Scrubba\"><strong>Scrubba</strong></a> for when your clothes actually need a wash. If you like working with your hands, grab a knife from <a href=\"/collections/opinel\" title=\"Opinel\"><strong>Opinel</strong></a> or a carving tool from <a href=\"/collections/beavercraft\" title=\"BeaverCraft\"><strong>Beavercraft</strong></a>. A <a href=\"/collections/leatherman\" title=\"Leatherman\"><strong>Leatherman</strong></a> is always a good idea on your belt, and <a href=\"/collections/outdoor-elements\" title=\"Outdoor Elements\"><strong>Outdoor Elements</strong></a> or <a href=\"/collections/eco-lite\" title=\"Eco-Lite\"><strong>Eco-Lite</strong></a> help get the fire going.</p><p>Planning the route is half the fun, and <a href=\"/collections/silva\" title=\"Silva\"><strong>Silva</strong></a> compasses, <a href=\"/collections/slingsby-maps\" title=\"Slingsby Maps\"><strong>Slingsby Maps</strong></a>, and <a href=\"/collections/tracks4africa\" title=\"Tracks4Africa\"><strong>Tracks4Africa</strong></a> guides are the gold standard for that. Don’t forget the small details—<a href=\"/collections/leuchtturm1917\" title=\"Leuchtturm1917\"><strong>Leuchtturm1917</strong></a> for notes, <a href=\"/collections/thermopro\" title=\"ThermoPro\"><strong>ThermoPro</strong></a> for the perfect braai temp, and <a href=\"/collections/nikwax\" title=\"Nikwax\"><strong>Nikwax</strong></a> to keep your kit waterproof. We even have <a href=\"/collections/toaks\" title=\"Toaks\"><strong>Toaks</strong></a> titanium gear for the weight-savers, <a href=\"/collections/tankwa\" title=\"Tankwa\"><strong>Tankwa</strong></a> and <a href=\"/collections/govino\" title=\"Govino\"><strong>Govino</strong></a> for the sundowners, and a few bits from <a href=\"/collections/papillon\" title=\"Papillon\"><strong>Papillon</strong></a>. Of course, there’s our own <a href=\"/collections/brave-hardy\" title=\"Brave Hardy\"><strong>Brave Hardy</strong></a> merch to round it all off.</p><p>It’s high-quality gear, built for people who actually enjoy being out there. Explore the collection and find whatever you need for your next adventure.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_efWxYQ",
+        "heading_wr8dgC",
+        "text_eA8q3Y"
+      ],
+      "settings": {
+        "text_position": "justify-center",
+        "text_align": "text-center",
+        "mob_center_text": true,
+        "wide": true,
+        "color_scheme": "none",
+        "full_width": true,
+        "prevent_animation": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_ed7RNn"
+  ]
+}

@@ -1,0 +1,430 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "0eaadff1-ed54-41ae-b175-6fe1053fa0e5": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.title }}",
+            "heading_size": "h1",
+            "heading_h1": false
+          }
+        },
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ collection.metafields.custom.short_description | metafield_tag }}</p>",
+            "enlarge_text": true
+          }
+        },
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_1_label": "Optional button",
+            "button_1_link": "",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "Optional button",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-heading-1",
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-text-1",
+        "template--16994976563447__0eaadff1-ed54-41ae-b175-6fe1053fa0e5-button-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_desktop": "{{ collection.metafields.custom.banner_image.value }}",
+        "url": "",
+        "height_mode": "fixed",
+        "fixed_height_desktop": 500,
+        "fixed_height_mobile": 350,
+        "overlay_position": "justify-center items-center",
+        "overlay_text_align": "text-center",
+        "mob_center_text": false,
+        "mobile_stacked": false,
+        "color_scheme": "white",
+        "full_width": true,
+        "transparent_content_color": "#ffffff",
+        "tint_color": "#000000",
+        "tint_opacity": 10,
+        "prevent_animation": false
+      }
+    },
+    "collection-banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_title": true,
+        "show_product_count": true,
+        "show_collection_description": true,
+        "text_align": "items-center text-center",
+        "collection_image": "none",
+        "use_product_image": false,
+        "text_width": "wide",
+        "color_scheme": "default"
+      }
+    },
+    "collection_list_6zgP4i": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_chntYE": {
+          "type": "collection",
+          "settings": {
+            "collection": "coffee-tea",
+            "image": "shopify://shop_images/01MOKAEXPRESS_0dde0513-5956-42ab-a83e-e71efeb8ec0d.jpg"
+          }
+        },
+        "collection_BXtJ7N": {
+          "type": "collection",
+          "settings": {
+            "collection": "cookware"
+          }
+        },
+        "collection_LQdyTJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "coolers"
+          }
+        },
+        "collection_emhgrD": {
+          "type": "collection",
+          "settings": {
+            "collection": "cups-mugs"
+          }
+        },
+        "collection_6nnwXT": {
+          "type": "collection",
+          "settings": {
+            "collection": "dishes-utensils",
+            "image": "shopify://shop_images/Z7A2318.jpg"
+          }
+        },
+        "collection_PcAhep": {
+          "type": "collection",
+          "settings": {
+            "collection": "food",
+            "image": "shopify://shop_images/Back-Country-Cuisine-Freeze-Dri-Beef-Mince-Gluten-Free-160g.jpg"
+          }
+        },
+        "collection_QepTqj": {
+          "type": "collection",
+          "settings": {
+            "collection": "knives"
+          }
+        }
+      },
+      "block_order": [
+        "collection_chntYE",
+        "collection_BXtJ7N",
+        "collection_LQdyTJ",
+        "collection_emhgrD",
+        "collection_6nnwXT",
+        "collection_PcAhep",
+        "collection_QepTqj"
+      ],
+      "settings": {
+        "title": "",
+        "heading_align": "text-start",
+        "button_label": "",
+        "button_link": "",
+        "layout": "grid",
+        "card_size": "small",
+        "use_product_image": false,
+        "circle_image": true,
+        "show_border": false,
+        "color_scheme": "1",
+        "full_width": true
+      }
+    },
+    "collection-products": {
+      "type": "main-collection-products",
+      "blocks": {
+        "wide_promotion_zMJek9": {
+          "type": "wide-promotion",
+          "settings": {
+            "position": "top",
+            "view": "grid_list",
+            "hide_on_filter": true,
+            "min_height": 150,
+            "link_url": "",
+            "content": "<p>Promotion text</p>",
+            "text_type_scale": "--h4-font-size",
+            "text_width": 400,
+            "text_alignment": "justify-center items-center text-center",
+            "button_label": "",
+            "button_style": "btn btn--primary",
+            "text_color": "#ffffff",
+            "tint_color": "#000000",
+            "tint_opacity": 20
+          }
+        },
+        "image_promotion_XnJ6Vx": {
+          "type": "image-promotion",
+          "settings": {
+            "position": 1,
+            "view": "grid_list",
+            "hide_on_filter": true,
+            "min_height": 150,
+            "link_url": "",
+            "content": "<p>Promotion text</p>",
+            "text_type_scale": "1em",
+            "text_width": 400,
+            "text_alignment": "justify-center items-center text-center",
+            "button_label": "",
+            "button_style": "btn btn--secondary",
+            "text_color": "#ffffff",
+            "tint_color": "#000000",
+            "tint_opacity": 20
+          }
+        }
+      },
+      "block_order": [
+        "wide_promotion_zMJek9",
+        "image_promotion_XnJ6Vx"
+      ],
+      "disabled": true,
+      "settings": {
+        "products_per_page": 16,
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "show_layout_toggle": false,
+        "enable_filtering": false,
+        "filters_open_lg": true,
+        "stick_on_scroll": true,
+        "show_filter_counts": true,
+        "expand_filters": true,
+        "max_filter_options": 10,
+        "enable_sorting": false,
+        "sort_show_featured": false,
+        "sort_show_best": true,
+        "sort_show_alpha": true,
+        "sort_show_price": true,
+        "sort_show_date": true,
+        "sort_first": true
+      }
+    },
+    "featured_collection_R3qL4B": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Coffee & Tea",
+        "heading_align": "text-start",
+        "show_view_all": true,
+        "collection": "coffee-tea",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "products_to_show": 24,
+        "show_highlight_products": true,
+        "show_promo_info": true,
+        "image_ratio": "fill",
+        "promo_title": "Jetboil",
+        "content": "<p>Compact and highly efficient cooking systems crafted for those who demand high performance without sacrificing portability.</p>",
+        "link_url": "",
+        "button_label": "",
+        "color_scheme": "1",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "1704635614694d2551": {
+      "type": "apps",
+      "blocks": {
+        "61148900-7098-4034-93e9-d48b04bd1687": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "61148900-7098-4034-93e9-d48b04bd1687"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "d67a6710-0290-42eb-beb9-31f4be56f675": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "{{ section.settings.collection.title }}",
+        "heading_align": "text-start",
+        "show_view_all": true,
+        "collection": "{{ collection.metafields.custom.secondary_collection.value }}",
+        "layout": "grid",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "products_to_show": 24,
+        "show_highlight_products": true,
+        "show_promo_info": false,
+        "image_ratio": "fill",
+        "promo_title": "A headline to grab attention",
+        "content": "<p>Use this card with an image to highlight your collections or introduce a promotion.</p>",
+        "link_url": "",
+        "button_label": "Button",
+        "color_scheme": "2",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "collection_list_eRfJUF": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_8Uyf6p": {
+          "type": "collection",
+          "settings": {
+            "collection": "aeropress"
+          }
+        },
+        "collection_heRphk": {
+          "type": "collection",
+          "settings": {
+            "collection": "bialetti"
+          }
+        },
+        "collection_prfefA": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "exotac"
+          }
+        },
+        "collection_73Wmyc": {
+          "type": "collection",
+          "settings": {
+            "collection": "fire-maple"
+          }
+        },
+        "collection_ragrdj": {
+          "type": "collection",
+          "settings": {
+            "collection": "govino"
+          }
+        },
+        "collection_qdYXed": {
+          "type": "collection",
+          "settings": {
+            "collection": "gsi-outdoors"
+          }
+        },
+        "collection_BB3PjM": {
+          "type": "collection",
+          "settings": {
+            "collection": "hydro-flask",
+            "image": "shopify://shop_images/Hydroflask_Logo.png"
+          }
+        },
+        "collection_hXAVnH": {
+          "type": "collection",
+          "settings": {
+            "collection": "jetboil"
+          }
+        },
+        "collection_nVe8MA": {
+          "type": "collection",
+          "settings": {
+            "collection": "opinel"
+          }
+        },
+        "collection_rjgWhq": {
+          "type": "collection",
+          "settings": {
+            "collection": "petromax"
+          }
+        },
+        "collection_DXVNzR": {
+          "type": "collection",
+          "settings": {
+            "collection": "primus"
+          }
+        },
+        "collection_FXGaXA": {
+          "type": "collection",
+          "settings": {
+            "collection": "sea-to-summit",
+            "image": "shopify://shop_images/Sea_To_Summit_Logo_ded93eb7-8a97-42aa-86a1-9f0c7262e4d4.png"
+          }
+        },
+        "collection_mHpKUX": {
+          "type": "collection",
+          "settings": {
+            "collection": "stanley"
+          }
+        },
+        "collection_kRt43P": {
+          "type": "collection",
+          "settings": {
+            "collection": "timemore"
+          }
+        },
+        "collection_ABDRDD": {
+          "type": "collection",
+          "settings": {
+            "collection": "toaks"
+          }
+        },
+        "collection_AfgJj4": {
+          "type": "collection",
+          "settings": {
+            "collection": "wacaco"
+          }
+        }
+      },
+      "block_order": [
+        "collection_8Uyf6p",
+        "collection_heRphk",
+        "collection_prfefA",
+        "collection_73Wmyc",
+        "collection_ragrdj",
+        "collection_qdYXed",
+        "collection_BB3PjM",
+        "collection_hXAVnH",
+        "collection_nVe8MA",
+        "collection_rjgWhq",
+        "collection_DXVNzR",
+        "collection_FXGaXA",
+        "collection_mHpKUX",
+        "collection_kRt43P",
+        "collection_ABDRDD",
+        "collection_AfgJj4"
+      ],
+      "settings": {
+        "title": "Brands",
+        "heading_align": "text-start",
+        "button_label": "",
+        "button_link": "",
+        "layout": "grid",
+        "card_size": "medium",
+        "use_product_image": false,
+        "circle_image": false,
+        "show_border": true,
+        "color_scheme": "none",
+        "full_width": true
+      }
+    }
+  },
+  "order": [
+    "0eaadff1-ed54-41ae-b175-6fe1053fa0e5",
+    "collection-banner",
+    "collection_list_6zgP4i",
+    "collection-products",
+    "featured_collection_R3qL4B",
+    "1704635614694d2551",
+    "d67a6710-0290-42eb-beb9-31f4be56f675",
+    "collection_list_eRfJUF"
+  ]
+}

@@ -1,0 +1,190 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "7f0fe006-3e71-47ee-816f-a7b1dc837ed8": {
+      "type": "icons-with-text",
+      "blocks": {
+        "sections--16880100442359__7f0fe006-3e71-47ee-816f-a7b1dc837ed8-item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "heading": "Courier Delivery",
+            "text": "<p>Throughout South Africa</p>",
+            "link": "shopify://policies/shipping-policy"
+          }
+        },
+        "item_yFbhjG": {
+          "type": "item",
+          "settings": {
+            "icon": "lock",
+            "heading": "Secure Payments",
+            "text": "<p>Credit Card, Apple Pay, EFT</p>",
+            "link": ""
+          }
+        },
+        "sections--16880100442359__7f0fe006-3e71-47ee-816f-a7b1dc837ed8-item-3": {
+          "type": "item",
+          "settings": {
+            "icon": "return",
+            "heading": "Easy Returns",
+            "text": "<p>Hassle free returns policy</p>",
+            "link": "shopify://policies/refund-policy"
+          }
+        },
+        "sections--16880100442359__7f0fe006-3e71-47ee-816f-a7b1dc837ed8-item-4": {
+          "type": "item",
+          "settings": {
+            "icon": "chat_bubble",
+            "heading": "Helpful Support",
+            "text": "<p>Real people on chat or email</p>",
+            "link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "sections--16880100442359__7f0fe006-3e71-47ee-816f-a7b1dc837ed8-item-1",
+        "item_yFbhjG",
+        "sections--16880100442359__7f0fe006-3e71-47ee-816f-a7b1dc837ed8-item-3",
+        "sections--16880100442359__7f0fe006-3e71-47ee-816f-a7b1dc837ed8-item-4"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_align": "text-start",
+        "icon_size": 48,
+        "title_type_scale": "small",
+        "text_type_scale": "small",
+        "icon_position": "beside",
+        "mobile_stack": false,
+        "section_height": "small",
+        "color_scheme": "1",
+        "full_width": true,
+        "dividers": "none",
+        "prevent_animation": false
+      }
+    },
+    "icons-with-text": {
+      "type": "icons-with-text",
+      "blocks": {
+        "icons-with-text-1": {
+          "type": "item",
+          "settings": {
+            "icon": "chat_bubble",
+            "heading": "Visit our support center",
+            "text": "<p>Expert help & advice</p>",
+            "link": ""
+          }
+        },
+        "icons-with-text-2": {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "heading": "Check your order status",
+            "text": "<p>Updates & tracking</p>",
+            "link": ""
+          }
+        },
+        "icons-with-text-3": {
+          "type": "item",
+          "settings": {
+            "icon": "return",
+            "heading": "Returns & exchanges",
+            "text": "<p>All you need to know</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icons-with-text-1",
+        "icons-with-text-2",
+        "icons-with-text-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_align": "text-start",
+        "icon_size": 36,
+        "title_type_scale": "medium",
+        "text_type_scale": "medium",
+        "icon_position": "beside",
+        "mobile_stack": false,
+        "section_height": "small",
+        "color_scheme": "1",
+        "full_width": true,
+        "dividers": "border-top",
+        "prevent_animation": false
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/BH_-_website_logo_-_w_-_full_2025_ae049de6-b69d-4c1d-8399-666b639e5322.png",
+            "image_width": 240,
+            "heading": "Cape Town, South Africa",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "enable_follow_on_shop": false,
+            "show_social": true,
+            "text_align": "text-start"
+          }
+        },
+        "link-list-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "About Brave Hardy",
+            "menu": "about-footer-menu"
+          }
+        },
+        "link-list-2": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Need Help?",
+            "menu": "footer"
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "heading": "Newsletter Sign up",
+            "text": "<p>For big offers, brave stories, events and more.</p>",
+            "collapse_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "text",
+        "link-list-1",
+        "link-list-2",
+        "newsletter"
+      ],
+      "settings": {
+        "show_back_to_top": false,
+        "show_payment_icons": true,
+        "show_powered_by": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "secondary_menu": "",
+        "bg_color": "#3c3b2a",
+        "text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "7f0fe006-3e71-47ee-816f-a7b1dc837ed8",
+    "icons-with-text",
+    "footer"
+  ]
+}

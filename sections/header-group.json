@@ -1,0 +1,188 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement": {
+      "type": "announcement",
+      "blocks": {
+        "announcement-2": {
+          "type": "announcement",
+          "settings": {
+            "text": "<p><strong>What you see is what we have! Our real-time stock levels are 100% accurate.</strong></p>"
+          }
+        },
+        "729f6ce3-9f53-46f2-8146-9693a78c855b": {
+          "type": "announcement",
+          "settings": {
+            "text": "<p><strong>We deliver to your door, anywhere in South Africa.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "announcement-2",
+        "729f6ce3-9f53-46f2-8146-9693a78c855b"
+      ],
+      "settings": {
+        "link1": "shopify://pages/store",
+        "link1_label": "Visit Our Store",
+        "link2": "shopify://pages/contact",
+        "link2_label": "Contact Us",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "bg_color": "#090302",
+        "text_color": "#ffffff",
+        "text_type_scale": "small",
+        "read_time": 15
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "columns_NPhwqU": {
+          "type": "columns",
+          "settings": {
+            "title": "Camp & Hike, Brands",
+            "collection_images": "standard",
+            "collection_use_product_image": false,
+            "collection_circle_image": false,
+            "show_underline": false,
+            "promo_position": "bottom",
+            "promo_min_height": 200,
+            "promo_text_color": "#ffffff",
+            "promo_tint_color": "#000000",
+            "promo_tint_opacity": 20,
+            "promo1_content": "",
+            "promo1_link_url": "",
+            "promo1_text_size": 16,
+            "promo1_text_width": 100,
+            "promo1_text_alignment": "justify-center items-center text-center",
+            "promo2_content": "",
+            "promo2_link_url": "",
+            "promo2_text_size": 16,
+            "promo2_text_width": 100,
+            "promo2_text_alignment": "justify-center items-center text-center",
+            "promo3_content": "",
+            "promo3_link_url": "",
+            "promo3_text_size": 16,
+            "promo3_text_width": 100,
+            "promo3_text_alignment": "justify-center items-center text-center",
+            "badge1_color": "#000000",
+            "badge1_link": "",
+            "badge1_text": "",
+            "badge2_color": "#000000",
+            "badge2_link": "",
+            "badge2_text": "",
+            "badge3_color": "#000000",
+            "badge3_link": "",
+            "badge3_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "columns_NPhwqU"
+      ],
+      "settings": {
+        "enable_sticky": true,
+        "mobile_menu_position": "burger-left",
+        "logo_text": "",
+        "logo_type_scale": "2",
+        "logo": "shopify://shop_images/Brave_Hardy_Logo_-_2025_76ddca3f-402f-4e7e-b224-550fc26daa16.svg",
+        "logo_width": 220,
+        "logo_h1": false,
+        "logo_center": false,
+        "enable_search": true,
+        "minimise_search_mobile": false,
+        "minimise_search_desktop": false,
+        "menu": "main-menu",
+        "menu_center": false,
+        "repeat_links": true,
+        "menu_featured_link": "Deals, Gift Guide, Gift Voucher",
+        "quicklinks_menu": "",
+        "cta_show": true,
+        "cta_icon": "chat_bubble",
+        "cta_label": "WhatsApp",
+        "cta_link": "https://wa.me/27720469380",
+        "cta_border_color": "#3c3b2a",
+        "cta_bg_color": "#3c3b2a",
+        "cta_text_color": "#ffffff",
+        "bg_color": "#ffffff",
+        "text_color": "#090302",
+        "accent_color": "#f55a00"
+      }
+    },
+    "promo_strip_QzqEzq": {
+      "type": "promo-strip",
+      "blocks": {
+        "text_VPC3Kx": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Need a GREAT Gift in a Hurry? Download, Print or Email a Gift Voucher.</strong></p>",
+            "enlarge_text": false,
+            "show_on_mobile": true,
+            "show_on_desktop": true
+          }
+        },
+        "button_KWazCP": {
+          "type": "button",
+          "settings": {
+            "button_label": "BUY VOUCHER",
+            "button_link": "shopify://products/brave-hardy-gift-voucher",
+            "button_style": "btn btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "text_VPC3Kx",
+        "button_KWazCP"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "xsmall",
+        "color_scheme": "1",
+        "full_width": true,
+        "dividers": "none",
+        "prevent_animation": false
+      }
+    },
+    "1765538674db73af99": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_798dc6f_gCJVnj": {
+          "type": "ai_gen_block_798dc6f",
+          "disabled": true,
+          "settings": {
+            "promo_text": "<p><strong>Will it arrive on time? Check delivery estimates via WhatsApp or Email.</strong></p>",
+            "text_size": 17,
+            "background_color": "#f55a00",
+            "text_color": "#ffffff",
+            "link_color": "#ffffff",
+            "padding_top": 10,
+            "padding_bottom": 0,
+            "padding_horizontal": 20,
+            "max_width": 1200
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_798dc6f_gCJVnj"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement",
+    "header",
+    "promo_strip_QzqEzq",
+    "1765538674db73af99"
+  ]
+}
