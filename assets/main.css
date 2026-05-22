@@ -2358,15 +2358,6 @@ td {
   .breadcrumbs-list {
     flex: 1 0 auto;
   }
-  .product-breadcrumbs .breadcrumbs-list__link {
-    max-width: 20em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .product-breadcrumbs .breadcrumbs-list__link:hover {
-    text-decoration: underline;
-  }
 }
 .card {
   flex-direction: column;

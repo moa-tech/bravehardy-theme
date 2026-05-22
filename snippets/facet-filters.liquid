@@ -1,6 +1,7 @@
 {%- comment -%}
   Parameters:
   - results {Object} - Results object (collection or search).
+  - collection_navigation_markup {String} - Optional pre-rendered collection navigation.
 
   Usage:
   {% render 'facet-filters', results: collection %}
@@ -236,6 +237,8 @@
           {%- if section.settings.enable_sorting and section.settings.sort_first -%}
             {{ mobile_sort_by }}
           {%- endif -%}
+
+          {{ collection_navigation_markup }}
 
           {%- for filter in results.filters -%}
             {%- liquid

@@ -43,6 +43,55 @@
     assign item_url = routes.account_url
     assign show_structured_data = false
   endif
+
+  assign menu_trail_count = 0
+  assign menu_trail_1_title = blank
+  assign menu_trail_1_url = blank
+  assign menu_trail_2_title = blank
+  assign menu_trail_2_url = blank
+
+  if template.name == 'collection' or template.name == 'product'
+    if collection
+      assign menu_trail_handle = collection.handle
+    endif
+    assign main_menu = linklists['main-menu']
+
+    if main_menu != blank and menu_trail_handle != blank
+      for top_link in main_menu.links
+        if top_link.type == 'collection_link' and top_link.object and top_link.object.handle == menu_trail_handle
+          break
+        endif
+
+        for child_link in top_link.links
+          if child_link.type == 'collection_link' and child_link.object and child_link.object.handle == menu_trail_handle
+            assign menu_trail_count = 1
+            assign menu_trail_1_title = top_link.title
+            assign menu_trail_1_url = top_link.url
+            break
+          endif
+
+          for grandchild_link in child_link.links
+            if grandchild_link.type == 'collection_link' and grandchild_link.object and grandchild_link.object.handle == menu_trail_handle
+              assign menu_trail_count = 2
+              assign menu_trail_1_title = top_link.title
+              assign menu_trail_1_url = top_link.url
+              assign menu_trail_2_title = child_link.title
+              assign menu_trail_2_url = child_link.url
+              break
+            endif
+          endfor
+
+          if menu_trail_count > 0
+            break
+          endif
+        endfor
+
+        if menu_trail_count > 0
+          break
+        endif
+      endfor
+    endif
+  endif
 -%}
 
 {%- if template.name == 'blog' and current_tags -%}
@@ -102,6 +151,24 @@
             },
             {%- assign collection_position = 3 -%}
           {%- endif -%}
+          {%- if menu_trail_count >= 1 -%}
+            {
+              "@type": "ListItem",
+              "position": {{ collection_position }},
+              "name": {{ menu_trail_1_title | json }},
+              "item": {{ shop.url | append: menu_trail_1_url | json }}
+            },
+            {%- assign collection_position = collection_position | plus: 1 -%}
+          {%- endif -%}
+          {%- if menu_trail_count >= 2 -%}
+            {
+              "@type": "ListItem",
+              "position": {{ collection_position }},
+              "name": {{ menu_trail_2_title | json }},
+              "item": {{ shop.url | append: menu_trail_2_url | json }}
+            },
+            {%- assign collection_position = collection_position | plus: 1 -%}
+          {%- endif -%}
           {
             "@type": "ListItem",
             "position": {{ collection_position }},
@@ -121,17 +188,31 @@
               },
               {%- assign product_position = 3 -%}
             {%- endif -%}
+            {%- if menu_trail_count >= 1 -%}
+              {
+                "@type": "ListItem",
+                "position": {{ product_position }},
+                "name": {{ menu_trail_1_title | json }},
+                "item": {{ shop.url | append: menu_trail_1_url | json }}
+              },
+              {%- assign product_position = product_position | plus: 1 -%}
+            {%- endif -%}
+            {%- if menu_trail_count >= 2 -%}
+              {
+                "@type": "ListItem",
+                "position": {{ product_position }},
+                "name": {{ menu_trail_2_title | json }},
+                "item": {{ shop.url | append: menu_trail_2_url | json }}
+              },
+              {%- assign product_position = product_position | plus: 1 -%}
+            {%- endif -%}
             {
               "@type": "ListItem",
               "position": {{ product_position }},
               "name": {{ collection.title | json }},
               "item": {{ shop.url | append: collection.url | json }}
             },
-            {%- if show_collection_listing_link -%}
-              {%- assign product_position = 4 -%}
-            {%- else -%}
-              {%- assign product_position = 3 -%}
-            {%- endif -%}
+            {%- assign product_position = product_position | plus: 1 -%}
           {%- endif -%}
           {
             "@type": "ListItem",
@@ -184,18 +265,24 @@
 {%- capture crumbs_html -%}
   <nav class="breadcrumbs flex justify-between w-full" aria-label="{{ breadcrumbs_title }}">
     <ol class="breadcrumbs-list flex has-ltr-icon">
-      <li class="flex items-center">
-        <a class="breadcrumbs-list__link" href="{{ routes.root_url }}">{{ home_title | escape }}</a> {{ divider }}
-      </li>
-
       {%- if template.name == 'collection' and collection.handle -%}
         {%- if show_collection_listing_link -%}
           <li class="flex items-center">
             <a class="breadcrumbs-list__link" href="{{ routes.collections_url }}">{{ collections_title | escape }}</a> {{ divider }}
           </li>
         {%- endif -%}
+        {%- if menu_trail_count >= 1 -%}
+          <li class="flex items-center">
+            <a class="breadcrumbs-list__link" href="{{ menu_trail_1_url }}">{{ menu_trail_1_title | escape }}</a> {{ divider }}
+          </li>
+        {%- endif -%}
+        {%- if menu_trail_count >= 2 -%}
+          <li class="flex items-center">
+            <a class="breadcrumbs-list__link" href="{{ menu_trail_2_url }}">{{ menu_trail_2_title | escape }}</a> {{ divider }}
+          </li>
+        {%- endif -%}
         <li class="flex items-center">
-          <a class="breadcrumbs-list__link" href="{{ routes.collections_url }}/{{ collection.handle }}" aria-current="page">{{ collection.title | escape }}</a>
+          <a class="breadcrumbs-list__link" href="{{ collection.url }}" aria-current="page">{{ collection.title | escape }}</a>
         </li>
 
       {%- elsif template.name == 'product' -%}
@@ -203,6 +290,16 @@
           {%- if show_collection_listing_link -%}
             <li class="flex items-center">
               <a class="breadcrumbs-list__link" href="{{ routes.collections_url }}">{{ collections_title | escape }}</a> {{ divider }}
+            </li>
+          {%- endif -%}
+          {%- if menu_trail_count >= 1 -%}
+            <li class="flex items-center">
+              <a class="breadcrumbs-list__link" href="{{ menu_trail_1_url }}">{{ menu_trail_1_title | escape }}</a> {{ divider }}
+            </li>
+          {%- endif -%}
+          {%- if menu_trail_count >= 2 -%}
+            <li class="flex items-center">
+              <a class="breadcrumbs-list__link" href="{{ menu_trail_2_url }}">{{ menu_trail_2_title | escape }}</a> {{ divider }}
             </li>
           {%- endif -%}
           <li class="flex items-center">
