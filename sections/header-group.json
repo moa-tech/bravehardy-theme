@@ -50,7 +50,7 @@
         "columns_NPhwqU": {
           "type": "columns",
           "settings": {
-            "title": "Camp & Hike, Brands",
+            "title": "Brands",
             "collection_images": "standard",
             "collection_use_product_image": false,
             "collection_circle_image": false,
@@ -104,7 +104,7 @@
         "minimise_search_desktop": false,
         "menu": "main-menu",
         "menu_center": false,
-        "repeat_links": true,
+        "repeat_links": false,
         "menu_featured_link": "Deals, Gift Guide, Gift Voucher",
         "quicklinks_menu": "",
         "cta_show": true,

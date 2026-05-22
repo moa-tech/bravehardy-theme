@@ -81,31 +81,6 @@
   endif
 -%}
 
-{%- capture collection_navigation_markup -%}
-  {% render 'collection-sidebar-navigation',
-    collection: collection,
-    expand_filters: section.settings.expand_filters,
-    max_filter_options: section.settings.max_filter_options
-  %}
-{%- endcapture -%}
-
-{%- liquid
-  assign has_collection_navigation = false
-  assign show_collection_sidebar = false
-  assign collection_navigation_markup_stripped = collection_navigation_markup | strip
-  if collection_navigation_markup_stripped != blank
-    assign has_collection_navigation = true
-  endif
-  if section.settings.enable_filtering
-    if collection.filters != empty
-      assign show_collection_sidebar = true
-    endif
-    if has_collection_navigation
-      assign show_collection_sidebar = true
-    endif
-  endif
--%}
-
 <div class="container" data-num-results="{{ collection.products_count }}">
   {%- if section.settings.enable_filtering or section.settings.show_layout_toggle or section.settings.enable_sorting or compare_visible -%}
     {% render 'products-toolbar', results: collection %}
@@ -113,9 +88,9 @@
 
   {%- paginate collection.products by section.settings.products_per_page -%}
     <custom-pagination class="main-products-grid{% if settings.card_contain %} main-products-grid--contained{% endif %} flex" data-layout="grid" data-compare="{{ compare_toggle }}" data-infinite-scroll="{{ settings.pagination_infinite }}" data-pause-infinite-scroll="false">
-      {%- if show_collection_sidebar -%}
+      {%- if collection.filters != empty and section.settings.enable_filtering -%}
         <div class="main-products-grid__filters{% if section.settings.filters_open_lg == false %} lg:js-hidden{% endif %}">
-          {% render 'facet-filters', results: collection, collection_navigation_markup: collection_navigation_markup %}
+          {% render 'facet-filters', results: collection %}
         </div>
       {%- endif -%}
 

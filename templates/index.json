@@ -12,6 +12,39 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
+        "slide_GBmxrE": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/OneTigris_Knife.jpg",
+            "url": "shopify://products/onetigris-trail-forge-fixed-blade-camping-knife",
+            "overlay_position": "justify-center items-center",
+            "overlay_text_align": "text-center",
+            "mob_center_text": false,
+            "subheading": "NEW ARRIVAL",
+            "heading": "OneTigris Trail Forge<br>Fixed Blade",
+            "heading_size": "h0",
+            "heading_h1": false,
+            "text": "<p>A rugged full-tang fixed blade knife made for clean cuts and real outdoor use.</p>",
+            "enlarge_text": true,
+            "button_1_label": "SHOP NOW",
+            "button_1_link": "shopify://products/onetigris-trail-forge-fixed-blade-camping-knife",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary",
+            "transparent_content_color": "#ffffff",
+            "countdown_show": false,
+            "countdown_end_date": "",
+            "countdown_end_time": "",
+            "countdown_end_text": "",
+            "enlarge_end_text": false,
+            "countdown_hide_on_end": false,
+            "use_custom_colors": false,
+            "count_color": "#ffffff",
+            "bg_color": "#070707",
+            "bg_grad": ""
+          }
+        },
         "slide_qXwADt": {
           "type": "slide",
           "settings": {
@@ -145,47 +178,14 @@
             "bg_color": "#070707",
             "bg_grad": ""
           }
-        },
-        "slide_7EKFiH": {
-          "type": "slide",
-          "settings": {
-            "image_desktop": "shopify://shop_images/Hydroflask_1.jpg",
-            "url": "shopify://products/hydro-flask-wide-mouth-32oz-straw-cap-bottle-946ml",
-            "overlay_position": "justify-center items-center",
-            "overlay_text_align": "text-center",
-            "mob_center_text": false,
-            "subheading": "HYDRO FLASK",
-            "heading": "Wide Mouth Straw Cap Bottle, 946ml",
-            "heading_size": "h0",
-            "heading_h1": false,
-            "text": "<p>Wide enough for ice, easy to fill, easy to drink.</p>",
-            "enlarge_text": true,
-            "button_1_label": "Shop Now",
-            "button_1_link": "shopify://products/hydro-flask-wide-mouth-32oz-straw-cap-bottle-946ml",
-            "button_1_style": "btn btn--primary",
-            "button_2_label": "",
-            "button_2_link": "",
-            "button_2_style": "btn btn--primary",
-            "transparent_content_color": "#ffffff",
-            "countdown_show": false,
-            "countdown_end_date": "",
-            "countdown_end_time": "",
-            "countdown_end_text": "",
-            "enlarge_end_text": false,
-            "countdown_hide_on_end": false,
-            "use_custom_colors": false,
-            "count_color": "#ffffff",
-            "bg_color": "#070707",
-            "bg_grad": ""
-          }
         }
       },
       "block_order": [
+        "slide_GBmxrE",
         "slide_qXwADt",
         "slide_gwCRxc",
         "slide_hQ8Rqz",
-        "slide_8kt8DR",
-        "slide_7EKFiH"
+        "slide_8kt8DR"
       ],
       "settings": {
         "height_mode": "fixed",
@@ -292,97 +292,6 @@
         "color_scheme": "none",
         "full_width": true,
         "prevent_animation": false
-      }
-    },
-    "featured_product_QVp63g": {
-      "type": "featured-product",
-      "blocks": {
-        "vendor_sku_hbYePR": {
-          "type": "vendor-sku",
-          "settings": {
-            "show_vendor": true,
-            "show_sku": true,
-            "show_barcode": false
-          }
-        },
-        "title_mcHzQN": {
-          "type": "title",
-          "settings": {
-            "show_weight": false
-          }
-        },
-        "price_fkKjUi": {
-          "type": "price",
-          "settings": {
-            "show_tax_and_shipping": true
-          }
-        },
-        "divider_FeN9Tm": {
-          "type": "divider",
-          "settings": {
-            "show_line": true,
-            "spacing": "mt-8 mb-8"
-          }
-        },
-        "variant_picker_kA6rjM": {
-          "type": "variant-picker",
-          "settings": {
-            "selector_style": "buttons",
-            "enable_dynamic_availability": true,
-            "dynamic_availability_downwards": false,
-            "show_backorder_text": true,
-            "enable_size_chart": false,
-            "size_chart_variant": "Size",
-            "size_chart_page": ""
-          }
-        },
-        "buy_buttons_64W8Pg": {
-          "type": "buy-buttons",
-          "settings": {
-            "show_qty_selector": true,
-            "enable_dynamic_checkout": false,
-            "show_gift_card_recipient": false
-          }
-        },
-        "divider_bYCmE4": {
-          "type": "divider",
-          "disabled": true,
-          "settings": {
-            "show_line": true,
-            "spacing": "mt-8 mb-8"
-          }
-        },
-        "view_more_button_cdYt6R": {
-          "type": "view-more-button",
-          "settings": {
-            "button_label": "Full details",
-            "text_align": "text-start"
-          }
-        }
-      },
-      "block_order": [
-        "vendor_sku_hbYePR",
-        "title_mcHzQN",
-        "price_fkKjUi",
-        "divider_FeN9Tm",
-        "variant_picker_kA6rjM",
-        "buy_buttons_64W8Pg",
-        "divider_bYCmE4",
-        "view_more_button_cdYt6R"
-      ],
-      "settings": {
-        "product": "brave-hardy-suzuki-jimny-spare-wheel-cover",
-        "select_first_variant": true,
-        "media_ratio": "1",
-        "media_crop": "none",
-        "media_width": 50,
-        "enable_video_looping": false,
-        "enable_zoom": false,
-        "zoom_mode": "hover",
-        "hover_zoom": "large",
-        "color_scheme": "none",
-        "border_color": "rgba(0,0,0,0)",
-        "bg_color": "#f4f4f4"
       }
     },
     "media_grid_dedKQa": {
@@ -649,7 +558,7 @@
     "featured_collection_hErbzL": {
       "type": "featured-collection",
       "settings": {
-        "title": "Latest Gear",
+        "title": "New Arrivals",
         "heading_align": "text-start",
         "show_view_all": true,
         "collection": "all",
@@ -660,8 +569,8 @@
         "show_highlight_products": true,
         "show_promo_info": false,
         "image_ratio": "fill",
-        "promo_title": "A headline to grab attention",
-        "content": "<p>Use this card with an image to highlight your collections or introduce a promotion.</p>",
+        "promo_title": "",
+        "content": "",
         "link_url": "",
         "button_label": "Button",
         "color_scheme": "none",
@@ -782,6 +691,11 @@
         "color_scheme": "1",
         "button_style": "btn btn--primary"
       }
+    },
+    "blocks_pzDtcR": {
+      "type": "_blocks",
+      "name": "Button",
+      "settings": {}
     },
     "image-banner": {
       "type": "image-banner",
@@ -1739,6 +1653,97 @@
         "full_width": true
       }
     },
+    "featured_product_QVp63g": {
+      "type": "featured-product",
+      "blocks": {
+        "vendor_sku_hbYePR": {
+          "type": "vendor-sku",
+          "settings": {
+            "show_vendor": true,
+            "show_sku": true,
+            "show_barcode": false
+          }
+        },
+        "title_mcHzQN": {
+          "type": "title",
+          "settings": {
+            "show_weight": false
+          }
+        },
+        "price_fkKjUi": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": true
+          }
+        },
+        "divider_FeN9Tm": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        },
+        "variant_picker_kA6rjM": {
+          "type": "variant-picker",
+          "settings": {
+            "selector_style": "buttons",
+            "enable_dynamic_availability": true,
+            "dynamic_availability_downwards": false,
+            "show_backorder_text": true,
+            "enable_size_chart": false,
+            "size_chart_variant": "Size",
+            "size_chart_page": ""
+          }
+        },
+        "buy_buttons_64W8Pg": {
+          "type": "buy-buttons",
+          "settings": {
+            "show_qty_selector": true,
+            "enable_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "divider_bYCmE4": {
+          "type": "divider",
+          "disabled": true,
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        },
+        "view_more_button_cdYt6R": {
+          "type": "view-more-button",
+          "settings": {
+            "button_label": "Full details",
+            "text_align": "text-start"
+          }
+        }
+      },
+      "block_order": [
+        "vendor_sku_hbYePR",
+        "title_mcHzQN",
+        "price_fkKjUi",
+        "divider_FeN9Tm",
+        "variant_picker_kA6rjM",
+        "buy_buttons_64W8Pg",
+        "divider_bYCmE4",
+        "view_more_button_cdYt6R"
+      ],
+      "settings": {
+        "product": "onetigris-leather-gloves",
+        "select_first_variant": true,
+        "media_ratio": "1",
+        "media_crop": "none",
+        "media_width": 50,
+        "enable_video_looping": false,
+        "enable_zoom": false,
+        "zoom_mode": "hover",
+        "hover_zoom": "large",
+        "color_scheme": "none",
+        "border_color": "rgba(0,0,0,0)",
+        "bg_color": "#f4f4f4"
+      }
+    },
     "rich_text_pQrahU": {
       "type": "rich-text",
       "blocks": {
@@ -1769,7 +1774,6 @@
     "slideshow",
     "icons_with_text_XRMQHC",
     "rich_text_rmniq3",
-    "featured_product_QVp63g",
     "media_grid_dedKQa",
     "featured_collection_hErbzL",
     "featured_collection_yhH8RU",
@@ -1777,6 +1781,7 @@
     "featured_collection_93pAAi",
     "featured-collection",
     "7a43afd5-ee2f-4bff-9ad2-6b370d4a4bf2",
+    "blocks_pzDtcR",
     "image-banner",
     "media-grid",
     "product-features",
@@ -1787,6 +1792,7 @@
     "testimonials_YXetqj",
     "rich_text_tcdCn3",
     "171448965465b283c7",
+    "featured_product_QVp63g",
     "rich_text_pQrahU"
   ]
 }
