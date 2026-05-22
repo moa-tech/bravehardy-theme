@@ -287,8 +287,8 @@
  * It's included locally and is only active if it has been enabled in
  * 'Theme Settings > Advanced > Preload links on hover'.
  *
- * Instant.page is a JavaScript library that speeds up page loads by preloading links as soon as the
- * customer hovers over them.
+ * Instant.page prefetches linked HTML on pointer hover (after a short delay). Touch-based prefetch
+ * is disabled in this theme to limit parallel requests on link-heavy pages.
  *
  *
  *

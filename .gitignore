@@ -2,3 +2,4 @@
 .shopify/
 node_modules/
 *.log
+config/settings_data.json

@@ -6,11 +6,8 @@ let _chromiumMajorVersionInUserAgent = null
   , _allowExternalLinks
   , _useWhitelist
   , _delayOnHover = 65
-  , _lastTouchTimestamp
   , _mouseoverTimer
   , _preloadedList = new Set();
-
-const DELAY_TO_NOT_BE_CONSIDERED_A_TOUCH_INITIATED_ACTION = 1111;
 
 init();
 
@@ -112,9 +109,8 @@ function init() {
     }
   }
 
-  if (!useMousedownOnly) {
-    document.addEventListener('touchstart', touchstartListener, eventListenersOptions);
-  }
+  // Touch prefetch omitted: touchstart prefetched every touched link before navigation, which
+  // produced many parallel HTML requests on dense grids (429s). Pointer hover (mouseover) remains.
 
   if (!useMousedown) {
     document.addEventListener('mouseover', mouseoverListener, eventListenersOptions);
@@ -163,26 +159,7 @@ function init() {
   }
 }
 
-function touchstartListener(event) {
-  _lastTouchTimestamp = performance.now();
-  // Chrome on Android triggers mouseover before touchcancel, so
-  // `_lastTouchTimestamp` must be assigned on touchstart to be measured
-  // on mouseover.
-
-  const anchorElement = event.target.closest('a');
-
-  if (!isPreloadable(anchorElement)) {
-    return
-  }
-
-  preload(anchorElement.href, 'high');
-}
-
 function mouseoverListener(event) {
-  if (performance.now() - _lastTouchTimestamp < DELAY_TO_NOT_BE_CONSIDERED_A_TOUCH_INITIATED_ACTION) {
-    return
-  }
-
   if (!('closest' in event.target)) {
     return
     // Without this check sometimes an error “event.target.closest is not a function” is thrown, for unknown reasons
@@ -227,10 +204,6 @@ function mouseoutListener(event) {
 }
 
 function mousedownShortcutListener(event) {
-  if (performance.now() - _lastTouchTimestamp < DELAY_TO_NOT_BE_CONSIDERED_A_TOUCH_INITIATED_ACTION) {
-    return
-  }
-
   const anchorElement = event.target.closest('a');
 
   if (event.which > 1 || event.metaKey || event.ctrlKey) {

@@ -2955,7 +2955,7 @@
         "type": "checkbox",
         "id": "preload_links",
         "label": "Preload links on hover",
-        "info": "This should increase the perceived loading speed of pages.",
+        "info": "Uses pointer hover (with a short delay) to prefetch linked pages. Touch-only devices do not prefetch full pages, which reduces duplicate requests on busy collection grids.",
         "default": true
       },
       {
