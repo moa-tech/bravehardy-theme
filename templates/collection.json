@@ -14,7 +14,6 @@
       "settings": {
         "show_collection_title": true,
         "show_product_count": true,
-        "show_collection_description": true,
         "text_align": "items-center text-center",
         "collection_image": "none",
         "use_product_image": false,
@@ -41,7 +40,9 @@
         "sort_show_alpha": true,
         "sort_show_price": true,
         "sort_show_date": true,
-        "sort_first": true
+        "sort_first": true,
+        "show_collection_description": true,
+        "description_text_align": "items-center text-center"
       }
     },
     "1770200266623b6a0e": {

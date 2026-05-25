@@ -324,14 +324,22 @@
       endif
     -%}
     {%- if show_breadcrumbs -%}
-      <div class="container{% if request.page_type == 'product' %} product-breadcrumbs{% endif %}">
-        {%- liquid
-          assign show_rss_link = false
-          if template.name == 'blog'
-            assign show_rss_link = settings.show_breadcrumbs_blog_rss
-          endif
-        -%}
+      {%- liquid
+        assign show_rss_link = false
+        if template.name == 'blog'
+          assign show_rss_link = settings.show_breadcrumbs_blog_rss
+        endif
+      -%}
+      {%- capture breadcrumbs_markup -%}
         {% render 'breadcrumbs', show_rss_link: show_rss_link %}
+      {%- endcapture -%}
+      {%- assign breadcrumbs_markup_stripped = breadcrumbs_markup | strip -%}
+      <div class="container{% if request.page_type == 'product' %} product-breadcrumbs{% elsif request.page_type == 'collection' %} collection-breadcrumbs{% endif %}" id="breadcrumbs-wrapper"{% if breadcrumbs_markup_stripped == blank and request.page_type != 'collection' %} hidden{% endif %}>
+        {%- if breadcrumbs_markup_stripped != blank -%}
+          {{ breadcrumbs_markup }}
+        {%- elsif request.page_type == 'collection' -%}
+          <nav class="breadcrumbs" aria-hidden="true"></nav>
+        {%- endif -%}
       </div>
     {%- endif -%}
 

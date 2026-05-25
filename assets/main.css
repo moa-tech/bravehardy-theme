@@ -2331,6 +2331,18 @@ td {
   color: currentColor;
   line-height: normal;
 }
+.breadcrumbs-list__link:hover {
+  text-decoration: underline;
+}
+
+.collection-breadcrumbs .breadcrumbs {
+  font-size: 0.875em;
+  margin-top: calc(4 * var(--space-unit));
+  margin-bottom: calc(3.5 * var(--space-unit));
+}
+.collection-breadcrumbs .breadcrumbs-list {
+  line-height: 1.2;
+}
 
 .breadcrumbs-prod-nav {
   margin-inline-start: auto;

@@ -22,6 +22,9 @@ if (!customElements.get('facet-filters')) {
       this.expanded = [];
       this.filterChangeTimeout = null;
 
+      const bannerSection = document.querySelector('#main-content .shopify-section.cc-collection-banner');
+      this.bannerSectionId = bannerSection?.id.replace('shopify-section-', '') || null;
+
       this.handleBreakpointChange();
       this.addElements();
       this.addListeners();
@@ -135,6 +138,18 @@ if (!customElements.get('facet-filters')) {
     handleFiltersClick(evt) {
       const { target } = evt;
 
+      // Subcategory link clicked.
+      const subcategoryLink = target.closest('.js-preserve-collection-filters');
+      if (subcategoryLink) {
+        evt.preventDefault();
+        const url = new URL(subcategoryLink.href);
+        const searchParams = new URLSearchParams(url.search);
+        searchParams.delete('page');
+        searchParams.delete('section_id');
+        this.applyFilters(searchParams.toString(), evt, true, url.pathname);
+        return;
+      }
+
       // Filter 'clear' button clicked.
       if (target.matches('.js-clear-filter')) {
         evt.preventDefault();
@@ -178,7 +193,7 @@ if (!customElements.get('facet-filters')) {
           ({ searchParams } = evt.state);
         }
 
-        this.applyFilters(searchParams, null, false);
+        this.applyFilters(searchParams, null, false, window.location.pathname);
       }
     }
 
@@ -187,8 +202,9 @@ if (!customElements.get('facet-filters')) {
      * @param {string} searchParams - Filter/sort search parameters.
      * @param {object} evt - Event object.
      * @param {boolean} [updateUrl=true] - Update url with the selected options.
+     * @param {string|null} [pathname=null] - Optional pathname to fetch (for collection navigation).
      */
-    async applyFilters(searchParams, evt, updateUrl = true) {
+    async applyFilters(searchParams, evt, updateUrl = true, pathname = null) {
       try {
         // Preserve the current element focus
         const activeElementId = document.activeElement.id;
@@ -206,9 +222,10 @@ if (!customElements.get('facet-filters')) {
         closeBtn.classList.add('is-loading');
 
         // Use Section Rendering API for the request, if possible.
-        let fetchUrl = `${window.location.pathname}?${searchParams}`;
+        const fetchPathname = pathname || window.location.pathname;
+        let fetchUrl = `${fetchPathname}?${searchParams}`;
         if (this.form.dataset.filterSectionId) {
-          fetchUrl += `&section_id=${this.form.dataset.filterSectionId}`;
+          fetchUrl += `${searchParams ? '&' : ''}section_id=${this.form.dataset.filterSectionId}`;
         }
 
         // Cancel current fetch request. (Raises an exception)
@@ -217,11 +234,21 @@ if (!customElements.get('facet-filters')) {
         }
         this.applyFiltersFetchAbortController = new AbortController();
 
-        // Fetch filtered products markup.
-        const response = await fetch(fetchUrl, {
+        const fetchOptions = {
           method: 'GET',
           signal: this.applyFiltersFetchAbortController.signal
-        });
+        };
+
+        const fetches = [fetch(fetchUrl, fetchOptions)];
+
+        if (pathname !== null && this.bannerSectionId) {
+          let bannerUrl = `${fetchPathname}?`;
+          if (searchParams) bannerUrl += `${searchParams}&`;
+          bannerUrl += `section_id=${this.bannerSectionId}`;
+          fetches.push(fetch(bannerUrl, fetchOptions));
+        }
+
+        const [response, bannerResponse] = await Promise.all(fetches);
 
         if (response.ok) {
           const tmpl = document.createElement('template');
@@ -257,6 +284,15 @@ if (!customElements.get('facet-filters')) {
           // Update the results.
           this.results.innerHTML = tmpl.content.getElementById('filter-results').innerHTML;
 
+          // Update breadcrumbs when navigating between collections.
+          this.updateBreadcrumbs(tmpl.content.getElementById('ajax-breadcrumbs'));
+
+          this.updateCollectionDescription(tmpl.content.getElementById('collection-description'));
+
+          if (bannerResponse?.ok) {
+            this.updateCollectionBanner(await bannerResponse.text());
+          }
+
           // Set the CSS class of the results to what it was
           const newResultsUl = this.results.querySelector('ul');
           if (newResultsUl && this.currentResultsClass) newResultsUl.setAttribute('class', this.currentResultsClass);
@@ -269,7 +305,7 @@ if (!customElements.get('facet-filters')) {
           if (customPagination && customPagination.reload) customPagination.reload();
 
           // Update the URL.
-          if (updateUrl) FacetFilters.updateURL(searchParams);
+          if (updateUrl) FacetFilters.updateURL(searchParams, fetchPathname);
 
           // Scroll to the top of the results if needed
           if (this.results.getBoundingClientRect().top < 0) {
@@ -310,14 +346,60 @@ if (!customElements.get('facet-filters')) {
     }
 
     /**
+     * Updates the collection description from a section rendering response.
+     * @param {HTMLElement|null} sourceEl - Element containing description markup.
+     */
+    updateCollectionDescription(sourceEl) {
+      const descriptionEl = document.getElementById('collection-description');
+      if (!descriptionEl || !sourceEl) return;
+
+      descriptionEl.className = sourceEl.className;
+      descriptionEl.hidden = sourceEl.hidden;
+      descriptionEl.innerHTML = sourceEl.innerHTML;
+    }
+
+    /**
+     * Updates the collection banner from a section rendering response.
+     * @param {string} html - Banner section HTML.
+     */
+    updateCollectionBanner(html) {
+      const bannerSection = document.getElementById(`shopify-section-${this.bannerSectionId}`);
+      if (!bannerSection || !html) return;
+
+      bannerSection.innerHTML = html;
+    }
+
+    /**
+     * Updates the collection breadcrumbs from a section rendering response.
+     * @param {HTMLElement|null} sourceEl - Element containing breadcrumb markup.
+     */
+    updateBreadcrumbs(sourceEl) {
+      const breadcrumbsWrapper = document.getElementById('breadcrumbs-wrapper');
+      if (!breadcrumbsWrapper || !sourceEl) return;
+
+      const newMarkup = sourceEl.innerHTML.trim();
+      if (newMarkup) {
+        breadcrumbsWrapper.innerHTML = newMarkup;
+        breadcrumbsWrapper.hidden = false;
+      } else if (breadcrumbsWrapper.classList.contains('collection-breadcrumbs')) {
+        breadcrumbsWrapper.innerHTML = '<nav class="breadcrumbs" aria-hidden="true"></nav>';
+        breadcrumbsWrapper.hidden = false;
+      } else {
+        breadcrumbsWrapper.innerHTML = '';
+        breadcrumbsWrapper.hidden = true;
+      }
+    }
+
+    /**
      * Updates the url with the current filter/sort parameters.
      * @param {string} searchParams - Filter/sort parameters.
+     * @param {string} [pathname] - Pathname for the updated URL.
      */
-    static updateURL(searchParams) {
+    static updateURL(searchParams, pathname = window.location.pathname) {
       window.history.pushState(
-        { searchParams },
+        { searchParams, pathname },
         '',
-        `${window.location.pathname}${searchParams && '?'.concat(searchParams)}`
+        `${pathname}${searchParams && '?'.concat(searchParams)}`
       );
     }
   }

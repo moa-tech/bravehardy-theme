@@ -106,6 +106,12 @@
   endif
 -%}
 
+{%- if settings.show_breadcrumbs_collection -%}
+  <div id="ajax-breadcrumbs" hidden aria-hidden="true">
+    {% render 'breadcrumbs' %}
+  </div>
+{%- endif -%}
+
 <div class="container" data-num-results="{{ collection.products_count }}">
   {%- if section.settings.enable_filtering or section.settings.show_layout_toggle or section.settings.enable_sorting or compare_visible -%}
     {% render 'products-toolbar', results: collection %}
@@ -119,7 +125,8 @@
         </div>
       {%- endif -%}
 
-      <div class="main-products-grid__results relative flex-auto" id="filter-results">
+      <div class="main-products-grid__results-column relative flex-auto flex flex-col">
+        <div class="main-products-grid__results relative flex-auto" id="filter-results">
         {%- if collection.products.size == 0 -%}
           <p>{{ 'sections.collection.empty' | t }}</p>
         {%- else -%}
@@ -282,6 +289,25 @@
             {% render 'pagination', paginate: paginate, class: "mb-10", style: settings.pagination_style %}
           {%- endif -%}
         {%- endif -%}
+        </div>
+
+        {%- liquid
+          assign show_collection_description = false
+          if section.settings.show_collection_description and collection.description != blank
+            assign show_collection_description = true
+          endif
+        -%}
+        <div
+          id="collection-description"
+          class="collection-description{% if show_collection_description %} flex flex-col {{ section.settings.description_text_align }}{% if section.settings.description_text_align == 'items-center text-center' %} collection-description--wide mx-auto{% endif %}{% else %} hidden{% endif %}"
+          {% unless show_collection_description %}hidden{% endunless %}
+        >
+          {%- if show_collection_description -%}
+            <div class="rte">
+              {{ collection.description }}
+            </div>
+          {%- endif -%}
+        </div>
       </div>
     </custom-pagination>
   {%- endpaginate -%}
@@ -342,6 +368,37 @@
         }
       ],
       "default": "medium"
+    },
+    {
+      "type": "header",
+      "content": "Collection description"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "label": "Show collection description",
+      "info": "Displays below the product grid.",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "description_text_align",
+      "label": "Description alignment",
+      "options": [
+        {
+          "value": "text-start",
+          "label": "Left"
+        },
+        {
+          "value": "items-center text-center",
+          "label": "Center"
+        },
+        {
+          "value": "items-end text-end",
+          "label": "Right"
+        }
+      ],
+      "default": "items-center text-center"
     },
     {
       "type": "header",

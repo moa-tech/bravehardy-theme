@@ -1,14 +1,8 @@
 {{ 'collection-banner.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
-  if section.settings.show_collection_description and collection.description != blank
-    assign is_description = true
-  else
-    assign is_description = false
-  endif
-
   assign collection_image_size = section.settings.collection_image
-  if section.settings.show_collection_title == false and is_description == false and collection_image_size == "fill"
+  if section.settings.show_collection_title == false and collection_image_size == "fill"
     assign collection_image_size = "natural"
   endif
 
@@ -67,27 +61,19 @@
       </div>
     {%- endif -%}
 
-    {%- if section.settings.show_collection_title or is_description -%}
+    {%- if section.settings.show_collection_title -%}
       <div class="collection-banner__content flex flex-col {% unless collection_image %}w-full {% endunless %}{{ section.settings.text_align }}{% unless color_scheme == 'default' %} color-scheme color-scheme--{{ color_scheme }}{% endunless %}{% if section.settings.text_width == "wide" or collection_image_size == "natural" %} collection-banner__content-wide{% endif %}{% if collection_image %} collection-banner__content--with-media{% elsif section.settings.text_align == "items-center text-center" %} mx-auto{% endif %}">
-        {%- if section.settings.show_collection_title -%}
-          <div class="block">
-            <h1 class="collection-banner__heading mb-0 inline">
-              {{- collection.title | escape -}}
-            </h1>
+        <div class="block">
+          <h1 class="collection-banner__heading mb-0 inline">
+            {{- collection.title | escape -}}
+          </h1>
 
-            {% if section.settings.show_product_count %}
-              <span class="font-heading collection-banner__count{% unless section.settings.text_align == "text-start" %} block {{ section.settings.text_align }}{% endunless %}">
-                ({{ 'sections.collection.product_count.other' | t: count: collection.all_products_count }})
-              </span>
-            {% endif %}
-          </div>
-        {%- endif -%}
-
-        {%- if is_description -%}
-          <div class="rte mt-4">
-            {{ collection.description }}
-          </div>
-        {%- endif -%}
+          {% if section.settings.show_product_count %}
+            <span class="font-heading collection-banner__count{% unless section.settings.text_align == "text-start" %} block {{ section.settings.text_align }}{% endunless %}">
+              ({{ 'sections.collection.product_count.other' | t: count: collection.all_products_count }})
+            </span>
+          {% endif %}
+        </div>
       </div>
     {%- endif -%}
   </div>
@@ -114,12 +100,6 @@
       "id": "show_product_count",
       "label": "Show product count",
       "info": "Only visible if the title is shown.",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_collection_description",
-      "label": "Show collection description",
       "default": true
     },
     {

@@ -171,7 +171,7 @@
       "filter_sort": "Filter & Sort",
       "min_price_label": "From",
       "max_price_label": "To",
-      "subcategories": "Subcategories",
+      "subcategories": "Categories",
       "show_more": "Show more",
       "show_result_count": {
         "one": "Show {{ count }} result",

@@ -206,17 +206,5 @@
     }
 
     document.addEventListener('on:facet-filters:updated', updateSubcategoryLinks);
-
-    document.addEventListener('click', (event) => {
-      const link = event.target.closest('.js-preserve-collection-filters');
-      if (!link) return;
-
-      const params = getActiveFilterParams();
-      if (!params.toString()) return;
-
-      event.preventDefault();
-      const baseUrl = link.dataset.baseUrl || link.href.split('?')[0];
-      window.location.assign(buildFilteredUrl(baseUrl, params));
-    });
   })();
 {% endjavascript %}

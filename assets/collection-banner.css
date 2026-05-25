@@ -1,9 +1,6 @@
 .collection-banner__content.color-scheme {
   padding: var(--gutter-sm, 20px);
 }
-.collection-banner__content.color-scheme h1 {
-  padding-top: calc(4 * var(--space-unit));
-}
 
 .collection-banner__media {
   order: 2;
@@ -11,6 +8,7 @@
 
 .collection-banner__heading {
   margin-inline-end: 5px;
+  font-size: calc(var(--h1-font-size) * 0.875);
 }
 
 .collection-banner__count {
@@ -27,9 +25,6 @@
   .collection-banner__content.color-scheme {
     padding: calc(10 * var(--space-unit));
   }
-  .collection-banner__content.color-scheme h1 {
-    padding-top: calc(2 * var(--space-unit));
-  }
 }
 @media (min-width: 769px) {
   .collection-banner__content {
@@ -42,6 +37,21 @@
   .collection-banner__content-wide {
     width: 66%;
   }
+}
+.cc-collection-banner.section--template {
+  margin-top: calc(2 * var(--space-unit));
+  margin-bottom: calc(3 * var(--space-unit));
+}
+.cc-collection-banner + .cc-collection-products.section--template {
+  margin-top: calc(2 * var(--space-unit));
+}
+.collection-description {
+  width: 100%;
+  margin-top: calc(8 * var(--space-unit));
+  padding-bottom: calc(8 * var(--space-unit));
+}
+.collection-description--wide {
+  max-width: 640px;
 }
 @media (min-width: 1024px) {
   .collection-banner__content--with-media.text-start,

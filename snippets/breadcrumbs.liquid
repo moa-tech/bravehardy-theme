@@ -92,6 +92,10 @@
       endfor
     endif
   endif
+
+  if template.name == 'collection' and menu_trail_count == 0 and show_collection_listing_link == false
+    assign show_crumbs = false
+  endif
 -%}
 
 {%- if template.name == 'blog' and current_tags -%}
