@@ -95,8 +95,8 @@
         "mobile_menu_position": "burger-left",
         "logo_text": "",
         "logo_type_scale": "2",
-        "logo": "shopify://shop_images/Brave_Hardy_Logo_-_2025_76ddca3f-402f-4e7e-b224-550fc26daa16.svg",
-        "logo_width": 220,
+        "logo": "shopify://shop_images/Brave_Hardy_-_Logo_-_250.svg",
+        "logo_width": 250,
         "logo_h1": false,
         "logo_center": false,
         "enable_search": true,
@@ -125,7 +125,7 @@
         "text_VPC3Kx": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Need a GREAT Gift in a Hurry? Download, Print or Email a Gift Voucher.</strong></p>",
+            "text": "<p><strong>'BRAVE THE WINTER SALE' </strong>- Ends 31 July</p>",
             "enlarge_text": false,
             "show_on_mobile": true,
             "show_on_desktop": true
@@ -134,8 +134,8 @@
         "button_KWazCP": {
           "type": "button",
           "settings": {
-            "button_label": "BUY VOUCHER",
-            "button_link": "shopify://products/brave-hardy-gift-voucher",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/sale",
             "button_style": "btn btn--primary"
           }
         }
@@ -144,10 +144,9 @@
         "text_VPC3Kx",
         "button_KWazCP"
       ],
-      "disabled": true,
       "settings": {
         "section_height": "xsmall",
-        "color_scheme": "1",
+        "color_scheme": "2",
         "full_width": true,
         "dividers": "none",
         "prevent_animation": false

@@ -552,96 +552,6 @@
         "bg_color": "#f4f4f4"
       }
     },
-    "featured_product_GpVwUG": {
-      "type": "featured-product",
-      "blocks": {
-        "vendor_sku_kTnrzM": {
-          "type": "vendor-sku",
-          "settings": {
-            "show_vendor": true,
-            "show_sku": true,
-            "show_barcode": false
-          }
-        },
-        "title_fQUBa3": {
-          "type": "title",
-          "settings": {
-            "show_weight": false
-          }
-        },
-        "price_NLDpTN": {
-          "type": "price",
-          "settings": {
-            "show_tax_and_shipping": false
-          }
-        },
-        "divider_tGaEj6": {
-          "type": "divider",
-          "settings": {
-            "show_line": true,
-            "spacing": "mt-8 mb-8"
-          }
-        },
-        "variant_picker_bbfKGL": {
-          "type": "variant-picker",
-          "settings": {
-            "selector_style": "buttons",
-            "enable_dynamic_availability": true,
-            "dynamic_availability_downwards": false,
-            "show_backorder_text": true,
-            "enable_size_chart": false,
-            "size_chart_variant": "Size",
-            "size_chart_page": ""
-          }
-        },
-        "buy_buttons_YAYNDe": {
-          "type": "buy-buttons",
-          "settings": {
-            "show_qty_selector": true,
-            "enable_dynamic_checkout": false,
-            "show_gift_card_recipient": false
-          }
-        },
-        "divider_dWDn6h": {
-          "type": "divider",
-          "settings": {
-            "show_line": true,
-            "spacing": "mt-8 mb-8"
-          }
-        },
-        "view_more_button_Fc4kGh": {
-          "type": "view-more-button",
-          "settings": {
-            "button_label": "Full details",
-            "text_align": "text-start"
-          }
-        }
-      },
-      "block_order": [
-        "vendor_sku_kTnrzM",
-        "title_fQUBa3",
-        "price_NLDpTN",
-        "divider_tGaEj6",
-        "variant_picker_bbfKGL",
-        "buy_buttons_YAYNDe",
-        "divider_dWDn6h",
-        "view_more_button_Fc4kGh"
-      ],
-      "settings": {
-        "product": "brave-hardy-flexfit-adjustable-snapback-cap",
-        "select_first_variant": true,
-        "media_ratio": "natural",
-        "media_crop": "none",
-        "media_width": 50,
-        "enable_video_looping": false,
-        "enable_zoom": true,
-        "zoom_mode": "hover",
-        "hover_zoom": "large",
-        "color_scheme": "none",
-        "border_color": "rgba(0,0,0,0)",
-        "bg_color": "#f4f4f4"
-      }
-    },
     "1699339887887cfaab": {
       "type": "apps",
       "blocks": {
@@ -722,7 +632,6 @@
     "dcecc287-d741-41a0-ac5d-93ee17586fc5",
     "7ab7a144-c7e5-4db9-b912-c4fc3872ed23",
     "featured_product_dciE7K",
-    "featured_product_GpVwUG",
     "1699339887887cfaab",
     "5b259416-8f30-481e-9005-02131cfa7725"
   ]

@@ -591,6 +591,46 @@
     "testimonials_f9N9xH": {
       "type": "testimonials",
       "blocks": {
+        "testimonial_97bjYY": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>I am super pleased with my purchase. All I'm doing now is baking sourdough bread! The result is amazing. My daughter also wants to get herself one. Super super fabulous little gift from me to me.</p>",
+            "author": "Inalize L.",
+            "author_info": "",
+            "show_star_rating": true,
+            "star_rating": 5
+          }
+        },
+        "testimonial_wrhKiH": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>Excellent value for money. Lid that also serves as \"skillet\" is amazing, makes the oven so much more versatile.</p>",
+            "author": "Johan S.",
+            "author_info": "",
+            "show_star_rating": true,
+            "star_rating": 5
+          }
+        },
+        "testimonial_EBX9m8": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>I use this as part of my camping setup. Very good quality product. I use it for breads, potjies and even birthday cake. I also like the lid that can be used as a pan.</p>",
+            "author": "Joubert",
+            "author_info": "",
+            "show_star_rating": true,
+            "star_rating": 5
+          }
+        },
+        "testimonial_zcwxQR": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>Bought for my husband's birthday and he loves it. The size is just right and it's cured and ready to use. Will recommend. Delivery was very quick.</p>",
+            "author": "Gillian C.",
+            "author_info": "",
+            "show_star_rating": true,
+            "star_rating": 5
+          }
+        },
         "testimonial_Lphfpa": {
           "type": "testimonial",
           "settings": {
@@ -603,17 +643,21 @@
         }
       },
       "block_order": [
+        "testimonial_97bjYY",
+        "testimonial_wrhKiH",
+        "testimonial_EBX9m8",
+        "testimonial_zcwxQR",
         "testimonial_Lphfpa"
       ],
       "settings": {
-        "heading": "Testimonials",
+        "heading": "What people say about the Petromax Dutch Oven",
         "show_quotes": true,
         "testimonial_size": "h5",
         "text_position": "justify-center",
         "text_align": "text-center justify-center",
-        "nav_style": "slideshow_nav_lines",
-        "transition": "slide-fade",
-        "autoplay": false,
+        "nav_style": "arrows",
+        "transition": "fade",
+        "autoplay": true,
         "slider_pause": false,
         "autoplay_speed": 5,
         "color_scheme": "1",

@@ -69,7 +69,6 @@
       "settings": {
         "show_collection_title": true,
         "show_product_count": true,
-        "show_collection_description": true,
         "text_align": "text-start",
         "collection_image": "none",
         "use_product_image": true,

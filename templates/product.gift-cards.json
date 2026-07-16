@@ -434,7 +434,7 @@
           "type": "metafield",
           "settings": {
             "title": "Weight",
-            "metafield_key": "custom.weight"
+            "metafield_key": "custom.weight_grams"
           }
         },
         "136b072a-5b48-413e-9168-79fa336623a6": {

@@ -14,12 +14,6 @@
   {% render 'variant-picker', product: product, product_form_id: product_form_id, block: block %}
 {%- endcomment -%}
 
-{%- liquid
-  if section.settings.select_first_variant or product.variants.size == 1 or product.selected_variant
-    assign variant_is_selected = true
-  endif
-%}
-
 {%- if block.settings.enable_size_chart -%}
   <link rel="stylesheet" href="{{ 'modal.css' | asset_url }}">
 {%- endif -%}
@@ -36,6 +30,7 @@
   {%- for option in product.options_with_values -%}
     {%- capture option_id %}{{ section.id }}-{{ option.name | handle }}{% endcapture -%}
     {%- liquid
+      assign option_index0 = forloop.index0
       assign is_color_selector = false
       assign is_swatch_style = false
       assign is_native_swatch_style = false
@@ -45,7 +40,6 @@
       if settings.swatch_option_name contains option.name and settings.variant_picker_color_style == 'variant-images'
         assign is_color_selector = true
         assign is_variant_image_style = true
-        assign option_index0 = forloop.index0
       elsif settings.swatch_option_name contains option.name and settings.variant_picker_color_style == 'swatches'
         assign is_color_selector = true
         assign is_swatch_style = true
@@ -60,6 +54,48 @@
 
       if block.settings.enable_size_chart and block.settings.size_chart_variant == option.name and block.settings.size_chart_page != blank
         assign show_size_chart = true
+      endif
+    -%}
+    {%- capture visible_option_values_string -%}
+      {%- liquid
+        assign visible_option_value_count = 0
+      -%}
+      {%- for value in option.values -%}
+        {%- liquid
+          assign has_active_variant_for_value = false
+          for variant in product.variants
+            assign variant_status = variant.metafields.custom.status.value | default: '' | downcase
+            if variant.options[option_index0] == value and variant_status != 'archived'
+              assign has_active_variant_for_value = true
+              break
+            endif
+          endfor
+        -%}
+        {%- if has_active_variant_for_value -%}
+          {%- if visible_option_value_count > 0 -%}|||{%- endif -%}
+          {{- value -}}
+          {%- assign visible_option_value_count = visible_option_value_count | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- liquid
+      assign visible_option_values = visible_option_values_string | split: '|||'
+      assign selected_option_value = ''
+      if section.settings.select_first_variant or product.variants.size == 1
+        assign candidate_selected_value = option.selected_value
+      elsif product.selected_variant
+        assign candidate_selected_value = option.selected_value
+      else
+        assign candidate_selected_value = ''
+      endif
+
+      if candidate_selected_value != blank
+        for visible_option_value in visible_option_values
+          if visible_option_value == candidate_selected_value
+            assign selected_option_value = candidate_selected_value
+            break
+          endif
+        endfor
       endif
     -%}
 
@@ -89,21 +125,10 @@
         {%- else -%}
           {{ selector_label }}
         {%- endif -%}
-        {%- liquid
-          if section.settings.select_first_variant or product.variants.size == 1
-            assign selected_value = option.selected_value
-          else
-            if product.selected_variant
-              assign selected_value = option.selected_value
-            else
-              assign selected_value = ''
-            endif
-          endif
-        -%}
         {% render 'custom-select',
           id: option_id,
-          option_values: option.values,
-          selected_value: selected_value,
+          option_values: visible_option_values,
+          selected_value: selected_option_value,
           swatches: is_swatch_style
         %}
       </div>
@@ -111,20 +136,36 @@
       <fieldset class="option-selector" data-selector-type="listed">
         {%- if show_size_chart -%}
           <div class="flex justify-between">
-            <legend class="label">{{- option.name -}}{% if is_color_selector and settings.variant_picker_color_style != 'text' %}: <span class="option-selector__label-value js-color-text">{% if variant_is_selected %}{{ option.selected_value }}{% endif %}</span>{% endif %}</legend>
+            <legend class="label">{{- option.name -}}{% if is_color_selector and settings.variant_picker_color_style != 'text' %}: <span class="option-selector__label-value js-color-text">{% if selected_option_value != blank %}{{ selected_option_value }}{% endif %}</span>{% endif %}</legend>
             {{ size_chart_link }}
           </div>
         {%- else -%}
-          <legend class="label">{{- option.name -}}{% if is_color_selector and settings.variant_picker_color_style != 'text' %}: <span class="option-selector__label-value js-color-text">{% if variant_is_selected %}{{ option.selected_value }}{% endif %}</span>{% endif %}</legend>
+          <legend class="label">{{- option.name -}}{% if is_color_selector and settings.variant_picker_color_style != 'text' %}: <span class="option-selector__label-value js-color-text">{% if selected_option_value != blank %}{{ selected_option_value }}{% endif %}</span>{% endif %}</legend>
         {%- endif -%}
         <div class="option-selector__btns flex flex-wrap{% if is_variant_image_style %} items-start{% endif %}">
           {%- for value in option.values -%}
             {%- assign value_index0 = forloop.index0 -%}
-            <input type="radio" class="opt-btn visually-hidden focus-label js-option" name="{{ option_id }}-option" id="{{ option_id }}-opt-{{ value_index0 }}" value="{{ value | escape }}"{% if variant_is_selected and option.selected_value == value %} checked{% endif %}>
+            {%- liquid
+              assign has_active_variant_for_value = false
+              for variant in product.variants
+                assign variant_status = variant.metafields.custom.status.value | default: '' | downcase
+                if variant.options[option_index0] == value and variant_status != 'archived'
+                  assign has_active_variant_for_value = true
+                  break
+                endif
+              endfor
+            -%}
+            {%- unless has_active_variant_for_value -%}
+              {%- continue -%}
+            {%- endunless -%}
+            <input type="radio" class="opt-btn visually-hidden focus-label js-option" name="{{ option_id }}-option" id="{{ option_id }}-opt-{{ value_index0 }}" value="{{ value | escape }}"{% if selected_option_value == value %} checked{% endif %}>
 
             {%- if is_variant_image_style -%}
               {%- for variant in product.variants -%}
-                {%- if variant.options[option_index0] == value -%}
+                {%- liquid
+                  assign variant_status = variant.metafields.custom.status.value | default: '' | downcase
+                -%}
+                {%- if variant.options[option_index0] == value and variant_status != 'archived' -%}
                   <label class="opt-label opt-label--swatch opt-label--image relative swatch-shape--{{ settings.variant_picker_swatch_shape }}{% if settings.variant_picker_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}{% if settings.variant_picker_color_style == 'variant-images' and variant.featured_media %} swatch--variant-image{% endif %}"{% if variant.featured_media == blank %} data-swatch="{{ value | replace: '"', '' | downcase }}"{% endif %} for="{{ option_id }}-opt-{{ value_index0 }}">
                     <span class="visually-hidden js-value">{{- value | escape -}}</span>
                     <div class="opt-label__media media h-full w-full{% if settings.variant_picker_color_style == 'variant-images' and variant.featured_media == blank %} absolute top-0 left-0{% else %} relative{% endif %}">
@@ -186,6 +227,21 @@
   <script type="application/json">
     {
       "product": {{- product | json -}},
+      "archivedVariantIds": [
+        {%- liquid
+          assign archived_variant_count = 0
+          for variant in product.variants
+            assign variant_status = variant.metafields.custom.status.value | default: '' | downcase
+            if variant_status == 'archived'
+              if archived_variant_count > 0
+                echo ','
+              endif
+              echo variant.id | json
+              assign archived_variant_count = archived_variant_count | plus: 1
+            endif
+          endfor
+        -%}
+      ],
       "formatted": {
         {%- for variant in product.variants -%}
 
@@ -230,6 +286,12 @@
     <div class="select relative">
       <select class="select w-full" id="variants-{{ section.id }}" name="id" form="{{ product_form_id }}">
         {%- for variant in product.variants -%}
+          {%- liquid
+            assign variant_status = variant.metafields.custom.status.value | default: '' | downcase
+          -%}
+          {%- if variant_status == 'archived' -%}
+            {%- continue -%}
+          {%- endif -%}
           <option value="{{ variant.id }}"
                   {% if variant == current_variant %}selected{% endif %}
                   {% if variant.available == false %}disabled{% endif %}>

@@ -12,22 +12,23 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "slide_GBmxrE": {
+        "slide_QBBc4X": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify://shop_images/OneTigris_Knife.jpg",
-            "url": "shopify://products/onetigris-trail-forge-fixed-blade-camping-knife",
+            "image_desktop": "shopify://shop_images/Nemo_Banner_1.jpg",
+            "image_mobile": "shopify://shop_images/PDP_Header_Image_-_Dragonfly_Bikepack_OSMO_copy.webp",
+            "url": "",
             "overlay_position": "justify-center items-center",
             "overlay_text_align": "text-center",
             "mob_center_text": false,
-            "subheading": "NEW ARRIVAL",
-            "heading": "OneTigris Trail Forge<br>Fixed Blade",
+            "subheading": "NEMO EQUIPMENT",
+            "heading": "Ultra-light & Seriously Packable",
             "heading_size": "h0",
             "heading_h1": false,
-            "text": "<p>A rugged full-tang fixed blade knife made for clean cuts and real outdoor use.</p>",
+            "text": "<p>NEMO keeps the load light without skimping on performance.</p>",
             "enlarge_text": true,
             "button_1_label": "SHOP NOW",
-            "button_1_link": "shopify://products/onetigris-trail-forge-fixed-blade-camping-knife",
+            "button_1_link": "shopify://collections/nemo",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "",
@@ -45,89 +46,56 @@
             "bg_grad": ""
           }
         },
-        "slide_qXwADt": {
+        "slide_VNVXPi": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify://shop_images/Lifesystems_2_1.jpg",
-            "image_mobile": "shopify://shop_images/42170-heatshield-thermal-blanket-double-7.webp",
-            "url": "shopify://collections/lifesystems",
+            "image_desktop": "shopify://shop_images/Brave_The_WInter_-_Sale_Banner_v3.webp",
+            "image_mobile": "shopify://shop_images/Brave_The_WInter_-_Sale_Banner_-_mobile.webp",
+            "url": "shopify://collections/sale",
             "overlay_position": "justify-center items-center",
             "overlay_text_align": "text-center",
             "mob_center_text": false,
-            "subheading": "LIFESYSTEMS",
-            "heading": "Outdoor Safety & Survival Equipment",
+            "subheading": "",
+            "heading": "",
             "heading_size": "h0",
             "heading_h1": false,
-            "text": "<p>Practical survival gear and travel safety essentials built for tough conditions</p>",
+            "text": "",
+            "enlarge_text": true,
+            "button_1_label": "",
+            "button_1_link": "",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary",
+            "transparent_content_color": "#ffffff",
+            "countdown_show": false,
+            "countdown_end_date": "",
+            "countdown_end_time": "",
+            "countdown_end_text": "",
+            "enlarge_end_text": false,
+            "countdown_hide_on_end": false,
+            "use_custom_colors": false,
+            "count_color": "#ffffff",
+            "bg_color": "#070707",
+            "bg_grad": ""
+          }
+        },
+        "slide_XjEjFU": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Petromax_Dutch_Oven_6f85d047-b911-4fc8-9972-430f9555cf64.jpg",
+            "url": "shopify://products/petromax-dutch-oven",
+            "overlay_position": "justify-center items-center",
+            "overlay_text_align": "text-center",
+            "mob_center_text": false,
+            "subheading": "PETROMAX DUTCH OVEN",
+            "heading": "Your Cast Iron Legacy",
+            "heading_size": "h0",
+            "heading_h1": false,
+            "text": "<p>More than a potjie. An heirloom for generations.</p>",
             "enlarge_text": true,
             "button_1_label": "SHOP NOW",
-            "button_1_link": "shopify://collections/lifesystems",
-            "button_1_style": "btn btn--primary",
-            "button_2_label": "",
-            "button_2_link": "",
-            "button_2_style": "btn btn--primary",
-            "transparent_content_color": "#ffffff",
-            "countdown_show": false,
-            "countdown_end_date": "",
-            "countdown_end_time": "",
-            "countdown_end_text": "",
-            "enlarge_end_text": false,
-            "countdown_hide_on_end": false,
-            "use_custom_colors": false,
-            "count_color": "#ffffff",
-            "bg_color": "#070707",
-            "bg_grad": ""
-          }
-        },
-        "slide_gwCRxc": {
-          "type": "slide",
-          "settings": {
-            "image_desktop": "shopify://shop_images/OneTigris_Chairs_-_Banner_3.jpg",
-            "url": "shopify://collections/onetigris",
-            "overlay_position": "justify-center items-center",
-            "overlay_text_align": "text-center",
-            "mob_center_text": false,
-            "subheading": "ONETIGRIS",
-            "heading": "Chairs Built Tough",
-            "heading_size": "h0",
-            "heading_h1": false,
-            "text": "<p>Compact, Foldable & Easy To Carry</p>",
-            "enlarge_text": true,
-            "button_1_label": "Shop Now",
-            "button_1_link": "shopify://collections/onetigris",
-            "button_1_style": "btn btn--primary",
-            "button_2_label": "",
-            "button_2_link": "",
-            "button_2_style": "btn btn--primary",
-            "transparent_content_color": "#ffffff",
-            "countdown_show": false,
-            "countdown_end_date": "",
-            "countdown_end_time": "",
-            "countdown_end_text": "",
-            "enlarge_end_text": false,
-            "countdown_hide_on_end": false,
-            "use_custom_colors": false,
-            "count_color": "#ffffff",
-            "bg_color": "#070707",
-            "bg_grad": ""
-          }
-        },
-        "slide_hQ8Rqz": {
-          "type": "slide",
-          "settings": {
-            "image_desktop": "shopify://shop_images/OneTigris_Stellar_2_Tent.jpg",
-            "url": "shopify://products/stella-2-person-backpacking-tent",
-            "overlay_position": "justify-center items-center",
-            "overlay_text_align": "text-center",
-            "mob_center_text": false,
-            "subheading": "ONETIGRIS",
-            "heading": "Stella 2 Person Backpacking Tent",
-            "heading_size": "h0",
-            "heading_h1": false,
-            "text": "<p>Built for year-round adventures, the Stella offers fast setup, storm-ready protection, and room for two.</p>",
-            "enlarge_text": true,
-            "button_1_label": "FIND OUT MORE",
-            "button_1_link": "shopify://products/stella-2-person-backpacking-tent",
+            "button_1_link": "shopify://products/petromax-dutch-oven",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "",
@@ -178,14 +146,48 @@
             "bg_color": "#070707",
             "bg_grad": ""
           }
+        },
+        "slide_Y8ipDk": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Petromax_Tyropit.jpg",
+            "image_mobile": "shopify://shop_images/IAAF_LEVI_BILDAUSWAHL-6457.jpg",
+            "url": "",
+            "overlay_position": "justify-center items-center",
+            "overlay_text_align": "text-center",
+            "mob_center_text": false,
+            "subheading": "PETROMAX",
+            "heading": "Tyropit Low Smoke Fire Bowl",
+            "heading_size": "h0",
+            "heading_h1": false,
+            "text": "<p>Stainless steel fire bowl delivering low-smoke flames, steady heat and a versatile base for outdoor cooking and gathering.</p>",
+            "enlarge_text": true,
+            "button_1_label": "SHOP NOW",
+            "button_1_link": "shopify://products/petromax-tyropit-low-smoke-fire-bowl",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "",
+            "button_2_link": "",
+            "button_2_style": "btn btn--primary",
+            "transparent_content_color": "#ffffff",
+            "countdown_show": false,
+            "countdown_end_date": "",
+            "countdown_end_time": "",
+            "countdown_end_text": "",
+            "enlarge_end_text": false,
+            "countdown_hide_on_end": false,
+            "use_custom_colors": false,
+            "count_color": "#ffffff",
+            "bg_color": "#070707",
+            "bg_grad": ""
+          }
         }
       },
       "block_order": [
-        "slide_GBmxrE",
-        "slide_qXwADt",
-        "slide_gwCRxc",
-        "slide_hQ8Rqz",
-        "slide_8kt8DR"
+        "slide_QBBc4X",
+        "slide_VNVXPi",
+        "slide_XjEjFU",
+        "slide_8kt8DR",
+        "slide_Y8ipDk"
       ],
       "settings": {
         "height_mode": "fixed",
@@ -202,7 +204,7 @@
         "color_scheme": "3",
         "full_width": true,
         "tint_color": "#000000",
-        "tint_opacity": 15,
+        "tint_opacity": 30,
         "accessibility_info": "",
         "prevent_animation": true
       }
@@ -320,7 +322,7 @@
           "type": "media",
           "settings": {
             "image": "shopify://shop_images/atago-firepit.jpg",
-            "link_url": "shopify://collections/fire-braai",
+            "link_url": "shopify://collections/braai-grill",
             "columns": 1,
             "rows": 1,
             "subheading": "",
@@ -434,7 +436,7 @@
           "type": "media",
           "settings": {
             "image": "shopify://shop_images/original-pro-hammock-ticket-to-the-moon-tttm-tmpro2424-841467.jpg",
-            "link_url": "shopify://collections/ticket-to-the-moon",
+            "link_url": "shopify://collections/hammocks",
             "columns": 1,
             "rows": 1,
             "subheading": "",
@@ -453,11 +455,11 @@
           "type": "media",
           "settings": {
             "image": "shopify://shop_images/Leatherman_Skeletool_Fishing_Fish_Outdoors_Outdoor_1.jpg",
-            "link_url": "shopify://collections/gadgets-gear",
+            "link_url": "shopify://collections/multi-tools",
             "columns": 1,
             "rows": 1,
             "subheading": "",
-            "title": "<p>Gadgets & Gear</p>",
+            "title": "<p>Multi-Tools</p>",
             "heading_size": "h5",
             "button_label": "",
             "button_link": "",
@@ -472,7 +474,7 @@
           "type": "media",
           "settings": {
             "image": "shopify://shop_images/24669122BEL_ALT03_ChefRoll.jpg",
-            "link_url": "shopify://collections/storage-maintenance",
+            "link_url": "shopify://collections/storage-bags",
             "columns": 1,
             "rows": 1,
             "subheading": "",
@@ -574,6 +576,118 @@
         "link_url": "",
         "button_label": "Button",
         "color_scheme": "none",
+        "button_style": "btn btn--primary"
+      }
+    },
+    "video_kVhEkr": {
+      "type": "video",
+      "blocks": {
+        "heading_KKaUYr": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Petromax",
+            "heading_size": "h1",
+            "heading_h1": false
+          }
+        },
+        "text_QejGNR": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Add text to a video to showcase a detail of your brand or product line.</p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_KKaUYr",
+        "text_QejGNR"
+      ],
+      "disabled": true,
+      "name": "Video",
+      "settings": {
+        "video_shopify": "shopify://files/videos/Petromax_2026_EN.mp4",
+        "video_external": "",
+        "video_description": "Petromax Promo",
+        "video_size": "lg",
+        "video_autoplay": true,
+        "text_align": "text-center",
+        "color_scheme": "2"
+      }
+    },
+    "background_video_U8PeQ7": {
+      "type": "background-video",
+      "blocks": {
+        "heading_RdVyih": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Background Video",
+            "heading_size": "h1",
+            "heading_h1": false
+          }
+        },
+        "text_Mec6ye": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Add text to a video to showcase a detail of your brand or product line.</p>",
+            "enlarge_text": true
+          }
+        },
+        "button_iBNtTP": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn btn--secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RdVyih",
+        "text_Mec6ye",
+        "button_iBNtTP"
+      ],
+      "disabled": true,
+      "name": "Background video",
+      "settings": {
+        "video_shopify": "shopify://files/videos/Petromax_2026_EN.mp4",
+        "video_external": "",
+        "video_description": "",
+        "video_height": "md",
+        "overlay_text_align": "text-center",
+        "overlay_position": "justify-center items-center",
+        "mob_center_text": true,
+        "color_scheme": "white",
+        "transparent_content_color": "#ffffff",
+        "tint_color": "#000000",
+        "tint_opacity": 40,
+        "lazyload": true,
+        "prevent_animation": false
+      }
+    },
+    "featured_collection_nxy8bK": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Explore Petromax",
+        "heading_align": "text-start",
+        "show_view_all": true,
+        "collection": "petromax",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "products_to_show": 24,
+        "show_highlight_products": true,
+        "show_promo_info": false,
+        "image_ratio": "fill",
+        "promo_title": "A headline to grab attention",
+        "content": "<p>Use this card with an image to highlight your collections or introduce a promotion.</p>",
+        "link_url": "",
+        "button_label": "Button",
+        "color_scheme": "2",
         "button_style": "btn btn--primary"
       }
     },
@@ -852,171 +966,6 @@
         "transparent_content_color": "#ffffff"
       }
     },
-    "product-features": {
-      "type": "product-features",
-      "blocks": {
-        "feature-0": {
-          "type": "feature",
-          "settings": {
-            "heading": "100% Silk Nylon fabric",
-            "text": "<p>The 10-year manufacturer’s warranty covers any defects in workmanship and materials on all Ticket To The Moon products.</p>",
-            "content_align": "text-start",
-            "hotspot_x": 20,
-            "hotspot_y": 45
-          }
-        },
-        "feature-1": {
-          "type": "feature",
-          "settings": {
-            "heading": "Side Storage Pocket",
-            "text": "<p>So that nothing can get lost. For keys, glasses etc.</p>",
-            "content_align": "text-start",
-            "hotspot_x": 50,
-            "hotspot_y": 63
-          }
-        },
-        "feature-2": {
-          "type": "feature",
-          "settings": {
-            "heading": "Built to last",
-            "text": "<p>Featuring triple stitching, this is a genuinely durable and reliable travel companion.</p>",
-            "content_align": "text-start",
-            "hotspot_x": 64,
-            "hotspot_y": 42
-          }
-        },
-        "39ae429c-d0df-47ea-826a-87ed17d15424": {
-          "type": "feature",
-          "settings": {
-            "heading": "Hammock Shaped Storage Bag",
-            "text": "<p>If you take the hammock with you on your travels, you can even use it as a neck cushion.</p>",
-            "content_align": "text-start",
-            "hotspot_x": 90,
-            "hotspot_y": 41
-          }
-        }
-      },
-      "block_order": [
-        "feature-0",
-        "feature-1",
-        "feature-2",
-        "39ae429c-d0df-47ea-826a-87ed17d15424"
-      ],
-      "disabled": true,
-      "settings": {
-        "product": "ticket-to-the-moon-original-hammock",
-        "show_content": true,
-        "layout": "text_first",
-        "text_align": "text-center",
-        "mob_center_text": false,
-        "heading_size": "h1",
-        "enlarge_text": false,
-        "image": "shopify://shop_images/TICKET_TO_THE_MOON_TMO3914_STUDIO_v1.png",
-        "title": "The Original Camping Hammock",
-        "description": "<p>What makes the Ticket To The Moon hammock a favourite around the world?</p>",
-        "button_label": "View Hammock Range",
-        "button_link": "shopify://collections/hammocks",
-        "hotspot_color": "#f7b618",
-        "color_scheme": "none",
-        "button_style": "btn btn--primary"
-      }
-    },
-    "featured-product": {
-      "type": "featured-product",
-      "blocks": {
-        "product-labels-1": {
-          "type": "product-labels",
-          "settings": {
-            "show_variant_icon": true
-          }
-        },
-        "title-2": {
-          "type": "title",
-          "settings": {
-            "show_weight": false
-          }
-        },
-        "rating-3": {
-          "type": "rating",
-          "settings": {}
-        },
-        "price-4": {
-          "type": "price",
-          "settings": {
-            "show_tax_and_shipping": false
-          }
-        },
-        "description-5": {
-          "type": "description",
-          "settings": {
-            "show_as_collapsible_content": false,
-            "text": "<p>The Petromax Atago is your all-in-one solution for outdoor cooking, featuring a grill, oven, stove, and fire bowl.</p><p>Thanks to its unique extension-retraction mechanism, the Atago is ready to use in an instant and folds to a height of just 15 cm. It's perfect for camping and overlanding, especially when paired with the Transport Bag.<br/></p>",
-            "icon": "none",
-            "open": false
-          }
-        },
-        "divider-6": {
-          "type": "divider",
-          "settings": {
-            "show_line": true,
-            "spacing": "mt-8 mb-8"
-          }
-        },
-        "variant-picker-7": {
-          "type": "variant-picker",
-          "settings": {
-            "selector_style": "buttons",
-            "enable_dynamic_availability": true,
-            "dynamic_availability_downwards": false,
-            "show_backorder_text": true,
-            "enable_size_chart": false,
-            "size_chart_variant": "Size",
-            "size_chart_page": ""
-          }
-        },
-        "buy-buttons-8": {
-          "type": "buy-buttons",
-          "settings": {
-            "show_qty_selector": true,
-            "enable_dynamic_checkout": true,
-            "show_gift_card_recipient": false
-          }
-        },
-        "divider-9": {
-          "type": "divider",
-          "settings": {
-            "show_line": true,
-            "spacing": "mt-8 mb-8"
-          }
-        }
-      },
-      "block_order": [
-        "product-labels-1",
-        "title-2",
-        "rating-3",
-        "price-4",
-        "description-5",
-        "divider-6",
-        "variant-picker-7",
-        "buy-buttons-8",
-        "divider-9"
-      ],
-      "disabled": true,
-      "settings": {
-        "product": "petromax-atago",
-        "select_first_variant": true,
-        "media_ratio": "1",
-        "media_crop": "none",
-        "media_width": 50,
-        "enable_video_looping": false,
-        "enable_zoom": true,
-        "zoom_mode": "hover",
-        "hover_zoom": "large",
-        "color_scheme": "1",
-        "border_color": "rgba(0,0,0,0)",
-        "bg_color": "#ffffff"
-      }
-    },
     "product-comparison-grid": {
       "type": "product-comparison-grid",
       "blocks": {
@@ -1050,7 +999,6 @@
         "comparison-price-3",
         "comparison-description-4"
       ],
-      "disabled": true,
       "settings": {
         "heading": "Product comparison grid",
         "text": "<p>Add content here to explain a bit about the range of products on offer and which ones may be most suitable for your customers.</p>",
@@ -1445,53 +1393,6 @@
         "full_width": true
       }
     },
-    "media_with_text_7A66jq": {
-      "type": "media-with-text",
-      "blocks": {
-        "heading_Q8yGX4": {
-          "type": "heading",
-          "settings": {
-            "heading": "Who are we?",
-            "heading_size": "h3",
-            "heading_h1": false
-          }
-        },
-        "text_UrwMAd": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We started Brave Hardy after selling our business, Yuppiechef, in 2021. Now, we've flipped the switch on a new crazy adventure with Brave Hardy, an outdoor distribution and retail company founded in 2023.</p>",
-            "enlarge_text": true
-          }
-        },
-        "button_NitzTa": {
-          "type": "button",
-          "settings": {
-            "button_label": "More About US",
-            "button_link": "shopify://pages/about-us",
-            "button_style": "btn btn--primary"
-          }
-        }
-      },
-      "block_order": [
-        "heading_Q8yGX4",
-        "text_UrwMAd",
-        "button_NitzTa"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/andrew_shane.png",
-        "video_external": "",
-        "video_description": "",
-        "video_autoplay": false,
-        "layout": "left",
-        "image_fit": "contain",
-        "media_width": 50,
-        "media_scale": 100,
-        "text_align": "text-start",
-        "color_scheme": "1",
-        "only_content_color_scheme": false
-      }
-    },
     "testimonials_YXetqj": {
       "type": "testimonials",
       "blocks": {
@@ -1730,8 +1631,8 @@
         "view_more_button_cdYt6R"
       ],
       "settings": {
-        "product": "onetigris-leather-gloves",
-        "select_first_variant": true,
+        "product": "brave-hardy-suzuki-jimny-spare-wheel-cover",
+        "select_first_variant": false,
         "media_ratio": "1",
         "media_crop": "none",
         "media_width": 50,
@@ -1742,6 +1643,96 @@
         "color_scheme": "none",
         "border_color": "rgba(0,0,0,0)",
         "bg_color": "#f4f4f4"
+      }
+    },
+    "logo_list_zWyEnB": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_xpeffp": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Petromax_Logo.png",
+            "url": "shopify://collections/petromax",
+            "logo_width": 200,
+            "text": ""
+          }
+        },
+        "logo_aigwyx": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/OneTigris_Logo.png",
+            "url": "shopify://collections/onetigris",
+            "logo_width": 200,
+            "text": ""
+          }
+        },
+        "logo_MCJnE9": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/TTTM_Logo_aea7c885-f264-4239-9c8f-d3535698276e.png",
+            "url": "shopify://collections/ticket-to-the-moon",
+            "logo_width": 205,
+            "text": ""
+          }
+        },
+        "logo_FTjJMq": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Osprey_Logo.png",
+            "url": "shopify://collections/osprey",
+            "logo_width": 200,
+            "text": ""
+          }
+        },
+        "logo_kcUCmW": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Beavercraft_Logo.png",
+            "url": "shopify://collections/beavercraft",
+            "logo_width": 200,
+            "text": ""
+          }
+        },
+        "logo_UM3xMr": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Nemo_Logo_9840915d-8c6b-4c73-b81a-c895076bf8b8.png",
+            "url": "",
+            "logo_width": 200,
+            "text": ""
+          }
+        },
+        "logo_h3LnNB": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Toaks_Logo.png",
+            "url": "shopify://collections/toaks",
+            "logo_width": 200,
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_xpeffp",
+        "logo_aigwyx",
+        "logo_MCJnE9",
+        "logo_FTjJMq",
+        "logo_kcUCmW",
+        "logo_UM3xMr",
+        "logo_h3LnNB"
+      ],
+      "disabled": true,
+      "name": "Logo list",
+      "settings": {
+        "title": "Top Brands",
+        "heading_align": "text-start",
+        "button_label": "View All Brands",
+        "button_link": "shopify://collections/brands",
+        "layout": "carousel",
+        "spacing": 32,
+        "logo_grid_align": "justify-center",
+        "color_scheme": "none",
+        "full_width": true
       }
     },
     "rich_text_pQrahU": {
@@ -1776,6 +1767,9 @@
     "rich_text_rmniq3",
     "media_grid_dedKQa",
     "featured_collection_hErbzL",
+    "video_kVhEkr",
+    "background_video_U8PeQ7",
+    "featured_collection_nxy8bK",
     "featured_collection_yhH8RU",
     "featured_collection_tGnEpq",
     "featured_collection_93pAAi",
@@ -1784,15 +1778,13 @@
     "blocks_pzDtcR",
     "image-banner",
     "media-grid",
-    "product-features",
-    "featured-product",
     "product-comparison-grid",
     "logo_list_LqmA7Q",
-    "media_with_text_7A66jq",
     "testimonials_YXetqj",
     "rich_text_tcdCn3",
     "171448965465b283c7",
     "featured_product_QVp63g",
+    "logo_list_zWyEnB",
     "rich_text_pQrahU"
   ]
 }

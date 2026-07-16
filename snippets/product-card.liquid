@@ -189,21 +189,47 @@
         if settings.product_label_card_position != "none"
           render 'product-label', product: product, position: settings.product_label_card_position, is_product_card: true, limit: 2
         endif
+
+        render 'product-card-metafield-badges', product: product
       -%}
     </div>
 
     <div class="card__info-container flex flex-col flex-auto relative">
       <div class="card__info w-full">
         <div class="card__info-inner{% if settings.card_price_bottom %} flex flex-col h-full{% else %} inline-block{% endif %} w-full">
-          {%- if settings.card_show_vendor -%}
+          {%- liquid
+            assign card_title = product.title
+            assign show_vendor_prefix = false
+
+            if product.vendor != blank
+              assign vendor_size = product.vendor | size
+              assign title_prefix = product.title | slice: 0, vendor_size
+              assign title_prefix_down = title_prefix | downcase
+              assign vendor_down = product.vendor | downcase
+
+              if title_prefix_down == vendor_down
+                assign remaining_title = product.title | slice: vendor_size, 9999 | strip
+                if remaining_title != blank
+                  assign show_vendor_prefix = true
+                  assign card_title = remaining_title
+                endif
+              endif
+            endif
+          -%}
+
+          {%- if show_vendor_prefix -%}
+            <p class="card__vendor card__vendor--prefix{% if settings.show_dividers %} mb-1{% else %} mb-0{% endif %} text-sm uppercase text-theme-light">
+              {{- product.vendor | escape -}}
+            </p>
+          {%- elsif settings.card_show_vendor -%}
             <p class="card__vendor{% if settings.show_dividers %} mb-1{% else %} mb-0{% endif %} text-sm text-theme-light">
               {{- product.vendor -}}
             </p>
           {%- endif -%}
 
           <p class="card__title font-bold{% if settings.show_dividers %} mb-1{% else %} mt-1 mb-0{% endif %}">
-            <a href="{{ product_url }}" class="card-link text-current js-prod-link">
-              {{- product.title | escape -}}
+            <a href="{{ product_url }}" class="card-link text-current js-prod-link"{% if show_vendor_prefix %} aria-label="{{ product.title | escape }}"{% endif %}>
+              {{- card_title | escape -}}
             </a>
           </p>
 
@@ -213,7 +239,12 @@
             </p>
           {%- endif -%}
 
-          {%- if settings.card_show_weight -%}
+          {%- assign weight_g = product.metafields.custom.weight_grams.value -%}
+          {%- if weight_g != blank and weight_g > 0 -%}
+            <p class="card__weight text-sm mb-1{% unless settings.show_dividers %} mt-1{% endunless %}">
+              Weighs {{ weight_g }}g
+            </p>
+          {%- elsif settings.card_show_weight -%}
             <p class="card__weight text-sm mb-1{% unless settings.show_dividers %} mt-1{% endunless %}">
               {%- render 'product-weight', product: product -%}
             </p>
@@ -251,19 +282,35 @@
                 {%- if is_native_swatch or settings.card_colors_style == 'swatches' or settings.card_colors_style == 'variant-images' -%}
                   <div class="card__swatches{% if settings.show_dividers %} mt-3 border-top{% else %} mt-2 pb-1{% endif %} pt-3 flex items-start relative">
                     {%- capture option_id %}{{ section.id }}-{{ product.id }}-{{ option.name | handle }}{% endcapture -%}
-                    {%- assign variant_key = 'option' | append: option.position -%}
+                    {%- liquid
+                      assign visible_swatch_count = 0
+                      assign option_index0 = option.position | minus: 1
+                    -%}
 
                     {%- for value in option.values limit: 50 -%}
                       {%- liquid
-                        assign variant_value = product.variants | where: variant_key, value | first
+                        assign variant_value = nil
+                        for variant in product.variants
+                          assign variant_status = variant.metafields.custom.status.value | default: '' | downcase
+                          if variant.options[option_index0] == value and variant_status != 'archived'
+                            assign variant_value = variant
+                            break
+                          endif
+                        endfor
+
+                        if variant_value == blank
+                          continue
+                        endif
+
+                        assign visible_swatch_count = visible_swatch_count | plus: 1
                         if option.selected_value == value
                           assign selected_color = value
                         endif
                       -%}
-                      <input{% if forloop.index > swatch_limit %} hidden{% endif %} type="radio" class="opt-btn visually-hidden js-option" name="{{ option_id }}-option" id="{{ option_id }}-opt-{{ forloop.index0 }}" value="{{ value | escape }}" data-variant-id="{{ variant_value.id }}"{% if variant_value.featured_media %} data-media-id="{{ variant_value.featured_media.id }}"{% endif %}{% if option.selected_value == value and settings.card_hover_action == 'slideshow' %} checked{% endif %}>
+                      <input{% if visible_swatch_count > swatch_limit %} hidden{% endif %} type="radio" class="opt-btn visually-hidden js-option" name="{{ option_id }}-option" id="{{ option_id }}-opt-{{ forloop.index0 }}" value="{{ value | escape }}" data-variant-id="{{ variant_value.id }}"{% if variant_value.featured_media %} data-media-id="{{ variant_value.featured_media.id }}"{% endif %}{% if option.selected_value == value and settings.card_hover_action == 'slideshow' %} checked{% endif %} />
                       {%- if is_native_swatch -%}
                         {%- if value.swatch.image -%}
-                          <label{% if forloop.index > swatch_limit %} hidden{% endif %} class="opt-label opt-label--swatch btn relative swatch--native swatch-shape--{{ settings.card_swatch_shape }}{% if settings.card_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}" for="{{ option_id }}-opt-{{ forloop.index0 }}" data-swatch>
+                          <label{% if visible_swatch_count > swatch_limit %} hidden{% endif %} class="opt-label opt-label--swatch btn relative swatch--native swatch-shape--{{ settings.card_swatch_shape }}{% if settings.card_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}" for="{{ option_id }}-opt-{{ forloop.index0 }}" data-swatch>
                             <span class="visually-hidden js-value">{{ value }}</span>
                             {%- if settings.card_swatch_shape == 'natural' -%}
                               <div class="opt-label__native-media media">
@@ -279,7 +326,7 @@
                           </label>
 
                         {%- elsif value.swatch.color -%}
-                          <label{% if forloop.index > swatch_limit %} hidden{% endif %} class="opt-label opt-label--swatch btn relative swatch-shape--{{ settings.card_swatch_shape }}{% if settings.card_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}"
+                          <label{% if visible_swatch_count > swatch_limit %} hidden{% endif %} class="opt-label opt-label--swatch btn relative swatch-shape--{{ settings.card_swatch_shape }}{% if settings.card_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}"
                                  data-swatch="{{ value | replace: '"', '' | downcase }}"
                                  for="{{ option_id }}-opt-{{ forloop.index0 }}"
                                  style="--swatch-color: rgb({{ value.swatch.color.rgb }});--swatch-image: none;">
@@ -287,7 +334,7 @@
                           </label>
                         {%- endif -%}
                       {%- else -%}
-                        <label{% if forloop.index > swatch_limit %} hidden{% endif %} class="opt-label opt-label--swatch relative swatch-shape--{{ settings.card_swatch_shape }}{% if settings.card_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}{% if settings.card_colors_style == 'variant-images' and variant_value.featured_media %} swatch--variant-image{% endif %}" title="{{ value | replace: '"', '`' }}" data-swatch="{% if settings.card_colors_style != 'variant-images' or variant_value.featured_media == blank %}{{ value | replace: '"', '' | downcase }}{% endif %}" for="{{ option_id }}-opt-{{ forloop.index0 }}">
+                        <label{% if visible_swatch_count > swatch_limit %} hidden{% endif %} class="opt-label opt-label--swatch relative swatch-shape--{{ settings.card_swatch_shape }}{% if settings.card_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}{% if settings.card_colors_style == 'variant-images' and variant_value.featured_media %} swatch--variant-image{% endif %}" title="{{ value | replace: '"', '`' }}" data-swatch="{% if settings.card_colors_style != 'variant-images' or variant_value.featured_media == blank %}{{ value | replace: '"', '' | downcase }}{% endif %}" for="{{ option_id }}-opt-{{ forloop.index0 }}">
                           {%- if settings.card_colors_style == 'variant-images' and variant_value.featured_media -%}
                             {%- if settings.card_swatch_shape == "natural" -%}
                               <img loading="lazy" class="bg-theme-bg" src="{{ variant_value.featured_media.preview_image | image_url: width: swatch_size }}" height="{{ swatch_size | divided_by: variant_value.featured_media.preview_image.aspect_ratio | round }}" width="{{ swatch_size }}" alt="{{ variant_value.featured_media.preview_image.alt | escape }}"/>
@@ -300,8 +347,8 @@
                       {%- endif -%}
                     {%- endfor -%}
 
-                    {%- if option.values.size > swatch_limit -%}
-                      <span class="self-center text-end text-sm">+{{ option.values.size | minus: swatch_limit }}</span>
+                    {%- if visible_swatch_count > swatch_limit -%}
+                      <span class="self-center text-end text-sm">+{{ visible_swatch_count | minus: swatch_limit }}</span>
                     {%- endif -%}
                   </div>
                 {%- elsif settings.card_colors_style == 'text' -%}

@@ -1,0 +1,61 @@
+{%- comment -%}
+  Spec badges overlaid on product card images. Add new metafields below.
+
+  Parameters:
+  - product {Object} - Product object.
+
+  Usage:
+  {% render 'product-card-metafield-badges', product: product %}
+{%- endcomment -%}
+
+{%- capture badge_markup -%}
+  {%- liquid
+    assign r_value_mf = product.metafields.custom.r_value
+    if r_value_mf.value != blank
+      assign r_tenths = r_value_mf.value | times: 10.0 | round
+      assign r_whole = r_tenths | divided_by: 10
+      assign r_frac = r_tenths | modulo: 10
+      assign r_value_label = 'R-Value: ' | append: r_whole | append: '.' | append: r_frac
+    endif
+
+    assign temp_mf = product.metafields.custom.sleeping_bag_temperature_rating
+    if temp_mf.value != blank
+      assign temp_value = temp_mf.value.value | times: 1.0
+      assign temp_unit = temp_mf.value.unit
+
+      if temp_unit == 'fahrenheit'
+        assign temp_c = temp_value | minus: 32.0 | times: 5.0 | divided_by: 9.0
+      elsif temp_unit == 'kelvin'
+        assign temp_c = temp_value | minus: 273.15
+      else
+        assign temp_c = temp_value
+      endif
+
+      assign temp_rounded = temp_c | round: 1
+      assign temp_as_int = temp_c | round
+      if temp_rounded == temp_as_int
+        assign temp_label = temp_as_int | append: '°C'
+      else
+        assign temp_label = temp_rounded | append: '°C'
+      endif
+    endif
+  -%}
+
+  {%- if r_value_label != blank -%}
+    <span class="card__metafield-badge card__metafield-badge--r-value">
+      {{- r_value_label -}}
+    </span>
+  {%- endif -%}
+
+  {%- if temp_label != blank -%}
+    <span class="card__metafield-badge card__metafield-badge--temperature">
+      {{- temp_label -}}
+    </span>
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- if badge_markup != blank -%}
+  <div class="card__metafield-badges">
+    {{- badge_markup -}}
+  </div>
+{%- endif -%}

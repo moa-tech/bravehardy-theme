@@ -50,6 +50,18 @@
   margin-top: calc(8 * var(--space-unit));
   padding-bottom: calc(8 * var(--space-unit));
 }
+.collection-description .rte {
+  max-width: 100%;
+  padding-top: calc(4 * var(--space-unit));
+  border-top: 1px solid rgba(var(--text-color)/0.15);
+}
+.collection-description.text-start .rte {
+  width: 100%;
+}
+.collection-description.text-center .rte,
+.collection-description.items-center .rte {
+  width: fit-content;
+}
 .collection-description--wide {
   max-width: 640px;
 }

@@ -86,7 +86,7 @@
         "template--16994979152119__f4d544e1-8a7e-496e-b3c4-8b7089e6e76d-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Shop Opening Hours</strong><br/>Monday - Friday: 9:00 AM - 4:30 PM<br/>Closed on weekends and public holidays.</p><p><strong>Shop Address<br/></strong><a href=\"https://g.co/kgs/Q694Yi3\" target=\"_blank\" title=\"https://g.co/kgs/Q694Yi3\">B5 Westlake Square<br/>1 Westlake Drive, Westlake<br/>Cape Town, 7945</a></p><p><strong>General Enquiries<br/></strong><a href=\"mailto:hello@bravehardy.com\" title=\"Email hello@bravehardy.com\">hello@bravehardy.com<br/></a>WhatsApp and Phone:<a href=\"https://wa.me/27720469380\" title=\"WhatsApp +27 72 046 9380\">+27 72 046 9380</a></p>",
+            "text": "<p><strong>Shop Opening Hours</strong><br/>Monday - Friday: 9:00 AM - 4:30 PM<br/>Closed on weekends and public holidays.</p><p><strong>Shop Address<br/></strong><a href=\"https://maps.app.goo.gl/oQGqZ3kAtLS9DFUz7\" target=\"_blank\" title=\"https://maps.app.goo.gl/oQGqZ3kAtLS9DFUz7\">B5 Westlake Square<br/>1 Westlake Drive, Westlake<br/>Cape Town, 7945</a></p><p><strong>General Enquiries<br/></strong><a href=\"mailto:hello@bravehardy.com\" title=\"Email hello@bravehardy.com\">hello@bravehardy.com<br/></a>WhatsApp and Phone:<a href=\"https://wa.me/27720469380\" title=\"WhatsApp +27 72 046 9380\">+27 72 046 9380</a></p>",
             "enlarge_text": false
           }
         }
@@ -119,7 +119,7 @@
         "heading_JawVFm": {
           "type": "heading",
           "settings": {
-            "heading": "Our store is tiny!",
+            "heading": "Our store is really small!",
             "heading_size": "h3",
             "heading_h1": false
           }
@@ -127,7 +127,7 @@
         "text_pEDBdy": {
           "type": "text",
           "settings": {
-            "text": "<p>Like, really tiny. But we like to think of it as \"boutique-sized with a big heart\"! You'll see everything from pretty much anywhere you stand, making your shopping trip wonderfully efficient. Our team is always on hand for a friendly chat (and to point you to that thing you're looking for, probably just a few steps away).</p>",
+            "text": "<p>Like, really small. But we like to think of it as \"boutique-sized with a big heart\"! You'll see everything from pretty much anywhere you stand, making your shopping trip wonderfully efficient. Our team is always on hand for a friendly chat (and to point you to that thing you're looking for, probably just a few steps away).</p>",
             "enlarge_text": true
           }
         }
@@ -150,10 +150,48 @@
     "media_grid_7KhpnR": {
       "type": "media-grid",
       "blocks": {
-        "media_w3AQzB": {
+        "media_AeADyd": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/2_0ce5bb30-aed5-4662-aa54-78f6490299e2.jpg",
+            "image": "shopify://shop_images/3_c5f5a507-19cd-458b-a9d5-a3c6f0bc8e44.jpg",
+            "link_url": "",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "",
+            "heading_size": "h4",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media_GGM9T6": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/5_04042590-ed73-4871-ba34-45a821855dc1.jpg",
+            "link_url": "",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "",
+            "heading_size": "h4",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media_iMFrpx": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/2_fb59e839-6ce7-40cb-9df5-7a5355948bcb.jpg",
             "link_url": "",
             "columns": 2,
             "rows": 1,
@@ -166,7 +204,45 @@
             "text_alignment": "text-start",
             "button_style": "btn btn--primary",
             "tint_color": "#000000",
-            "tint_opacity": 0
+            "tint_opacity": 40
+          }
+        },
+        "media_n6dPR4": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/4_04aa6c63-9e27-4605-8087-b25238537059.jpg",
+            "link_url": "",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "",
+            "heading_size": "h4",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media_4pKr3f": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/1_7e34f07c-3c65-4b47-bb55-a14b186ef9b0.jpg",
+            "link_url": "",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "",
+            "heading_size": "h4",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
           }
         },
         "media_a3gV4D": {
@@ -207,10 +283,10 @@
             "tint_opacity": 0
           }
         },
-        "media_iBGq74": {
+        "media_CACGnn": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/6_d0f79446-0171-4aeb-b0e6-b4e069a75c0d.jpg",
+            "image": "shopify://shop_images/1_218b91be-86de-4a93-b773-6ca1a7789a4b.jpg",
             "link_url": "",
             "columns": 1,
             "rows": 1,
@@ -226,10 +302,10 @@
             "tint_opacity": 0
           }
         },
-        "media_CACGnn": {
+        "media_iBGq74": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/1_218b91be-86de-4a93-b773-6ca1a7789a4b.jpg",
+            "image": "shopify://shop_images/6_d0f79446-0171-4aeb-b0e6-b4e069a75c0d.jpg",
             "link_url": "",
             "columns": 1,
             "rows": 1,
@@ -282,16 +358,80 @@
             "tint_color": "#000000",
             "tint_opacity": 0
           }
+        },
+        "media_w3AQzB": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/2_0ce5bb30-aed5-4662-aa54-78f6490299e2.jpg",
+            "link_url": "",
+            "columns": 2,
+            "rows": 1,
+            "subheading": "",
+            "title": "",
+            "heading_size": "h4",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 0
+          }
+        },
+        "media_Xnrdwc": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/6_e4041ad2-b02c-4adf-958b-8d6429775e36.jpg",
+            "link_url": "",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "",
+            "heading_size": "h4",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
+        },
+        "media_GYqGc3": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/7_367e95b7-910d-42ea-9583-e9f0430ad5af.jpg",
+            "link_url": "",
+            "columns": 1,
+            "rows": 1,
+            "subheading": "",
+            "title": "",
+            "heading_size": "h4",
+            "button_label": "",
+            "button_link": "",
+            "overlay_position": "justify-start items-end",
+            "text_alignment": "text-start",
+            "button_style": "btn btn--primary",
+            "tint_color": "#000000",
+            "tint_opacity": 40
+          }
         }
       },
       "block_order": [
-        "media_w3AQzB",
+        "media_AeADyd",
+        "media_GGM9T6",
+        "media_iMFrpx",
+        "media_n6dPR4",
+        "media_4pKr3f",
         "media_a3gV4D",
         "media_bULDTF",
-        "media_iBGq74",
         "media_CACGnn",
+        "media_iBGq74",
         "media_baAtKC",
-        "media_9WWK6V"
+        "media_9WWK6V",
+        "media_w3AQzB",
+        "media_Xnrdwc",
+        "media_GYqGc3"
       ],
       "name": "Media grid",
       "settings": {

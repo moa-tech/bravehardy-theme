@@ -436,7 +436,14 @@ if (!customElements.get('variant-picker')) {
      */
     getProductData() {
       const dataEl = this.querySelector('[type="application/json"]');
-      return JSON.parse(dataEl.textContent);
+      const data = JSON.parse(dataEl.textContent);
+      const archivedVariantIds = new Set((data.archivedVariantIds || []).map((id) => id.toString()));
+
+      data.product.variants = data.product.variants.filter(
+        (variant) => !archivedVariantIds.has(variant.id.toString())
+      );
+
+      return data;
     }
 
     /**

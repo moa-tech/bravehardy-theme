@@ -4490,6 +4490,39 @@ label[data-swatch]::before {
   color: rgba(var(--preorder-label-text-color));
 }
 
+.card__metafield-badges {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+.card__metafield-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #111;
+  white-space: nowrap;
+}
+
+.card__metafield-badge--r-value {
+  background-color: #7ED957;
+  color: #fff;
+}
+
+.card__metafield-badge--temperature {
+  background-color: #8dcbb9;
+}
+
 @media (max-width: 599.98px) {
   [data-layout=list] .product-label-container {
     position: relative;
@@ -4502,6 +4535,10 @@ label[data-swatch]::before {
 @media (min-width: 769px) {
   .product-label {
     padding: 4px 8px;
+    font-size: 1.3rem;
+  }
+  .card__metafield-badge {
+    padding: 3px 7px;
     font-size: 1.3rem;
   }
   .xl\:auto-cols-4 .badge.collection-label--circle {

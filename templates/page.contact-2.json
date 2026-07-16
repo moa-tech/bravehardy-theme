@@ -65,7 +65,7 @@
         "contact-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Shop Opening Hours (Collections & Outlet Store)</strong><br/>Monday - Friday: 9:00 AM - 4:30 PM<br/>Closed on weekends and public holidays.</p><p><strong>Address (Collections & Outlet Store)<br/></strong><a href=\"https://g.co/kgs/Q694Yi3\" target=\"_blank\" title=\"https://g.co/kgs/Q694Yi3\">B5 Westlake Square, 1 Westlake Drive, Westlake, Cape Town, 7945</a></p><p><strong>General Enquiries<br/></strong><a href=\"mailto:hello@bravehardy.com\" title=\"Email hello@bravehardy.com\">hello@bravehardy.com</a><br/>WhatsApp and Phone: <a href=\"https://wa.me/27720469380\" title=\"WhatsApp +27 72 046 9380\">+27 72 046 9380</a></p><p><strong>Wholesale Enquiries</strong><br/><a href=\"mailto:sales@bravehardy.com\" title=\"mailto:sales@bravehardy.com\">sales@bravehardy.com</a></p><p></p><p>If the answers you're looking for aren't in our FAQ, please send us an email by completing the form below.</p>",
+            "text": "<p><strong>Shop Opening Hours (Collections & Outlet Store)</strong><br/>Monday - Friday: 9:00 AM - 4:30 PM<br/>Closed on weekends and public holidays.</p><p><strong>Address (Collections & Outlet Store)<br/></strong><a href=\"https://maps.app.goo.gl/oQGqZ3kAtLS9DFUz7\" target=\"_blank\" title=\"https://maps.app.goo.gl/oQGqZ3kAtLS9DFUz7\">B5 Westlake Square, 1 Westlake Drive, Westlake, Cape Town, 7945</a></p><p><strong>General Enquiries<br/></strong><a href=\"mailto:hello@bravehardy.com\" title=\"Email hello@bravehardy.com\">hello@bravehardy.com</a><br/>WhatsApp and Phone: <a href=\"https://wa.me/27720469380\" title=\"WhatsApp +27 72 046 9380\">+27 72 046 9380</a></p><p><strong>Wholesale Enquiries</strong><br/><a href=\"mailto:sales@bravehardy.com\" title=\"mailto:sales@bravehardy.com\">sales@bravehardy.com</a></p><p></p><p>If the answers you're looking for aren't in our FAQ, please send us an email by completing the form below.</p>",
             "half_width": false
           }
         },
@@ -129,7 +129,7 @@
           "settings": {
             "icon": "chat_bubble",
             "heading": "What if I want to speak to someone?",
-            "text": "<p>We want to speak to you too! <a href=\"/pages/contact\" title=\"Contact\">Contact us </a>with any questions, concerns, or feedback. You can reach us on <a href=\"https://wa.me/27720469380\" title=\"https://wa.me/27720469380\">WhatsApp</a>, email or call us at +27 72 046 9380</p>"
+            "text": "<p>We want to speak to you too! <a href=\"/pages/contact\" title=\"Contact\">Contact us </a>with any questions, concerns, or feedback. You can reach a real human on <a href=\"https://wa.me/27720469380\" title=\"https://wa.me/27720469380\">WhatsApp</a>, email or call us at +27 72 046 9380</p>"
           }
         },
         "faq-question-1": {
@@ -151,7 +151,7 @@
           "settings": {
             "icon": "map_pin",
             "heading": "What countries do you ship to?",
-            "text": "<p>We only ship to South Africa.</p>"
+            "text": "<p>We only ship to South Africa right now. If you're anywhere else in the world, come on over for a holiday. You won't regret it!</p>"
           }
         },
         "faq-question-4": {
@@ -159,7 +159,7 @@
           "settings": {
             "icon": "calendar",
             "heading": "How long will it take to receive my order?",
-            "text": "<p>We will do our best to pack and ship your order on the day we receive payment.</p><p>We hand it over to a courier who will get it to your door in 1-3 days later if you are in Cape Town and surrounds, and 3+ days further afield.</p><p>See our <a href=\"/policies/shipping-policy\" title=\"Shipping Policy\">shipping policies</a>.</p>"
+            "text": "<p>We will do our very best to pack and ship your order on the day we receive payment.</p><p>We hand it over to a courier who will get it to your door in 1-3 days later if you are in Cape Town and surrounds, and 3+ days further afield.</p><p>See our <a href=\"/policies/shipping-policy\" title=\"Shipping Policy\">shipping policies</a>.</p>"
           }
         },
         "question_iyMTE7": {
