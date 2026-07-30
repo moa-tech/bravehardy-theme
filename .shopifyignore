@@ -1,1 +1,5 @@
+# Merchant / Theme Editor settings — never overwrite remote from local push/dev.
+# Edit these in the Theme Editor, or pull intentionally when you want a refresh.
 config/settings_data.json
+sections/*-group*.json
+templates/**/*.json
