@@ -4515,11 +4515,66 @@ label[data-swatch]::before {
 }
 
 .card__metafield-badge--r-value {
-  background-color: #7ED957;
+  position: relative;
+  pointer-events: auto;
+  cursor: help;
+  background-color: #4C1D95;
   color: #fff;
 }
 
+.card__metafield-badge__tooltip {
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  bottom: calc(100% + 8px);
+  width: max-content;
+  max-width: min(260px, 70vw);
+  padding: 8px 10px;
+  border-radius: 4px;
+  background-color: #111;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.4;
+  white-space: normal;
+  text-align: left;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+
+.card__metafield-badge__tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 12px;
+  border: 6px solid transparent;
+  border-top-color: #111;
+}
+
+.card__metafield-badge__tooltip-gap {
+  display: block;
+  height: 0.35em;
+}
+
+.card__metafield-badge--r-value:hover .card__metafield-badge__tooltip,
+.card__metafield-badge--r-value:focus .card__metafield-badge__tooltip,
+.card__metafield-badge--r-value:focus-within .card__metafield-badge__tooltip,
+.card__metafield-badge--temperature:hover .card__metafield-badge__tooltip,
+.card__metafield-badge--temperature:focus .card__metafield-badge__tooltip,
+.card__metafield-badge--temperature:focus-within .card__metafield-badge__tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
 .card__metafield-badge--temperature {
+  position: relative;
+  pointer-events: auto;
+  cursor: help;
   background-color: #8dcbb9;
 }
 

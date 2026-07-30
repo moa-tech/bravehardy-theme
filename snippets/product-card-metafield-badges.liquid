@@ -12,10 +12,21 @@
   {%- liquid
     assign r_value_mf = product.metafields.custom.r_value
     if r_value_mf.value != blank
-      assign r_tenths = r_value_mf.value | times: 10.0 | round
+      assign r_value = r_value_mf.value | times: 1.0
+      assign r_tenths = r_value | times: 10.0 | round
       assign r_whole = r_tenths | divided_by: 10
       assign r_frac = r_tenths | modulo: 10
       assign r_value_label = 'R-Value: ' | append: r_whole | append: '.' | append: r_frac
+
+      if r_value <= 2.0
+        assign r_value_tooltip = 'R‑Value 0.1 to 2.0 is good for warm weather camping. Provides minimal insulation from the ground. Best for hot nights.'
+      elsif r_value < 4.0
+        assign r_value_tooltip = 'R‑Value 2.0 to 3.9 is good for spring, summer, and early autumn. Ideal for cool but not freezing temperatures.'
+      elsif r_value < 5.5
+        assign r_value_tooltip = 'R‑Value 4.0 to 5.4 is good for year-round camping, including mild winter conditions and frosty ground.'
+      else
+        assign r_value_tooltip = 'R‑Value 5.5 & up is good for sub-freezing temperatures, sleeping on snow, or extreme expeditions.'
+      endif
     endif
 
     assign temp_mf = product.metafields.custom.sleeping_bag_temperature_rating
@@ -34,22 +45,50 @@
       assign temp_rounded = temp_c | round: 1
       assign temp_as_int = temp_c | round
       if temp_rounded == temp_as_int
-        assign temp_label = temp_as_int | append: '°C'
+        assign temp_label = 'Limit Rating: ' | append: temp_as_int | append: '°C'
       else
-        assign temp_label = temp_rounded | append: '°C'
+        assign temp_label = 'Limit Rating: ' | append: temp_rounded | append: '°C'
+      endif
+
+      if temp_c >= 5.0
+        assign temp_tooltip_heading = 'Temp 5°C & above:'
+        assign temp_tooltip_body = 'Suitable for warm weather, indoor use, or peak summer.'
+      elsif temp_c >= -10.0
+        assign temp_tooltip_heading = 'Temp -10°C to 5°C:'
+        assign temp_tooltip_body = 'Suitable for spring, crisp autumn nights, and mild frost.'
+      else
+        assign temp_tooltip_heading = 'Temp -10°C & below:'
+        assign temp_tooltip_body = 'Suitable for sub-freezing temperatures, snow, and alpine trips.'
       endif
     endif
   -%}
 
   {%- if r_value_label != blank -%}
-    <span class="card__metafield-badge card__metafield-badge--r-value">
+    <span
+      class="card__metafield-badge card__metafield-badge--r-value"
+      tabindex="0"
+      aria-describedby="r-value-tip-{{ product.id }}"
+    >
       {{- r_value_label -}}
+      <span class="card__metafield-badge__tooltip" id="r-value-tip-{{ product.id }}" role="tooltip">
+        The measure of insulation provided.<br>
+        {{- r_value_tooltip -}}
+      </span>
     </span>
   {%- endif -%}
 
   {%- if temp_label != blank -%}
-    <span class="card__metafield-badge card__metafield-badge--temperature">
+    <span
+      class="card__metafield-badge card__metafield-badge--temperature"
+      tabindex="0"
+      aria-describedby="temp-tip-{{ product.id }}"
+    >
       {{- temp_label -}}
+      <span class="card__metafield-badge__tooltip" id="temp-tip-{{ product.id }}" role="tooltip">
+        <strong>{{- temp_tooltip_heading -}}</strong> {{ temp_tooltip_body }}
+        <span class="card__metafield-badge__tooltip-gap"></span>
+        <strong>Limit Rating:</strong> The lowest temperature a ‘warm sleeper’ stays comfortable. ‘Cold sleepers’ may need a warmer bag.
+      </span>
     </span>
   {%- endif -%}
 {%- endcapture -%}
