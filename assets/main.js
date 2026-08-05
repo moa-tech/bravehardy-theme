@@ -519,12 +519,14 @@ class ProductCard extends HTMLElement {
       }
     }
 
-    const separator = this.productUrl.split('?').length > 1 ? '&' : '?';
-    const url = `${this.productUrl + separator}variant=${evt.target.dataset.variantId}`;
+    // Preserve existing query params (e.g. search/_sid tracking) while replacing variant.
+    const url = new URL(this.productUrl, window.location.origin);
+    url.searchParams.set('variant', evt.target.dataset.variantId);
+    const relativeUrl = `${url.pathname}${url.search}${url.hash}`;
 
     // Update link hrefs to url of selected variant.
     this.links.forEach((link) => {
-      link.href = url;
+      link.href = relativeUrl;
     });
 
     // Update the Quick Add button data.

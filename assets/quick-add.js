@@ -135,15 +135,17 @@ if (!customElements.get('quick-add-drawer')) {
      * @param {object} evt - Event object.
      */
     handleVariantChange(evt) {
-      let url = this.productUrl;
+      let relativeUrl = this.productUrl;
 
       if (evt.detail.variant) {
-        const separator = this.productUrl.split('?').length > 1 ? '&' : '?';
-        url += `${separator}variant=${evt.detail.variant.id}`;
+        // Preserve existing query params (e.g. search/_sid tracking) while replacing variant.
+        const url = new URL(this.productUrl, window.location.origin);
+        url.searchParams.set('variant', evt.detail.variant.id);
+        relativeUrl = `${url.pathname}${url.search}${url.hash}`;
       }
 
       this.querySelectorAll('.js-prod-link').forEach((link) => {
-        link.href = url;
+        link.href = relativeUrl;
       });
     }
 

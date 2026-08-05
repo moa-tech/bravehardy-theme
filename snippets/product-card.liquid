@@ -18,10 +18,7 @@
     assign product_url = product.url
   endif
 
-  if product_url contains "?"
-    assign product_url = product_url | split: "?" | first
-  endif
-
+  # Keep Shopify query params (search tracking, recommendation tracking, variant).
   assign current_variant = product.selected_or_first_available_variant
   assign product_images = product.media | where: 'media_type', 'image'
 
