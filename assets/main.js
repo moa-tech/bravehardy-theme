@@ -500,6 +500,77 @@ class ProductCard extends HTMLElement {
     }
 
     this.addEventListener('change', this.handleSwatchChange.bind(this));
+    this.initMetafieldTooltips();
+  }
+
+  /**
+   * Toggle metafield badge tooltips on tap; dismiss without navigating.
+   */
+  initMetafieldTooltips() {
+    this.tooltipBadges = this.querySelectorAll('.card__metafield-badge[aria-describedby]');
+    if (!this.tooltipBadges.length) return;
+
+    ProductCard.bindMetafieldTooltipDismiss();
+
+    this.tooltipBadges.forEach((badge) => {
+      badge.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        evt.stopPropagation();
+
+        const willOpen = !badge.classList.contains('is-tooltip-open');
+        ProductCard.closeAllMetafieldTooltips();
+
+        if (willOpen) {
+          badge.classList.add('is-tooltip-open');
+        } else {
+          badge.blur();
+        }
+      });
+    });
+
+    // Use click (not pointerdown): closing on pointerdown re-enables links before click fires.
+    this.addEventListener('click', this.handleTooltipOutsideClick.bind(this), true);
+  }
+
+  /**
+   * Closes an open tooltip on the next tap without following product links.
+   * @param {MouseEvent} evt - Event object.
+   */
+  handleTooltipOutsideClick(evt) {
+    const openBadge = this.querySelector('.card__metafield-badge.is-tooltip-open');
+    if (!openBadge) return;
+    if (openBadge.contains(evt.target)) return;
+
+    evt.preventDefault();
+    evt.stopPropagation();
+    ProductCard.closeAllMetafieldTooltips();
+  }
+
+  /**
+   * Closes tooltips when tapping outside any product card.
+   */
+  static bindMetafieldTooltipDismiss() {
+    if (ProductCard.metafieldTooltipDismissBound) return;
+    ProductCard.metafieldTooltipDismissBound = true;
+
+    document.addEventListener('click', (evt) => {
+      if (!evt.target.closest) return;
+      if (evt.target.closest('.card__metafield-badge.is-tooltip-open')) return;
+      if (evt.target.closest('product-card')?.querySelector('.card__metafield-badge.is-tooltip-open')) {
+        return;
+      }
+      ProductCard.closeAllMetafieldTooltips();
+    }, true);
+  }
+
+  /**
+   * Closes metafield tooltips across all product cards.
+   */
+  static closeAllMetafieldTooltips() {
+    document.querySelectorAll('.card__metafield-badge.is-tooltip-open').forEach((badge) => {
+      badge.classList.remove('is-tooltip-open');
+      badge.blur();
+    });
   }
 
   /**

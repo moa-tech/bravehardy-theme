@@ -8,6 +8,20 @@
   {% render 'product-card-metafield-badges', product: product %}
 {%- endcomment -%}
 
+{%- liquid
+  assign shout_out = product.metafields.custom.shout_out.value
+-%}
+
+{%- if shout_out != blank -%}
+  <div class="product-label-container absolute top-0 start">
+    <div class="product-label-wrapper flex">
+      <span class="product-label product-label--shout-out">
+        {{- shout_out | escape -}}
+      </span>
+    </div>
+  </div>
+{%- endif -%}
+
 {%- capture badge_markup -%}
   {%- liquid
     assign r_value_mf = product.metafields.custom.r_value

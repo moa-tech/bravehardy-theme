@@ -4485,6 +4485,11 @@ label[data-swatch]::before {
   color: rgba(var(--new-label-text-color));
 }
 
+.product-label--shout-out {
+  background-color: #f5e642;
+  color: #111;
+}
+
 .product-label--preorder {
   background-color: rgba(var(--preorder-label-bg-color));
   color: rgba(var(--preorder-label-text-color));
@@ -4494,6 +4499,7 @@ label[data-swatch]::before {
   position: absolute;
   z-index: 2;
   right: 0;
+  left: 0;
   bottom: 0;
   display: flex;
   flex-wrap: wrap;
@@ -4539,7 +4545,7 @@ label[data-swatch]::before {
   white-space: normal;
   text-align: left;
   word-break: normal;
-  overflow-wrap: normal;
+  overflow-wrap: break-word;
   hyphens: none;
   opacity: 0;
   visibility: hidden;
@@ -4561,14 +4567,18 @@ label[data-swatch]::before {
   height: 0.35em;
 }
 
-.card__metafield-badge--r-value:hover .card__metafield-badge__tooltip,
-.card__metafield-badge--r-value:focus .card__metafield-badge__tooltip,
-.card__metafield-badge--r-value:focus-within .card__metafield-badge__tooltip,
-.card__metafield-badge--temperature:hover .card__metafield-badge__tooltip,
-.card__metafield-badge--temperature:focus .card__metafield-badge__tooltip,
-.card__metafield-badge--temperature:focus-within .card__metafield-badge__tooltip {
+.card__metafield-badge.is-tooltip-open .card__metafield-badge__tooltip,
+.card__metafield-badge:focus-visible .card__metafield-badge__tooltip {
   opacity: 1;
   visibility: visible;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card__metafield-badge--r-value:hover .card__metafield-badge__tooltip,
+  .card__metafield-badge--temperature:hover .card__metafield-badge__tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .card__metafield-badge--temperature {
@@ -4576,6 +4586,41 @@ label[data-swatch]::before {
   pointer-events: auto;
   cursor: help;
   background-color: #8dcbb9;
+}
+
+.card--product:has(.card__metafield-badge.is-tooltip-open),
+.card--product:has(.card__metafield-badge:focus-visible) {
+  z-index: 3;
+}
+
+/* While a tooltip is open, ignore product links so dismiss taps don't navigate. */
+product-card:has(.card__metafield-badge.is-tooltip-open) a {
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card--product:has(.card__metafield-badge:hover) {
+    z-index: 3;
+  }
+}
+
+@media (max-width: 768.98px) {
+  .card__metafield-badge--r-value,
+  .card__metafield-badge--temperature {
+    position: static;
+  }
+
+  .card__metafield-badge__tooltip {
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: none;
+    bottom: calc(100% + 6px);
+  }
+
+  .card__metafield-badge__tooltip::after {
+    right: 1.2rem;
+  }
 }
 
 @media (max-width: 599.98px) {
