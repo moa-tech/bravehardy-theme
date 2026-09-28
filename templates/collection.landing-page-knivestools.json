@@ -82,7 +82,7 @@
         "collection_P7WxyK": {
           "type": "collection",
           "settings": {
-            "collection": "carving-tools"
+            "collection": "carving-knives"
           }
         },
         "collection_DXFMXC": {
@@ -100,7 +100,7 @@
         "collection_QepTqj": {
           "type": "collection",
           "settings": {
-            "collection": "knives"
+            "collection": "folding_knives"
           }
         },
         "collection_T6dfEA": {
@@ -262,7 +262,7 @@
         "title": "Carving Tools",
         "heading_align": "text-start",
         "show_view_all": true,
-        "collection": "carving-tools",
+        "collection": "carving-knives",
         "layout": "carousel",
         "card_size_mobile": "small",
         "card_size": "small",
@@ -325,7 +325,7 @@
         "title": "Knives",
         "heading_align": "text-start",
         "show_view_all": true,
-        "collection": "knives",
+        "collection": "folding_knives",
         "layout": "carousel",
         "card_size_mobile": "small",
         "card_size": "small",

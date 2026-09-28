@@ -142,7 +142,7 @@
       "qty": "Qty",
       "rating": "Rating",
       "reviews": "Reviews",
-      "sale": "Sale",
+      "sale": "Deal",
       "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
       "size_chart": "Size guide",
       "sku": "SKU:",
@@ -184,7 +184,7 @@
     "inventory": {
       "in_stock": "In stock",
       "low_stock": "Low stock",
-      "very_low_stock": "Very low stock",
+      "very_low_stock": "Low stock",
       "only_x_left": "{{ quantity }} in stock",
       "backordered": "Backordered",
       "available_count": {

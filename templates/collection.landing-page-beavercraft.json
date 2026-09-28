@@ -100,7 +100,7 @@
         "collection_VJz8Rf": {
           "type": "collection",
           "settings": {
-            "collection": "carving-tools",
+            "collection": "carving-knives",
             "image": "shopify://shop_images/2_fix-1.webp"
           }
         },
@@ -144,7 +144,7 @@
         "title": "Wood Carving & Whittling Tools",
         "heading_align": "text-start",
         "show_view_all": true,
-        "collection": "carving-tools",
+        "collection": "carving-knives",
         "layout": "grid",
         "card_size_mobile": "small",
         "card_size": "small",

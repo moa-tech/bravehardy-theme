@@ -486,6 +486,15 @@
             "text": "Beavercraft"
           }
         },
+        "logo_aBBqMf": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Flipfuel_Logo.png",
+            "url": "shopify://collections/flipfuel",
+            "logo_width": 260,
+            "text": "FlipFuel"
+          }
+        },
         "logo_JLkGyT": {
           "type": "logo",
           "settings": {
@@ -552,6 +561,7 @@
       },
       "block_order": [
         "logo_f4YneN",
+        "logo_aBBqMf",
         "logo_JLkGyT",
         "logo_VAzfW4",
         "logo_DCnQFD",

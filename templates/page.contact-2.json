@@ -118,10 +118,40 @@
     "faqs": {
       "type": "faq",
       "blocks": {
+        "category_dCktWL": {
+          "type": "category",
+          "settings": {
+            "text": "Stock & Availability"
+          }
+        },
+        "question_ExznkR": {
+          "type": "question",
+          "settings": {
+            "icon": "box",
+            "heading": "If the website says \"In Stock,\" is it actually in your warehouse?",
+            "text": "<p>Yes, absolutely.<strong> </strong>If an item is listed as \"In Stock\" on our website, it means it is physically sitting on our shelves and ready to be shipped directly to you. We only display and sell items that we currently have on hand.</p>"
+          }
+        },
+        "question_b4Efzr": {
+          "type": "question",
+          "settings": {
+            "icon": "truck",
+            "heading": "Do you drop-ship your products directly from suppliers?",
+            "text": "<p>No, we never drop-ship. We fulfil every single order directly from our own warehouse. Because we don't rely on third-party suppliers to ship your items, you won't experience unexpected delays, and we have complete control over the quality and speed of your delivery.</p>"
+          }
+        },
+        "question_hfY3AC": {
+          "type": "question",
+          "settings": {
+            "icon": "check_mark_in_circle",
+            "heading": "How accurate are your online stock levels?",
+            "text": "<p>Our stock indication is 100% accurate. Our website's inventory system is linked directly to our physical warehouse. When you purchase an item, it is immediately reserved for you, so you can trust that what you see online matches exactly what we have available.</p>"
+          }
+        },
         "faq-category-1": {
           "type": "category",
           "settings": {
-            "text": "Ordering"
+            "text": "Orders & Support"
           }
         },
         "faq-question-2": {
@@ -129,7 +159,7 @@
           "settings": {
             "icon": "chat_bubble",
             "heading": "What if I want to speak to someone?",
-            "text": "<p>We want to speak to you too! <a href=\"/pages/contact\" title=\"Contact\">Contact us </a>with any questions, concerns, or feedback. You can reach a real human on <a href=\"https://wa.me/27720469380\" title=\"https://wa.me/27720469380\">WhatsApp</a>, email or call us at +27 72 046 9380</p>"
+            "text": "<p>We want to speak to you too! <a href=\"/pages/contact\" title=\"Contact\">Contact us </a>with any questions, concerns, or feedback. You can always reach a real human on <a href=\"https://wa.me/27720469380\" title=\"https://wa.me/27720469380\">WhatsApp</a>, email or call us at +27 72 046 9380</p>"
           }
         },
         "faq-question-1": {
@@ -181,7 +211,7 @@
           "settings": {
             "icon": "return",
             "heading": "How do I return a product?",
-            "text": "<p>Reach out to us via WhatsApp or email and we'll walk you through the process. To qualify for refund, please make sure you keep all the original packaging.</p>"
+            "text": "<p>Reach out to us via <a href=\"https://wa.me/27720469380\" title=\"https://wa.me/27720469380\">WhatsApp</a> or email and we'll walk you through the process. To qualify for refund, please make sure you keep all the original packaging.</p>"
           }
         },
         "faq-question-6": {
@@ -194,6 +224,10 @@
         }
       },
       "block_order": [
+        "category_dCktWL",
+        "question_ExznkR",
+        "question_b4Efzr",
+        "question_hfY3AC",
         "faq-category-1",
         "faq-question-2",
         "faq-question-1",

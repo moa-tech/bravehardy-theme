@@ -95,7 +95,7 @@
         "mobile_menu_position": "burger-left",
         "logo_text": "",
         "logo_type_scale": "2",
-        "logo": "shopify://shop_images/BraveHardy_-_Logo_-_300.svg",
+        "logo": "shopify://shop_images/Brave_Hardy_-_Logo_-_2026.svg",
         "logo_width": 250,
         "logo_h1": false,
         "logo_center": false,
@@ -105,7 +105,7 @@
         "menu": "main-menu",
         "menu_center": false,
         "repeat_links": false,
-        "menu_featured_link": "Deals, Gift Guide, Gift Voucher",
+        "menu_featured_link": "Deals, Gift Guide, Gift Card",
         "quicklinks_menu": "",
         "cta_show": true,
         "cta_icon": "chat_bubble",
@@ -144,6 +144,7 @@
         "text_VPC3Kx",
         "button_KWazCP"
       ],
+      "disabled": true,
       "settings": {
         "section_height": "xsmall",
         "color_scheme": "2",

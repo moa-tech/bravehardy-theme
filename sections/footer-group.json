@@ -130,10 +130,10 @@
         "text": {
           "type": "text",
           "settings": {
-            "image": "shopify://shop_images/BraveHardy_-_Logo_-_300_-_W.svg",
+            "image": "shopify://shop_images/Brave_Hardy_-_Logo_-_WHT.svg",
             "image_width": 250,
             "heading": "Cape Town, South Africa",
-            "text": "",
+            "text": "<p><a href=\"https://maps.app.goo.gl/tjo8K5ygddr7S4SP9\" title=\"https://maps.app.goo.gl/tjo8K5ygddr7S4SP9\">34.080720° S, 18.439612° E</a></p>",
             "button_label": "",
             "button_link": "",
             "enable_follow_on_shop": false,

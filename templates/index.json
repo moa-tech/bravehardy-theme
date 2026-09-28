@@ -12,23 +12,22 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "slide_QBBc4X": {
+        "slide_BLxGeH": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify://shop_images/Nemo_Banner_1.jpg",
-            "image_mobile": "shopify://shop_images/PDP_Header_Image_-_Dragonfly_Bikepack_OSMO_copy.webp",
-            "url": "",
+            "image_desktop": "shopify://shop_images/Benchmade_1.jpg",
+            "url": "shopify://collections/benchmade",
             "overlay_position": "justify-center items-center",
             "overlay_text_align": "text-center",
             "mob_center_text": false,
-            "subheading": "NEMO EQUIPMENT",
-            "heading": "Ultra-light & Seriously Packable",
+            "subheading": "NEW ARRIVAL",
+            "heading": "Benchmade.<br>Built For Serious Use.",
             "heading_size": "h0",
             "heading_h1": false,
-            "text": "<p>NEMO keeps the load light without skimping on performance.</p>",
+            "text": "<p>Precision engineering, premium blade steels and dependable designs.</p>",
             "enlarge_text": true,
-            "button_1_label": "SHOP NOW",
-            "button_1_link": "shopify://collections/nemo",
+            "button_1_label": "Explore Range",
+            "button_1_link": "shopify://collections/benchmade",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "",
@@ -46,23 +45,22 @@
             "bg_grad": ""
           }
         },
-        "slide_VNVXPi": {
+        "slide_wiRPji": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify://shop_images/Brave_The_WInter_-_Sale_Banner_v3.webp",
-            "image_mobile": "shopify://shop_images/Brave_The_WInter_-_Sale_Banner_-_mobile.webp",
-            "url": "shopify://collections/sale",
+            "image_desktop": "shopify://shop_images/Square_Cookware.jpg",
+            "url": "shopify://collections/square-cookware",
             "overlay_position": "justify-center items-center",
             "overlay_text_align": "text-center",
             "mob_center_text": false,
-            "subheading": "",
-            "heading": "",
+            "subheading": "NEW ARRIVAL",
+            "heading": "Square Cookware",
             "heading_size": "h0",
             "heading_h1": false,
-            "text": "",
+            "text": "<p>Compact, stackable cookware with a detachable handle <br/>and bag for easy storage.</p>",
             "enlarge_text": true,
-            "button_1_label": "",
-            "button_1_link": "",
+            "button_1_label": "EXPLORE RANGE",
+            "button_1_link": "shopify://collections/square-cookware",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "",
@@ -80,22 +78,23 @@
             "bg_grad": ""
           }
         },
-        "slide_XjEjFU": {
+        "slide_8KtMkz": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify://shop_images/Petromax_Dutch_Oven_6f85d047-b911-4fc8-9972-430f9555cf64.jpg",
-            "url": "shopify://products/petromax-dutch-oven",
+            "image_desktop": "shopify://shop_images/Work_Sharp_Banner_1.jpg",
+            "image_mobile": "shopify://shop_images/KTS2-Use-1.webp",
+            "url": "shopify://collections/work-sharp",
             "overlay_position": "justify-center items-center",
             "overlay_text_align": "text-center",
             "mob_center_text": false,
-            "subheading": "PETROMAX DUTCH OVEN",
-            "heading": "Your Cast Iron Legacy",
+            "subheading": "NEW ARRIVAL",
+            "heading": "Work Sharp - Precision Knife & Tool Sharpeners.",
             "heading_size": "h0",
             "heading_h1": false,
-            "text": "<p>More than a potjie. An heirloom for generations.</p>",
+            "text": "<p>Powered or manual precision sharpeners with premium<br/>abrasives to help you get your edges sharp again.</p>",
             "enlarge_text": true,
-            "button_1_label": "SHOP NOW",
-            "button_1_link": "shopify://products/petromax-dutch-oven",
+            "button_1_label": "EXPLORE RANGE",
+            "button_1_link": "shopify://collections/work-sharp",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "",
@@ -113,23 +112,22 @@
             "bg_grad": ""
           }
         },
-        "slide_8kt8DR": {
+        "slide_wGjJKj": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify://shop_images/Omnia_-_Banner_2.jpg",
-            "image_mobile": "shopify://shop_images/Mountains_Outdoor.jpg",
-            "url": "shopify://collections/omnia",
+            "image_desktop": "shopify://shop_images/FlipFuel.jpg",
+            "url": "shopify://products/flipfuel-canister-fuel-transfer-device",
             "overlay_position": "justify-center items-center",
             "overlay_text_align": "text-center",
             "mob_center_text": false,
-            "subheading": "OMNIA OVEN",
-            "heading": "Turn your Gas Stove into an Oven",
+            "subheading": "NOW AVAILABLE & READY TO SHIP",
+            "heading": "FlipFuel Gas Canister Transfer Device",
             "heading_size": "h0",
             "heading_h1": false,
-            "text": "<p>Bake, cook and heat just like in a traditional oven.</p>",
+            "text": "<p>FlipFuel® lets you transfer leftover isobutane fuel between canisters so you carry less weight and waste less fuel.</p>",
             "enlarge_text": true,
             "button_1_label": "SHOP NOW",
-            "button_1_link": "shopify://collections/omnia",
+            "button_1_link": "shopify://products/flipfuel-canister-fuel-transfer-device",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "",
@@ -147,23 +145,23 @@
             "bg_grad": ""
           }
         },
-        "slide_Y8ipDk": {
+        "slide_8C6FHf": {
           "type": "slide",
           "settings": {
-            "image_desktop": "shopify://shop_images/Petromax_Tyropit.jpg",
-            "image_mobile": "shopify://shop_images/IAAF_LEVI_BILDAUSWAHL-6457.jpg",
-            "url": "",
+            "image_desktop": "shopify://shop_images/Petromax_Essential.jpg",
+            "image_mobile": "shopify://shop_images/59-DSC03302.jpg",
+            "url": "shopify://products/petromax-essential-dutch-oven",
             "overlay_position": "justify-center items-center",
             "overlay_text_align": "text-center",
             "mob_center_text": false,
-            "subheading": "PETROMAX",
-            "heading": "Tyropit Low Smoke Fire Bowl",
+            "subheading": "JUST LANDED",
+            "heading": "New Petromax Essential Dutch Oven",
             "heading_size": "h0",
             "heading_h1": false,
-            "text": "<p>Stainless steel fire bowl delivering low-smoke flames, steady heat and a versatile base for outdoor cooking and gathering.</p>",
+            "text": "<p>Combines lightweight, robust cast iron<br/> with a multifunctional lid for frying.</p>",
             "enlarge_text": true,
-            "button_1_label": "SHOP NOW",
-            "button_1_link": "shopify://products/petromax-tyropit-low-smoke-fire-bowl",
+            "button_1_label": "Shop Now",
+            "button_1_link": "shopify://products/petromax-essential-dutch-oven",
             "button_1_style": "btn btn--primary",
             "button_2_label": "",
             "button_2_link": "",
@@ -183,11 +181,11 @@
         }
       },
       "block_order": [
-        "slide_QBBc4X",
-        "slide_VNVXPi",
-        "slide_XjEjFU",
-        "slide_8kt8DR",
-        "slide_Y8ipDk"
+        "slide_BLxGeH",
+        "slide_wiRPji",
+        "slide_8KtMkz",
+        "slide_wGjJKj",
+        "slide_8C6FHf"
       ],
       "settings": {
         "height_mode": "fixed",
@@ -322,7 +320,7 @@
           "type": "media",
           "settings": {
             "image": "shopify://shop_images/atago-firepit.jpg",
-            "link_url": "shopify://collections/braai-grill",
+            "link_url": "shopify://collections/fire-braai",
             "columns": 1,
             "rows": 1,
             "subheading": "",
@@ -689,6 +687,129 @@
         "button_label": "Button",
         "color_scheme": "2",
         "button_style": "btn btn--primary"
+      }
+    },
+    "promo_grid_3YW4bm": {
+      "type": "promo-grid",
+      "blocks": {
+        "media_whWMVi": {
+          "type": "media",
+          "settings": {
+            "link_url": "",
+            "columns": 2,
+            "rows": 2,
+            "line1_text": "Save up to",
+            "line1_text_type_scale": "text-h6",
+            "line2_text": "50%",
+            "line2_text_type_scale": "text-h0",
+            "line3_text": "",
+            "line3_text_type_scale": "text-h6",
+            "overlay_position": "justify-start items-start",
+            "text_alignment": "text-center",
+            "promo_circle": false,
+            "background_color": "#e32b2b",
+            "text_color": "#ffffff",
+            "subheading": "Subheading",
+            "link_text": "",
+            "text_type_scale": "h6",
+            "tint_color": "#000000",
+            "tint_opacity": 30
+          }
+        },
+        "media_G4PafF": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/onetigris_gloves.jpg",
+            "link_url": "shopify://products/onetigris-leather-gloves",
+            "columns": 1,
+            "rows": 1,
+            "line1_text": "",
+            "line1_text_type_scale": "text-h6",
+            "line2_text": "",
+            "line2_text_type_scale": "text-h0",
+            "line3_text": "",
+            "line3_text_type_scale": "text-h6",
+            "overlay_position": "justify-start items-start",
+            "text_alignment": "text-center",
+            "promo_circle": false,
+            "background_color": "#e32b2b",
+            "text_color": "#ffffff",
+            "subheading": "OneTigris Leather Gloves",
+            "link_text": "",
+            "text_type_scale": "h6",
+            "tint_color": "#000000",
+            "tint_opacity": 30
+          }
+        },
+        "media_jRBy3N": {
+          "type": "media",
+          "settings": {
+            "link_url": "",
+            "columns": 1,
+            "rows": 1,
+            "line1_text": "Now only",
+            "line1_text_type_scale": "text-h6",
+            "line2_text": "$999",
+            "line2_text_type_scale": "text-h0",
+            "line3_text": "",
+            "line3_text_type_scale": "text-h6",
+            "overlay_position": "justify-start items-start",
+            "text_alignment": "text-center",
+            "promo_circle": false,
+            "background_color": "#e32b2b",
+            "text_color": "#ffffff",
+            "subheading": "Subheading",
+            "link_text": "",
+            "text_type_scale": "h6",
+            "tint_color": "#000000",
+            "tint_opacity": 30
+          }
+        },
+        "media_X8Uz8c": {
+          "type": "media",
+          "settings": {
+            "link_url": "",
+            "columns": 2,
+            "rows": 1,
+            "line1_text": "Save up to",
+            "line1_text_type_scale": "text-h6",
+            "line2_text": "1/3",
+            "line2_text_type_scale": "text-h0",
+            "line3_text": "",
+            "line3_text_type_scale": "text-h6",
+            "overlay_position": "justify-start items-start",
+            "text_alignment": "text-center",
+            "promo_circle": false,
+            "background_color": "#e32b2b",
+            "text_color": "#ffffff",
+            "subheading": "Subheading",
+            "link_text": "",
+            "text_type_scale": "h6",
+            "tint_color": "#000000",
+            "tint_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "media_whWMVi",
+        "media_G4PafF",
+        "media_jRBy3N",
+        "media_X8Uz8c"
+      ],
+      "disabled": true,
+      "name": "Promo grid",
+      "settings": {
+        "title": "Top Sellers",
+        "heading_align": "text-start",
+        "button_label": "",
+        "button_link": "",
+        "gallery_cols_max": 4,
+        "mobile_carousel": false,
+        "gallery_cols_min": "1",
+        "fixed_height_desktop": 200,
+        "fixed_height_mobile": 280,
+        "text_overlay_font": "body",
+        "color_scheme": "default"
       }
     },
     "featured_collection_yhH8RU": {
@@ -1454,6 +1575,7 @@
         "testimonial_8mqG6f",
         "testimonial_yVRHxP"
       ],
+      "disabled": true,
       "settings": {
         "heading": "What our customers are saying",
         "show_quotes": true,
@@ -1514,6 +1636,7 @@
         "text_6URQ7i",
         "button_cz4JQd"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "text_position": "justify-center",
@@ -1630,9 +1753,10 @@
         "divider_bYCmE4",
         "view_more_button_cdYt6R"
       ],
+      "disabled": true,
       "settings": {
-        "product": "brave-hardy-suzuki-jimny-spare-wheel-cover",
-        "select_first_variant": false,
+        "product": "brave-hardy-gift-voucher",
+        "select_first_variant": true,
         "media_ratio": "1",
         "media_crop": "none",
         "media_width": 50,
@@ -1755,7 +1879,7 @@
         "text_align": "text-center",
         "mob_center_text": true,
         "wide": false,
-        "color_scheme": "none",
+        "color_scheme": "1",
         "full_width": true,
         "prevent_animation": false
       }
@@ -1770,6 +1894,7 @@
     "video_kVhEkr",
     "background_video_U8PeQ7",
     "featured_collection_nxy8bK",
+    "promo_grid_3YW4bm",
     "featured_collection_yhH8RU",
     "featured_collection_tGnEpq",
     "featured_collection_93pAAi",

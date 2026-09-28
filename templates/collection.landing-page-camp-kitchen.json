@@ -107,7 +107,7 @@
         "collection_6nnwXT": {
           "type": "collection",
           "settings": {
-            "collection": "dishes-utensils",
+            "collection": "camp_utensils",
             "image": "shopify://shop_images/Z7A2318.jpg"
           }
         },
@@ -121,7 +121,7 @@
         "collection_QepTqj": {
           "type": "collection",
           "settings": {
-            "collection": "knives"
+            "collection": "folding_knives"
           }
         }
       },
