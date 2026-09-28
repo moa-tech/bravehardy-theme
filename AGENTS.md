@@ -224,6 +224,11 @@ the new theme name/ID in the message. Push to GitHub (`origin`) when the user as
   are theme settings under **Theme settings → Shipping & returns (structured data)**,
   output as JSON-LD on every page by `snippets/structured-data-header.liquid`. If the
   shipping or refund policy changes, update those settings too.
+- The physical store's address, coordinates, opening hours, phone and email are theme
+  settings under **Theme settings → Store & contact (structured data)**, output as
+  Store and Organization JSON-LD on every page by `snippets/structured-data-header.liquid`.
+  If any store details change, update those settings too, and keep them the same as the
+  store and contact pages and the Google Business Profile.
 - Prices are whole rands; the store never shows cents. The format is set in the Shopify
   admin (Settings → General → Currency display, using `{{amount_no_decimals}}`), not in
   the theme. Always output prices through Shopify's `money` filters (or
