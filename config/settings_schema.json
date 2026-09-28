@@ -3122,5 +3122,167 @@
         "default": 30
       }
     ]
+  },
+  {
+    "name": "Store & contact (structured data)",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Describes your physical store and contact details to search engines and AI assistants on every page. Keep these the same as your Google Business Profile and the store and contact pages."
+      },
+      {
+        "type": "checkbox",
+        "id": "structured_data_store_enable",
+        "label": "Include store and contact details",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Contact"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_phone",
+        "label": "Phone number",
+        "info": "International format, e.g. +27 72 046 9380",
+        "default": "+27 72 046 9380"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_email",
+        "label": "Customer service email",
+        "default": "hello@bravehardy.com"
+      },
+      {
+        "type": "header",
+        "content": "Store"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_name",
+        "label": "Store name",
+        "info": "Leave blank to use the shop name. Should match your Google Business Profile."
+      },
+      {
+        "type": "select",
+        "id": "structured_data_store_type",
+        "label": "Store type",
+        "options": [
+          {
+            "value": "SportingGoodsStore",
+            "label": "Sporting goods store"
+          },
+          {
+            "value": "Store",
+            "label": "General store"
+          }
+        ],
+        "default": "SportingGoodsStore"
+      },
+      {
+        "type": "page",
+        "id": "structured_data_store_page",
+        "label": "Store page",
+        "info": "The page about visiting the store. Leave blank to use the homepage."
+      },
+      {
+        "type": "image_picker",
+        "id": "structured_data_store_image",
+        "label": "Store photo",
+        "info": "Optional. Uses the header logo if blank."
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_street",
+        "label": "Street address",
+        "info": "Leave blank to leave the store out.",
+        "default": "B5 Westlake Square, 1 Westlake Drive, Westlake"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_locality",
+        "label": "City",
+        "default": "Cape Town"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_region",
+        "label": "Province",
+        "default": "Western Cape"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_postal_code",
+        "label": "Postal code",
+        "default": "7945"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_country",
+        "label": "Country code",
+        "info": "Two-letter ISO code, e.g. ZA",
+        "default": "ZA"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_latitude",
+        "label": "Latitude",
+        "info": "Decimal degrees. South is negative, e.g. -34.080720",
+        "default": "-34.080720"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_longitude",
+        "label": "Longitude",
+        "info": "Decimal degrees, e.g. 18.439612",
+        "default": "18.439612"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_map_url",
+        "label": "Google Maps link",
+        "default": "https://maps.app.goo.gl/oQGqZ3kAtLS9DFUz7"
+      },
+      {
+        "type": "header",
+        "content": "Opening hours"
+      },
+      {
+        "type": "paragraph",
+        "content": "24-hour time, e.g. 09:00 and 16:30. Leave a day blank if the store is closed."
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_weekday_opens",
+        "label": "Monday to Friday opens",
+        "default": "09:00"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_weekday_closes",
+        "label": "Monday to Friday closes",
+        "default": "16:30"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_saturday_opens",
+        "label": "Saturday opens"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_saturday_closes",
+        "label": "Saturday closes"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_sunday_opens",
+        "label": "Sunday opens"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_store_sunday_closes",
+        "label": "Sunday closes"
+      }
+    ]
   }
 ]

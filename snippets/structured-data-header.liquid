@@ -1,7 +1,46 @@
+{%- liquid
+  assign organization_id = shop.url | append: '/#organization'
+  assign store_phone = settings.structured_data_store_phone | strip
+  assign store_email = settings.structured_data_store_email | strip
+  assign store_street = settings.structured_data_store_street | strip
+  assign store_country = settings.structured_data_store_country | strip | default: 'ZA' | upcase
+
+  assign show_contact = false
+  assign show_store = false
+  if settings.structured_data_store_enable
+    if store_phone != blank or store_email != blank
+      assign show_contact = true
+    endif
+    if store_street != blank
+      assign show_store = true
+    endif
+  endif
+-%}
+
+{%- if show_store -%}
+  {%- capture store_address_json -%}
+    {
+      "@type": "PostalAddress",
+      "streetAddress": {{ store_street | json }},
+      {%- if settings.structured_data_store_locality != blank %}
+        "addressLocality": {{ settings.structured_data_store_locality | strip | json }},
+      {%- endif %}
+      {%- if settings.structured_data_store_region != blank %}
+        "addressRegion": {{ settings.structured_data_store_region | strip | json }},
+      {%- endif %}
+      {%- if settings.structured_data_store_postal_code != blank %}
+        "postalCode": {{ settings.structured_data_store_postal_code | strip | json }},
+      {%- endif %}
+      "addressCountry": {{ store_country | json }}
+    }
+  {%- endcapture -%}
+{%- endif -%}
+
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "Organization",
+    "@id": {{ organization_id | json }},
     "name": {{ shop.name | json }},
     {%- if section.settings.logo %}
       "logo": {{ section.settings.logo | image_url: width: section.settings.logo.width | prepend: "https:" | json }},
@@ -65,6 +104,23 @@
     "sameAs": [
       {{ sameAs_json | remove_last: ',' }}
     ],
+    {%- if show_store %}
+      "address": {{ store_address_json }},
+    {%- endif %}
+    {%- if show_contact %}
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        {%- if store_phone != blank %}
+          "telephone": {{ store_phone | json }},
+        {%- endif %}
+        {%- if store_email != blank %}
+          "email": {{ store_email | json }},
+        {%- endif %}
+        "areaServed": {{ store_country | json }},
+        "availableLanguage": "en"
+      },
+    {%- endif %}
     {%- if settings.structured_data_policies_enable %}
       {%- assign policy_country = settings.structured_data_shipping_country | default: 'ZA' | upcase %}
       "hasShippingService": {
@@ -116,9 +172,91 @@
         "merchantReturnLink": {{ shop.url | append: '/policies/refund-policy' | json }}
       },
     {%- endif %}
-    "url": {{ shop.url | append: page.url | json }}
+    "url": {{ shop.url | json }}
   }
 </script>
+
+{%- if show_store -%}
+  {%- liquid
+    assign store_page = settings.structured_data_store_page
+    assign store_url = shop.url
+    if store_page != blank and store_page.url != blank
+      assign store_url = shop.url | append: store_page.url
+    endif
+
+    assign store_image = settings.structured_data_store_image | default: section.settings.logo
+
+    # Non-numeric input becomes 0 and is left out.
+    assign store_latitude = settings.structured_data_store_latitude | strip | plus: 0
+    assign store_longitude = settings.structured_data_store_longitude | strip | plus: 0
+
+    assign store_week_days = 'Monday,Tuesday,Wednesday,Thursday,Friday' | split: ','
+  -%}
+
+  {%- capture opening_hours_json -%}
+    {%- if settings.structured_data_store_weekday_opens != blank and settings.structured_data_store_weekday_closes != blank -%}
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [{% for day in store_week_days %}"https://schema.org/{{ day }}"{% unless forloop.last %}, {% endunless %}{% endfor %}],
+        "opens": {{ settings.structured_data_store_weekday_opens | strip | json }},
+        "closes": {{ settings.structured_data_store_weekday_closes | strip | json }}
+      },
+    {%- endif -%}
+    {%- if settings.structured_data_store_saturday_opens != blank and settings.structured_data_store_saturday_closes != blank -%}
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["https://schema.org/Saturday"],
+        "opens": {{ settings.structured_data_store_saturday_opens | strip | json }},
+        "closes": {{ settings.structured_data_store_saturday_closes | strip | json }}
+      },
+    {%- endif -%}
+    {%- if settings.structured_data_store_sunday_opens != blank and settings.structured_data_store_sunday_closes != blank -%}
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["https://schema.org/Sunday"],
+        "opens": {{ settings.structured_data_store_sunday_opens | strip | json }},
+        "closes": {{ settings.structured_data_store_sunday_closes | strip | json }}
+      },
+    {%- endif -%}
+  {%- endcapture -%}
+  {%- assign opening_hours_json = opening_hours_json | strip | remove_last: ',' -%}
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": {{ settings.structured_data_store_type | default: 'Store' | json }},
+      "@id": {{ shop.url | append: '/#store' | json }},
+      "name": {{ settings.structured_data_store_name | strip | default: shop.name | json }},
+      "url": {{ store_url | json }},
+      {%- if store_image != blank %}
+        "image": {{ store_image | image_url: width: 1200 | prepend: "https:" | json }},
+      {%- endif %}
+      {%- if store_phone != blank %}
+        "telephone": {{ store_phone | json }},
+      {%- endif %}
+      {%- if store_email != blank %}
+        "email": {{ store_email | json }},
+      {%- endif %}
+      {%- if store_latitude != 0 and store_longitude != 0 %}
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": {{ store_latitude }},
+          "longitude": {{ store_longitude }}
+        },
+      {%- endif %}
+      {%- if settings.structured_data_store_map_url != blank %}
+        "hasMap": {{ settings.structured_data_store_map_url | strip | json }},
+      {%- endif %}
+      {%- if opening_hours_json != blank %}
+        "openingHoursSpecification": [
+          {{ opening_hours_json }}
+        ],
+      {%- endif %}
+      "parentOrganization": { "@id": {{ organization_id | json }} },
+      "address": {{ store_address_json }}
+    }
+  </script>
+{%- endif -%}
 
 {%- if request.page_type == 'index' -%}
   {%- assign potential_action_target = shop.url | append: routes.search_url | append: "?q={search_term_string}" -%}
@@ -126,8 +264,10 @@
     {
       "@context": "http://schema.org",
       "@type": "WebSite",
+      "@id": {{ shop.url | append: '/#website' | json }},
       "name": {{ shop.name | json }},
-      "url": {{ shop.url | append: page.url | json }},
+      "url": {{ shop.url | json }},
+      "publisher": { "@id": {{ organization_id | json }} },
       "potentialAction": {
         "@type": "SearchAction",
         "target": {{ potential_action_target | json }},
