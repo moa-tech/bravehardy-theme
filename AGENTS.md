@@ -103,8 +103,41 @@ so it isn't mixed up with your changes.
 shopify theme check --no-color -o json
 ```
 
-The theme has existing offenses (10 errors, 40 warnings as of 2026-09-28) in files we
-haven't touched. Make sure **your** files add none.
+The theme has existing offenses (10 errors, 40 warnings as of 2026-09-28). All were
+checked against the live site and none affects customers, so don't chase them. Make
+sure **your** changes add none: compare totals and the files involved.
+
+Known errors (10):
+
+| Error | Why it's harmless |
+|---|---|
+| `MatchingTranslations` × 7: `products.filtering.subcategories` missing in de/es/fr/it/ja/nl/pt-PT | The store is English only; those locale files are never shown. |
+| `LiquidHTMLSyntaxError` in `sections/apps.liquid:11` (`{%- endunless- %}` typo) | Shopify's lax parser treats it as `endunless`, and the section renders correctly on every product page. Fix it (`{%- endunless -%}`) as part of any future change to that file. |
+| `LiquidHTMLSyntaxError` in `sections/media-grid.liquid:139` and `sections/promo-grid.liquid:119` | A validator false positive: the code opens `<a>` or `<div>` inside `{% if %}` and closes it the same way further down. The rendered HTML is balanced (checked on the homepage media grid). Don't rewrite. |
+
+Known warnings (40), grouped:
+
+- **No effect on output:** `VariableName` (7), `UnusedAssign` (4), `LiquidComplexity`
+  (5), `LiquidNestingDepth` (1), `OrphanedSnippet` (2), and
+  `DuplicateRenderSnippetArguments` (2; the same value is passed twice).
+- **`UndefinedObject` (11), all harmless:**
+  - `tab_btns`: an intentional self-appending capture.
+  - `paginate` in `main-list-collections.liquid`: only affects promo blocks, and the
+    collections list page has none.
+  - `link.current` in `header.liquid`: the header CTA is an external WhatsApp link.
+  - `block` in `navigation-slideshow.liquid` and `product-compare.liquid`: the first
+    section isn't used, and the second only affects Theme Editor attributes.
+  - `email` in `main-reset_password.liquid`: the store uses Shopify's new customer
+    accounts (account.bravehardy.com), so the classic account templates are never shown.
+- **`UnclosedHTMLElement` in `sections/logo-list.liquid:142`: a real bug from the
+  original Enterprise 2.0.0 code.** Line 142 is a stray `</div>` (two opened, three
+  closed). Browsers ignore it: on /pages/store and /pages/about-us every later section
+  is still inside `<main>`. Remove that line as part of any future change to that file.
+- **`AssetPreload` (7): the only speed-related item.** `layout/theme.liquid` preloads
+  `main.css` and the two fonts with hand-written `<link rel="preload">` tags instead of
+  Shopify's `preload_tag` filter / `stylesheet_tag: preload: true`. The filters also send
+  HTTP `Link` headers so the browser can start downloads earlier. The benefit is small,
+  but it's a safe improvement if you're touching `theme.liquid`.
 
 ### 5. Upload to a staging copy of live
 
