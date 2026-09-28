@@ -382,7 +382,7 @@ if (!customElements.get('facet-filters')) {
         breadcrumbsWrapper.innerHTML = newMarkup;
         breadcrumbsWrapper.hidden = false;
       } else if (breadcrumbsWrapper.classList.contains('collection-breadcrumbs')) {
-        breadcrumbsWrapper.innerHTML = '<nav class="breadcrumbs" aria-hidden="true"></nav>';
+        breadcrumbsWrapper.innerHTML = '<div class="breadcrumbs" aria-hidden="true"></div>';
         breadcrumbsWrapper.hidden = false;
       } else {
         breadcrumbsWrapper.innerHTML = '';

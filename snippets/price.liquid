@@ -19,6 +19,14 @@
   assign available = variant.available | default: false
   assign compare_at_price = variant.compare_at_price
   assign price = variant.price | default: 1999
+
+  assign has_unit_price = false
+  for product_variant in product.variants
+    if product_variant.unit_price_measurement
+      assign has_unit_price = true
+      break
+    endif
+  endfor
 -%}
 
 <div class="price{%- if compare_at_price > price %} price--on-sale{% endif -%}
@@ -53,7 +61,13 @@
     </span>
   </div>
 
-  <div class="unit-price relative"{% if variant.unit_price_measurement == nil %} hidden{% endif %}><span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span><span class="unit-price__price">{%- render 'price-as-money', price: variant.unit_price, show_money_with_currency: false -%}</span><span class="unit-price__separator">{{ 'products.product.price.unit_price_separator' | t }}</span><span class="unit-price__unit">{%- if variant.unit_price_measurement.reference_value != 1 -%}{{- variant.unit_price_measurement.reference_value -}}{%- endif -%}{{ variant.unit_price_measurement.reference_unit }}</span></div>
+  {%- comment -%}
+    Only output when some variant has a unit price.
+    Hidden text elsewhere is read by AI assistants and scrapers as "Unit price".
+  {%- endcomment -%}
+  {%- if has_unit_price -%}
+    <div class="unit-price relative"{% if variant.unit_price_measurement == nil %} hidden{% endif %}><span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span><span class="unit-price__price">{%- render 'price-as-money', price: variant.unit_price, show_money_with_currency: false -%}</span><span class="unit-price__separator">{{ 'products.product.price.unit_price_separator' | t }}</span><span class="unit-price__unit">{%- if variant.unit_price_measurement.reference_value != 1 -%}{{- variant.unit_price_measurement.reference_value -}}{%- endif -%}{{ variant.unit_price_measurement.reference_unit }}</span></div>
+  {%- endif -%}
 
   {%- comment -%}
     Only needed where the variant picker can select a non-existent combination

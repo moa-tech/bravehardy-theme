@@ -338,10 +338,20 @@
         {%- if breadcrumbs_markup_stripped != blank -%}
           {{ breadcrumbs_markup }}
         {%- elsif request.page_type == 'collection' -%}
-          <nav class="breadcrumbs" aria-hidden="true"></nav>
+          <div class="breadcrumbs" aria-hidden="true"></div>
         {%- endif -%}
       </div>
     {%- endif -%}
+
+    {%- comment -%}
+      BreadcrumbList JSON-LD, output once per page whether or not the visible breadcrumbs show.
+    {%- endcomment -%}
+    {%- liquid
+      assign breadcrumb_page_types = 'product,collection,list-collections,page,blog,article' | split: ','
+      if breadcrumb_page_types contains request.page_type
+        render 'breadcrumbs', structured_data_only: true
+      endif
+    -%}
 
     {{ content_for_layout }}
   </main>

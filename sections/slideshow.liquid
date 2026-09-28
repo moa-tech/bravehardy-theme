@@ -168,7 +168,13 @@
              {{ block.shopify_attributes }}>
 
           {%- if block.settings.url != blank -%}
-            <a href="{{ block.settings.url }}" class="image-banner__image media media--has-overlay block absolute top-0 left-0 w-full h-full has-motion">
+            {%- liquid
+              assign slide_link_label = block.settings.heading | replace: '<br>', ' ' | strip_html | strip
+              if slide_link_label == blank
+                assign slide_link_label = block.settings.button_1_label | default: img.alt
+              endif
+            -%}
+            <a href="{{ block.settings.url }}" class="image-banner__image media media--has-overlay block absolute top-0 left-0 w-full h-full has-motion"{% if slide_link_label != blank %} aria-label="{{ slide_link_label | escape }}"{% endif %}>
           {%- else -%}
             <div class="image-banner__image media media--has-overlay absolute top-0 left-0 w-full h-full has-motion">
           {%- endif -%}

@@ -329,8 +329,8 @@ if (!customElements.get('variant-picker')) {
           }
         }
 
-        // Update unit price, if specified.
-        if (this.variant.unit_price_measurement) {
+        // Update unit price, if specified. The element is only output when some variant has one.
+        if (unitPriceEl && this.variant.unit_price_measurement) {
           const valueEl = this.price.querySelector('.unit-price__price');
           const unitEl = this.price.querySelector('.unit-price__unit');
           const value = this.variant.unit_price_measurement.reference_value;
@@ -340,7 +340,7 @@ if (!customElements.get('variant-picker')) {
           unitEl.textContent = value === 1 ? unit : `${value} ${unit}`;
         }
 
-        unitPriceEl.hidden = !this.variant.unit_price_measurement;
+        if (unitPriceEl) unitPriceEl.hidden = !this.variant.unit_price_measurement;
         this.price.classList.toggle(
           'price--on-sale',
           this.variant.compare_at_price > this.variant.price

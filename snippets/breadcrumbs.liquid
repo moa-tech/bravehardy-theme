@@ -6,6 +6,9 @@
   - divider {String} - Markup to use for the divider (optional).
   - prev_icon {String} - Markup to use for the previous product button (optional).
   - next_icon {String} - Markup to use for the next product button (optional).
+  - structured_data_only {Boolean} - Output only the BreadcrumbList JSON-LD, even when the
+    visible breadcrumbs are off or hidden (optional, default is false). The visible breadcrumbs
+    never include JSON-LD; layout/theme.liquid outputs it once per page with this parameter.
 
   Usage:
   {%- capture divider -%}
@@ -365,10 +368,11 @@
   </nav>
 {%- endcapture -%}
 
-{%- if show_crumbs -%}
+{%- if structured_data_only -%}
   {%- if show_structured_data -%}
     {{ crumbs_structured_data }}
   {%- endif -%}
+{%- elsif show_crumbs -%}
   {{ crumbs_html }}
 {%- endif -%}
 {% comment %}
