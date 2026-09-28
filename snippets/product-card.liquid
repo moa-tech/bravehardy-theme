@@ -80,6 +80,24 @@
     endif
   endif
 
+  # Whether the card shows swatches (same conditions as the swatch markup below).
+  # Hidden variant images are only needed then, for the swatch image swap.
+  assign card_has_swatches = false
+  if settings.card_colors_style == 'native' or settings.card_colors_style == 'swatches' or settings.card_colors_style == 'variant-images'
+    for option in product.options_with_values
+      if settings.card_colors_style == 'native'
+        assign native_swatch_options = option.values | where: 'swatch'
+        if native_swatch_options.size > 0
+          assign card_has_swatches = true
+          break
+        endif
+      elsif settings.swatch_option_name contains option.name
+        assign card_has_swatches = true
+        break
+      endif
+    endfor
+  endif
+
   assign image_quality = 1
   if product.featured_media.preview_image.aspect_ratio > 1 and settings.prod_card_image_ratio != "1.77" and settings.prod_card_image_fit == "cover"
     assign image_quality = 2
@@ -150,9 +168,20 @@
               quality: image_quality
             %}
 
-            {%- if settings.card_colors_style == 'native' or settings.card_colors_style == 'swatches' or settings.card_colors_style == 'variant-images' -%}
+            {%- if card_has_swatches -%}
               {%- assign variant_media = product.variants | map: 'featured_media' -%}
+              {%- assign rendered_media_ids = product.featured_media.id | append: ',' | prepend: ',' -%}
               {%- for media in variant_media -%}
+                {%- liquid
+                  if media == blank
+                    continue
+                  endif
+                  assign media_id_key = media.id | append: ',' | prepend: ','
+                  if rendered_media_ids contains media_id_key
+                    continue
+                  endif
+                  assign rendered_media_ids = rendered_media_ids | append: media.id | append: ','
+                -%}
                 {%- unless media == product.featured_media -%}
                   {%- capture attributes %}data-media-id="{{ media.id }}" hidden{% endcapture -%}
                   {% render 'image',

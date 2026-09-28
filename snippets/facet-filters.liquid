@@ -280,31 +280,36 @@
                     {%- for value in filter.values -%}
                       {%- assign selectable_filter_count = selectable_filter_count | plus: 1 -%}
                       <li{% if selectable_filter_count > section.settings.max_filter_options %} class="js-hidden"{% endif %}>
-                        <input type="checkbox"
-                                class="{% unless swatches %}checkbox {% endunless %}visually-hidden focus-label-before"
-                                id="filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
-                                name="{{ value.param_name }}"
-                                value="{{ value.value | escape }}"
-                                {% if value.active %}checked{% endif %}
-                          {% if value.count == 0 and value.active == false %}disabled{% endif %}>
-                        <label for="filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
-                                class="filter__label flex items-start w-full m-0"
-                        {%- if swatches and settings.filter_color_style == 'swatches' %}
-                            data-swatch="{{ value.label | replace: '"', '' | downcase }}"
-                          {%- elsif swatches and settings.filter_color_style == 'native' -%}
-                            data-swatch
-                            {%- if value.swatch and value.swatch.image %}
-                              style="--swatch-image: url({{ value.swatch.image | image_url: width: 40, height: 40, crop: 'center' }})"
-                            {%- elsif value.swatch and value.swatch.color %}
-                              style="--swatch-color: rgb({{ value.swatch.color.rgb }});--swatch-image: none;"
-                            {%- endif %}
-                          {% endif %}>
-                          <span class="flex-auto">{{ value.label | escape }}</span>
-                          {% if section.settings.show_filter_counts -%}
-                            <span class="filter__count">({{ value.count }})</span>
-                          {%- endif -%}
-                        </label>
-                      </li>
+                        {%- liquid
+                          # This repeats for every filter value (60+ on large collections), so the
+                          # markup is output without indentation whitespace.
+                          assign input_state = ''
+                          if value.active
+                            assign input_state = ' checked'
+                          endif
+                          if value.count == 0 and value.active == false
+                            assign input_state = input_state | append: ' disabled'
+                          endif
+                        -%}
+                        <input type="checkbox" class="{% unless swatches %}checkbox {% endunless %}visually-hidden focus-label-before" id="filter-{{ filter.param_name | escape }}-{{ forloop.index }}" name="{{ value.param_name }}" value="{{ value.value | escape }}"{{ input_state }}>
+                        {%- liquid
+                          assign label_attrs = ''
+                          if swatches and settings.filter_color_style == 'swatches'
+                            assign swatch_name = value.label | replace: '"', '' | downcase
+                            assign label_attrs = ' data-swatch="' | append: swatch_name | append: '"'
+                          elsif swatches and settings.filter_color_style == 'native'
+                            assign label_attrs = ' data-swatch'
+                            if value.swatch and value.swatch.image
+                              assign swatch_image_url = value.swatch.image | image_url: width: 40, height: 40, crop: 'center'
+                              assign label_attrs = label_attrs | append: ' style="--swatch-image: url(' | append: swatch_image_url | append: ')"'
+                            elsif value.swatch and value.swatch.color
+                              assign label_attrs = label_attrs | append: ' style="--swatch-color: rgb(' | append: value.swatch.color.rgb | append: ');--swatch-image: none;"'
+                            endif
+                          endif
+                        -%}
+                        <label for="filter-{{ filter.param_name | escape }}-{{ forloop.index }}" class="filter__label flex items-start w-full m-0"{{ label_attrs }}><span class="flex-auto">{{ value.label | escape }}</span>
+                          {%- if section.settings.show_filter_counts %} <span class="filter__count">({{ value.count }})</span>{% endif -%}
+                        </label></li>
                     {%- endfor -%}
                   </ul>
 
