@@ -168,6 +168,7 @@
         "merchantReturnDays": {{ settings.structured_data_return_days | default: 30 }},
         "returnMethod": "https://schema.org/ReturnByMail",
         "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility",
+        "refundType": "https://schema.org/FullRefund",
         "itemCondition": "https://schema.org/NewCondition",
         "merchantReturnLink": {{ shop.url | append: '/policies/refund-policy' | json }}
       },
