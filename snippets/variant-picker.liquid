@@ -158,6 +158,19 @@
             {%- unless has_active_variant_for_value -%}
               {%- continue -%}
             {%- endunless -%}
+            {%- liquid
+              # Server-rendered availability for readers that don't run JS (AI assistants,
+              # scrapers). updateOptionAvailability() in variant-picker.js keeps it current.
+              assign value_status = ''
+              unless value.available
+                # value.variant is nil when this value can't combine with the other selected options.
+                if value.variant
+                  assign value_status = 'products.variant.no_stock' | t
+                else
+                  assign value_status = 'products.variant.non_existent' | t
+                endif
+              endunless
+            -%}
             <input type="radio" class="opt-btn visually-hidden focus-label js-option" name="{{ option_id }}-option" id="{{ option_id }}-opt-{{ value_index0 }}" value="{{ value | escape }}"{% if selected_option_value == value %} checked{% endif %}>
 
             {%- if is_variant_image_style -%}
@@ -166,7 +179,7 @@
                   assign variant_status = variant.metafields.custom.status.value | default: '' | downcase
                 -%}
                 {%- if variant.options[option_index0] == value and variant_status != 'archived' -%}
-                  <label class="opt-label opt-label--swatch opt-label--image relative swatch-shape--{{ settings.variant_picker_swatch_shape }}{% if settings.variant_picker_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}{% if settings.variant_picker_color_style == 'variant-images' and variant.featured_media %} swatch--variant-image{% endif %}"{% if variant.featured_media == blank %} data-swatch="{{ value | replace: '"', '' | downcase }}"{% endif %} for="{{ option_id }}-opt-{{ value_index0 }}">
+                  <label class="opt-label opt-label--swatch opt-label--image relative swatch-shape--{{ settings.variant_picker_swatch_shape }}{% if settings.variant_picker_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}{% if settings.variant_picker_color_style == 'variant-images' and variant.featured_media %} swatch--variant-image{% endif %}"{% if variant.featured_media == blank %} data-swatch="{{ value | replace: '"', '' | downcase }}"{% endif %} for="{{ option_id }}-opt-{{ value_index0 }}"{% if value_status != blank %} title="{{ value_status }}"{% endif %}>
                     <span class="visually-hidden js-value">{{- value | escape -}}</span>
                     <div class="opt-label__media media h-full w-full{% if settings.variant_picker_color_style == 'variant-images' and variant.featured_media == blank %} absolute top-0 left-0{% else %} relative{% endif %}">
                       {%- liquid
@@ -182,6 +195,7 @@
                       -%}
                       {% render 'image', image: variant.featured_media, src_width: swatch_size, lazy_load: false, class: class, disable_focal_point: true %}
                     </div>
+                    <span class="visually-hidden js-option-status">{% if value_status != blank %} ({{ value_status }}){% endif %}</span>
                   </label>
                   {%- break -%}
                 {%- endif -%}
@@ -192,7 +206,7 @@
                 assign multiplier = settings.variant_picker_swatch_size | at_least: 64
                 assign image_width = value.swatch.image.aspect_ratio | at_least: 1.0 | times: multiplier | ceil
               -%}
-              <label class="opt-label opt-label--swatch btn relative swatch--native swatch-shape--{{ settings.variant_picker_swatch_shape }}{% if settings.variant_picker_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}" for="{{ option_id }}-opt-{{ value_index0 }}" data-swatch>
+              <label class="opt-label opt-label--swatch btn relative swatch--native swatch-shape--{{ settings.variant_picker_swatch_shape }}{% if settings.variant_picker_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}" for="{{ option_id }}-opt-{{ value_index0 }}"{% if value_status != blank %} title="{{ value_status }}"{% endif %} data-swatch>
                 <span class="visually-hidden js-value">{{ value }}</span>
                 {%- if settings.variant_picker_swatch_shape == 'natural' -%}
                   <div class="opt-label__native-media media">
@@ -203,19 +217,22 @@
                     {%- render 'image', image: value.swatch.image, src_width: image_width, srcset_2x: true, class: 'img-fit' -%}
                   </div>
                 {%- endif -%}
+                <span class="visually-hidden js-option-status">{% if value_status != blank %} ({{ value_status }}){% endif %}</span>
               </label>
 
             {%- elsif settings.variant_picker_color_style == 'native' and value.swatch.color -%}
               <label class="opt-label opt-label--swatch btn relative swatch-shape--{{ settings.variant_picker_swatch_shape }}{% if settings.variant_picker_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}"
                      data-swatch="{{ value | replace: '"', '' | downcase }}"
-                     for="{{ option_id }}-opt-{{ value_index0 }}"
+                     for="{{ option_id }}-opt-{{ value_index0 }}"{% if value_status != blank %} title="{{ value_status }}"{% endif %}
                      style="--swatch-color: rgb({{ value.swatch.color.rgb }});--swatch-image: none;">
                 <span class="visually-hidden js-value">{{ value }}</span>
+                <span class="visually-hidden js-option-status">{% if value_status != blank %} ({{ value_status }}){% endif %}</span>
               </label>
 
             {%- else -%}
-              <label class="opt-label {% if is_color_selector and is_swatch_style %}opt-label--swatch swatch-shape--{{ settings.variant_picker_swatch_shape }}{% if settings.variant_picker_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}{% else %}opt-label--btn{% endif %} btn relative text-center"{% if is_color_selector and is_swatch_style %} data-swatch="{{ value | replace: '"', '' | downcase }}"{% endif %} for="{{ option_id }}-opt-{{ value_index0 }}">
+              <label class="opt-label {% if is_color_selector and is_swatch_style %}opt-label--swatch swatch-shape--{{ settings.variant_picker_swatch_shape }}{% if settings.variant_picker_swatch_shape != "circle" %} swatch-shape--not-circle{% endif %}{% else %}opt-label--btn{% endif %} btn relative text-center"{% if is_color_selector and is_swatch_style %} data-swatch="{{ value | replace: '"', '' | downcase }}"{% endif %} for="{{ option_id }}-opt-{{ value_index0 }}"{% if value_status != blank %} title="{{ value_status }}"{% endif %}>
                 <span{% if is_color_selector and is_swatch_style %} class="visually-hidden js-value"{% endif %}>{{- value | escape -}}</span>
+                <span class="visually-hidden js-option-status">{% if value_status != blank %} ({{ value_status }}){% endif %}</span>
               </label>
             {%- endif -%}
           {%- endfor -%}

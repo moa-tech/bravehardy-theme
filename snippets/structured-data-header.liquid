@@ -65,6 +65,57 @@
     "sameAs": [
       {{ sameAs_json | remove_last: ',' }}
     ],
+    {%- if settings.structured_data_policies_enable %}
+      {%- assign policy_country = settings.structured_data_shipping_country | default: 'ZA' | upcase %}
+      "hasShippingService": {
+        "@type": "ShippingService",
+        "name": "Courier delivery",
+        "fulfillmentType": "https://schema.org/FulfillmentTypeDelivery",
+        "handlingTime": {
+          "@type": "ServicePeriod",
+          "duration": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": {{ settings.structured_data_handling_days_max | default: 1 }},
+            "unitCode": "DAY"
+          },
+          "businessDays": ["https://schema.org/Monday", "https://schema.org/Tuesday", "https://schema.org/Wednesday", "https://schema.org/Thursday", "https://schema.org/Friday"]
+        },
+        "shippingConditions": {
+          "@type": "ShippingConditions",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": {{ policy_country | json }}
+          },
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": {{ settings.structured_data_shipping_rate | default: 0 }},
+            "currency": {{ shop.currency | json }}
+          },
+          "transitTime": {
+            "@type": "ServicePeriod",
+            "duration": {
+              "@type": "QuantitativeValue",
+              "minValue": {{ settings.structured_data_transit_days_min | default: 1 }},
+              "maxValue": {{ settings.structured_data_transit_days_max | default: 7 }},
+              "unitCode": "DAY"
+            },
+            "businessDays": ["https://schema.org/Monday", "https://schema.org/Tuesday", "https://schema.org/Wednesday", "https://schema.org/Thursday", "https://schema.org/Friday"]
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": {{ policy_country | json }},
+        "returnPolicyCountry": {{ policy_country | json }},
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": {{ settings.structured_data_return_days | default: 30 }},
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility",
+        "itemCondition": "https://schema.org/NewCondition",
+        "merchantReturnLink": {{ shop.url | append: '/policies/refund-policy' | json }}
+      },
+    {%- endif %}
     "url": {{ shop.url | append: page.url | json }}
   }
 </script>

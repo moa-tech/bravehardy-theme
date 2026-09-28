@@ -4495,6 +4495,40 @@ label[data-swatch]::before {
   color: rgba(var(--preorder-label-text-color));
 }
 
+/* Out of stock: slim one-line band across the bottom of product card images.
+   Text scales with the card width (container query units) between 10px and 12px. */
+.card--oos .card__media {
+  container-type: inline-size;
+}
+.card--oos .card__main-image,
+.card--oos .card__hover-image {
+  filter: grayscale(0.4) opacity(0.8);
+}
+.card__oos-band {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  padding: 0 6px;
+  overflow: hidden;
+  background-color: rgb(20 20 20 / 0.7);
+  color: #fff;
+  font-size: clamp(10px, 6.4cqi, 12px);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+.card--oos .card__metafield-badges {
+  bottom: 25px;
+}
+
 .card__metafield-badges {
   position: absolute;
   z-index: 2;

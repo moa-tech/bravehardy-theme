@@ -104,6 +104,7 @@
             {% endif %}
             {%- if value == selected_value %} aria-selected="true"{% endif %}>
           <span class="pointer-events-none">{{- option_names[forloop.index0] -}}</span>
+          {%- if value.available == false %} <em class="pointer-events-none">{% if value.variant == blank %}{{ 'products.variant.non_existent' | t }}{% else %}{{ 'products.variant.no_stock' | t }}{% endif %}</em>{% endif -%}
         </li>
       {%- endfor -%}
     </ul>

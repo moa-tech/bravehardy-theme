@@ -1,7 +1,66 @@
 {{ 'product-inventory.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'product-inventory.js' | asset_url }}" defer="defer"></script>
 
-<product-inventory class="product-info__block product-info__block--sm product-inventory block no-js-hidden" {{ block.shopify_attributes }}
+{%- liquid
+  # Only output notice texts that can apply to this product. AI assistants and
+  # scrapers read data attributes, so an unused "Backordered" text looks real.
+  assign any_sold_out = false
+  assign any_backorderable = false
+  for variant in product.variants
+    unless variant.available
+      assign any_sold_out = true
+    endunless
+    if variant.inventory_management == 'shopify' and variant.inventory_policy == 'continue'
+      assign any_backorderable = true
+    endif
+  endfor
+
+  # Work out the initial notice in Liquid (mirrors updateInventory() in
+  # product-inventory.js) so readers that don't run JS still see the stock status.
+  assign inventory_level = ''
+  assign show_inventory = false
+  if current_variant
+    assign count = current_variant.inventory_quantity | at_least: 0
+    assign threshold_low = settings.inventory_threshold_low | plus: 0
+    assign threshold_very_low = settings.inventory_threshold_very_low | plus: 0
+
+    if count <= 0
+      if current_variant.inventory_policy == 'continue'
+        assign inventory_level = 'backordered'
+      elsif current_variant.available
+        assign inventory_level = 'in_stock'
+      else
+        assign inventory_level = 'none'
+      endif
+    elsif count <= threshold_very_low
+      assign inventory_level = 'very_low'
+    elsif count <= threshold_low
+      assign inventory_level = 'low'
+    else
+      assign inventory_level = 'normal'
+    endif
+
+    if settings.inventory_show_notice == 'always'
+      assign show_inventory = true
+    elsif settings.inventory_show_notice == 'low' and inventory_level contains 'low'
+      assign show_inventory = true
+    endif
+    if inventory_level == 'backordered' and settings.hide_no_stock_backordered
+      assign show_inventory = false
+    endif
+
+    assign show_count = false
+    if inventory_level != 'in_stock'
+      if settings.inventory_show_count == 'always'
+        assign show_count = true
+      elsif settings.inventory_show_count == 'low' and inventory_level contains 'low'
+        assign show_count = true
+      endif
+    endif
+  endif
+-%}
+
+<product-inventory class="product-info__block product-info__block--sm product-inventory block" {{ block.shopify_attributes }}
      data-show-count="{{ settings.inventory_show_count }}"
      data-show-notice="{{ settings.inventory_show_notice }}"
      data-threshold-low="{{ settings.inventory_threshold_low }}"
@@ -9,28 +68,62 @@
      data-text-very-low="{{ block.settings.text_very_low | escape }}"
      data-text-low="{{ block.settings.text_low | escape }}"
      data-text-normal="{{ block.settings.text_normal | escape }}"
-     data-text-no-stock="{{ block.settings.text_no_stock | escape }}"
-     data-text-no-stock-backordered="{{ block.settings.text_no_stock_backordered | escape }}"
+     data-text-no-stock="{% if any_sold_out %}{{ block.settings.text_no_stock | escape }}{% endif %}"
+     data-text-no-stock-backordered="{% if any_backorderable %}{{ block.settings.text_no_stock_backordered | escape }}{% endif %}"
      data-show-no-stock-backordered="{%- if settings.hide_no_stock_backordered -%}false{%- else -%}true{%- endif -%}"
-     data-inventory-level=""
+     data-inventory-level="{{ inventory_level }}"
      data-variant-available="{{ current_variant.available }}"
      data-inventory-quantity="{{ current_variant.inventory_quantity | at_least: 0 }}"
      data-inventory-policy="{{ current_variant.inventory_policy | escape }}"
      data-scale="35"
-     {% if current_variant == false %}
+     {% unless show_inventory %}
         hidden
-     {% endif %}
+     {% endunless %}
 >
   {% if product and product != empty %}
     <div class="product-inventory__text">
-      <span class="product-inventory__status js-inventory-notice"></span>
+      <span class="product-inventory__status js-inventory-notice">
+        {%- liquid
+          if inventory_level == 'backordered'
+            echo ''
+          elsif show_count
+            echo 'products.inventory.only_x_left' | t: quantity: count
+          elsif inventory_level == 'very_low'
+            echo 'products.inventory.very_low_stock' | t
+          elsif inventory_level == 'low'
+            echo 'products.inventory.low_stock' | t
+          elsif inventory_level == 'normal' or inventory_level == 'in_stock'
+            echo 'products.inventory.in_stock' | t
+          elsif inventory_level == 'none'
+            echo 'products.variant.no_stock' | t
+          endif
+        -%}
+      </span>
       {% if block.settings.show_urgency_message %}
-        <span class="product-inventory__urgency js-inventory-urgency"></span>
+        <span class="product-inventory__urgency js-inventory-urgency">
+          {%- case inventory_level -%}
+            {%- when 'very_low' -%}{{ block.settings.text_very_low }}
+            {%- when 'low' -%}{{ block.settings.text_low }}
+            {%- when 'backordered' -%}{{ block.settings.text_no_stock_backordered }}
+            {%- when 'normal', 'in_stock' -%}{{ block.settings.text_normal }}
+            {%- when 'none' -%}{{ block.settings.text_no_stock }}
+          {%- endcase -%}
+        </span>
       {% endif %}
     </div>
     {% if block.settings.show_indicator_bar %}
-      <div class="product-inventory__indicator js-inventory-indicator" hidden>
-        <span style="width: 0%;"></span>
+      {%- liquid
+        assign indicator_width = 0
+        if inventory_level != 'backordered'
+          if count >= 35 or inventory_level == 'in_stock'
+            assign indicator_width = 100
+          else
+            assign indicator_width = count | times: 100.0 | divided_by: 35 | round: 1
+          endif
+        endif
+      -%}
+      <div class="product-inventory__indicator js-inventory-indicator"{% unless show_inventory %} hidden{% endunless %}>
+        <span style="width: {{ indicator_width }}%;"></span>
       </div>
     {% endif %}
     <script type="application/json">

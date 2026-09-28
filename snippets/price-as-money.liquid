@@ -24,11 +24,22 @@
         assign separator = ","
       endif
 
-      assign money_price = money_price | replace: separator, '<sup>'
-      if show_money_with_currency
-        assign money_price = money_price | replace_last: ' ', '</sup> '
-      else
-        assign money_price = money_price | concat: '</sup>'
+      # Wrap only the two decimals after the last separator in <sup>, and keep the
+      # separator as visually-hidden text so plain-text readers (AI assistants,
+      # scrapers, screen readers) see "R 419.00" rather than "R 41900".
+      if money_price contains separator
+        assign decimals_and_suffix = money_price | split: separator | last
+        assign decimals = decimals_and_suffix | slice: 0, 2
+        assign suffix = decimals_and_suffix | remove_first: decimals
+        assign whole_size = money_price.size | minus: decimals_and_suffix.size | minus: separator.size
+        assign whole = money_price | slice: 0, whole_size
+
+        capture money_price
+          echo whole
+          echo '<span class="visually-hidden">' | append: separator | append: '</span>'
+          echo '<sup>' | append: decimals | append: '</sup>'
+          echo suffix
+        endcapture
       endif
     endunless
   endif

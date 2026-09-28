@@ -102,6 +102,13 @@
   if product.metafields.theme.highlight == true and show_highlight_product != false
     assign is_highlighted = true
   endif
+
+  # Out of stock: "Currently out of stock" band over the image (not for coming-soon/countdown products).
+  assign is_out_of_stock = false
+  if product.available == false and product_not_for_sale == false
+    assign is_out_of_stock = true
+    assign card_class = card_class | append: ' card--oos'
+  endif
 -%}
 
 {%- if product and product != empty -%}
@@ -189,6 +196,10 @@
 
         render 'product-card-metafield-badges', product: product
       -%}
+
+      {%- if is_out_of_stock -%}
+        <div class="card__oos-band">{{ 'products.variant.no_stock' | t }}</div>
+      {%- endif -%}
     </div>
 
     <div class="card__info-container flex flex-col flex-auto relative">
@@ -382,6 +393,7 @@
                 elsif product.available
                   assign inventory_level = 'in_stock'
                 else
+                  # Out of stock is shown by the band over the image (card__oos-band).
                   assign inventory_level = 'hide'
                 endif
               elsif total <= settings.inventory_threshold_very_low

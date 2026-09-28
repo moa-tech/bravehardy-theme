@@ -128,10 +128,19 @@ if (!customElements.get('variant-picker')) {
             el.innerHTML = `${el.innerHTML} <em class="pointer-events-none">${unavailableText}</em>`;
           }
         }
-      } else if (!available) {
-        el.nextElementSibling.title = unavailableText;
       } else {
-        el.nextElementSibling.removeAttribute('title');
+        const label = el.nextElementSibling;
+        const statusEl = label.querySelector('.js-option-status');
+
+        if (available) {
+          label.removeAttribute('title');
+        } else {
+          label.title = unavailableText;
+        }
+
+        if (statusEl) {
+          statusEl.textContent = available ? '' : ` (${unavailableText})`;
+        }
       }
     }
 
@@ -340,7 +349,8 @@ if (!customElements.get('variant-picker')) {
       }
 
       this.price.querySelector('.price__default').hidden = !this.variant && !this.preSelection;
-      this.price.querySelector('.price__no-variant').hidden = this.variant || this.preSelection;
+      const noVariantEl = this.price.querySelector('.price__no-variant');
+      if (noVariantEl) noVariantEl.hidden = this.variant || this.preSelection;
       const from = this.price.querySelector('.price__from');
       if (from) {
         from.hidden = !this.preSelection;

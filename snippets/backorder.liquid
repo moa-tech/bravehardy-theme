@@ -8,18 +8,43 @@
     product: product,
     variant: product.selected_or_first_available_variant
   %}
+
+  Only outputs markup when a backorder notice can actually apply. A hidden
+  notice on an in-stock product is still read by AI assistants, scrapers and
+  reader modes, which then report the product as backordered.
 {%- endcomment -%}
 
-<div class="backorder"{% unless variant.inventory_management == 'shopify' and variant.inventory_quantity < 1 and variant.available %} hidden{% endunless %}>
-  {%- if template contains 'cart' -%}
-    <p class="m-0">{{ 'cart.general.backorder' | t }}</p>
-  {%- else -%}
-    <p class="m-0">
-      <span class="backorder__product">
-        {{- product.title -}}
-        {%- unless variant.title contains 'Default' %} - {{ variant.title }}{% endunless -%}
-      </span>
-      {{ 'products.product.backorder' | t }}
-    </p>
-  {%- endif -%}
-</div>
+{%- liquid
+  assign is_backordered = false
+  if variant.inventory_management == 'shopify' and variant.inventory_quantity < 1 and variant.available
+    assign is_backordered = true
+  endif
+
+  # On product pages the variant picker can reveal the notice for another variant,
+  # so render it (hidden) if any variant can be sold past zero stock.
+  assign can_backorder = is_backordered
+  unless template contains 'cart'
+    for v in product.variants
+      if v.inventory_management == 'shopify' and v.inventory_policy == 'continue'
+        assign can_backorder = true
+        break
+      endif
+    endfor
+  endunless
+-%}
+
+{%- if can_backorder -%}
+  <div class="backorder"{% unless is_backordered %} hidden{% endunless %}>
+    {%- if template contains 'cart' -%}
+      <p class="m-0">{{ 'cart.general.backorder' | t }}</p>
+    {%- else -%}
+      <p class="m-0">
+        <span class="backorder__product">
+          {{- product.title -}}
+          {%- unless variant.title contains 'Default' %} - {{ variant.title }}{% endunless -%}
+        </span>
+        {{ 'products.product.backorder' | t }}
+      </p>
+    {%- endif -%}
+  </div>
+{%- endif -%}

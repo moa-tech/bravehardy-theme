@@ -84,9 +84,9 @@
           "settings": {
             "show_indicator_bar": false,
             "show_urgency_message": true,
-            "text_very_low": "<p>- ships immediately from our warehouse</p>",
-            "text_low": "<p>- ships immediately from our warehouse</p>",
-            "text_normal": "<p>- ships immediately from our warehouse</p>",
+            "text_very_low": "<p>- ships immediately from our Cape Town store to anywhere in South Africa</p>",
+            "text_low": "<p>- ships immediately from our Cape Town store to anywhere in South Africa</p>",
+            "text_normal": "<p>- ships immediately from our Cape Town store to anywhere in South Africa</p>",
             "text_no_stock": "",
             "text_no_stock_backordered": "<p>Backordered</p>"
           }
@@ -184,7 +184,7 @@
           "settings": {
             "heading": "Delivery and Shipping",
             "icon": "truck",
-            "text": "<p>All stock is held at our warehouse and ships immediately. Delivery by courier to your door. R75 delivery charge for all orders.</p>",
+            "text": "<p>In-stock items ship immediately from our Cape Town store. Delivery by courier to your door anywhere in South Africa costs R75 for all orders.</p><p>Alternatively, free collection is available at our store in Westlake, Cape Town.</p>",
             "page": "",
             "open": false
           }

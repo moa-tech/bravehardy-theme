@@ -3060,5 +3060,67 @@
         "content": "For a full list of JavaScript events included with Enterprise, please refer to the /assets/custom.js file within the theme code, or read our [JavaScript Technical Guide](https://cleancanvas.co.uk/support/enterprise/technical-guides/js)."
       }
     ]
+  },
+  {
+    "name": "Shipping & returns (structured data)",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Describes your delivery and returns to search engines and AI assistants on every page. Keep these in line with your shipping and refund policies."
+      },
+      {
+        "type": "checkbox",
+        "id": "structured_data_policies_enable",
+        "label": "Include shipping and returns details",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Shipping"
+      },
+      {
+        "type": "text",
+        "id": "structured_data_shipping_country",
+        "label": "Delivery country code",
+        "info": "Two-letter ISO code, e.g. ZA",
+        "default": "ZA"
+      },
+      {
+        "type": "number",
+        "id": "structured_data_shipping_rate",
+        "label": "Courier delivery charge",
+        "info": "In your store currency.",
+        "default": 75
+      },
+      {
+        "type": "number",
+        "id": "structured_data_handling_days_max",
+        "label": "Dispatch time (max business days)",
+        "default": 1
+      },
+      {
+        "type": "number",
+        "id": "structured_data_transit_days_min",
+        "label": "Courier transit time (min business days)",
+        "default": 1
+      },
+      {
+        "type": "number",
+        "id": "structured_data_transit_days_max",
+        "label": "Courier transit time (max business days)",
+        "default": 7
+      },
+      {
+        "type": "header",
+        "content": "Returns"
+      },
+      {
+        "type": "number",
+        "id": "structured_data_return_days",
+        "label": "Return window (days)",
+        "info": "Customer pays return shipping, per the refund policy.",
+        "default": 30
+      }
+    ]
   }
 ]

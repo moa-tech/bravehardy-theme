@@ -55,7 +55,14 @@
 
   <div class="unit-price relative"{% if variant.unit_price_measurement == nil %} hidden{% endif %}><span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span><span class="unit-price__price">{%- render 'price-as-money', price: variant.unit_price, show_money_with_currency: false -%}</span><span class="unit-price__separator">{{ 'products.product.price.unit_price_separator' | t }}</span><span class="unit-price__unit">{%- if variant.unit_price_measurement.reference_value != 1 -%}{{- variant.unit_price_measurement.reference_value -}}{%- endif -%}{{ variant.unit_price_measurement.reference_unit }}</span></div>
 
-  <div class="price__no-variant" hidden>
-    <strong class="price__current">{{ 'products.variant.non_existent' | t }}</strong>
-  </div>
+  {%- comment -%}
+    Only needed where the variant picker can select a non-existent combination
+    (two or more options).
+    Hidden text elsewhere is read by AI assistants as "Unavailable".
+  {%- endcomment -%}
+  {%- if use_variant and product.options.size > 1 -%}
+    <div class="price__no-variant" hidden>
+      <strong class="price__current">{{ 'products.variant.non_existent' | t }}</strong>
+    </div>
+  {%- endif -%}
 </div>
