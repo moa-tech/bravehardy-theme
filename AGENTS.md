@@ -229,6 +229,15 @@ the new theme name/ID in the message. Push to GitHub (`origin`) when the user as
   Store and Organization JSON-LD on every page by `snippets/structured-data-header.liquid`.
   If any store details change, update those settings too, and keep them the same as the
   store and contact pages and the Google Business Profile.
+- Product JSON-LD (Product, or ProductGroup with one Product per variant) is written by
+  hand in `snippets/structured-data-product.liquid`, not Shopify's `structured_data`
+  filter, which lists only one image per product or variant. It adds every product image
+  (each variant: its own photo, then the images not tied to a variant, up to 10), `gtin`
+  only for valid 8/12/13/14-digit barcodes, `variesBy` with color/size/material/pattern
+  on variants, `itemCondition`, and absolute `@id`s. Everything else must stay in step
+  with the filter's fields (type, name, url, description, brand, category, sku, price,
+  currency, availability, offer url). If Shopify changes the filter's output or you
+  change the snippet, compare the two on a sample of products before publishing.
 - Prices are whole rands; the store never shows cents. The format is set in the Shopify
   admin (Settings → General → Currency display, using `{{amount_no_decimals}}`), not in
   the theme. Always output prices through Shopify's `money` filters (or
