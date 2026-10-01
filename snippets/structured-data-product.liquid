@@ -1,4 +1,17 @@
 {%- comment -%}
+  Product structured data: a Product, or a ProductGroup with one Product per variant.
+
+  Replaces Shopify's `structured_data` filter, which lists only one image per product or
+  variant. Keeps the fields the filter output and adds:
+  - every product image. A variant lists its own image first, then the images that aren't
+    tied to any variant (up to 10 in all), so it never claims another variant's photos.
+  - gtin only when the barcode is a valid GTIN (8, 12, 13 or 14 digits).
+  - variesBy, and the matching property on each variant, when every option maps to one
+    (colour, size, material or pattern).
+  - itemCondition on offers, and absolute @id values.
+
+  Prices stay exact ("1339.00"), not in the storefront's no-cents money format.
+
   Parameters:
   - product {Object} - Product object.
 
@@ -6,6 +19,164 @@
   {% render 'structured-data-product', product: product %}
 {%- endcomment -%}
 
+{%- liquid
+  assign product_url = shop.url | append: product.url
+  assign currency = cart.currency.iso_code | default: shop.currency
+  assign description = product.description | strip_html | strip
+  assign gtin_lengths = '8,12,13,14' | split: ','
+
+  # Each variant lists at most 10 images (Merchant Center uses 1 + 10), so products with
+  # many variants and photos don't repeat 30+ URLs per variant.
+  assign all_images = ''
+  assign shared_images = ''
+  assign shared_images_9 = ''
+  assign shared_count = 0
+  for image in product.images
+    assign image_json = image | image_url: width: 1920 | prepend: 'https:' | json
+    assign all_images = all_images | append: ',' | append: image_json
+    if image.variants.size == 0
+      assign shared_count = shared_count | plus: 1
+      if shared_count <= 10
+        assign shared_images = shared_images | append: ',' | append: image_json
+      endif
+      if shared_count <= 9
+        assign shared_images_9 = shared_images_9 | append: ',' | append: image_json
+      endif
+    endif
+  endfor
+  assign all_images = all_images | remove_first: ','
+  assign shared_images = shared_images | remove_first: ','
+  assign shared_images_9 = shared_images_9 | remove_first: ','
+
+  assign is_group = true
+  if product.has_only_default_variant
+    assign is_group = false
+  endif
+
+  # variesBy: only when every option maps to a schema.org property Google supports.
+  assign option_properties = ''
+  assign all_options_mapped = true
+  for option in product.options_with_values
+    assign option_name = option.name | downcase | strip
+    if option_name == 'colour' or option_name == 'color'
+      assign option_properties = option_properties | append: 'color,'
+    elsif option_name contains 'size'
+      assign option_properties = option_properties | append: 'size,'
+    elsif option_name == 'material' or option_name == 'pattern'
+      assign option_properties = option_properties | append: option_name | append: ','
+    else
+      assign all_options_mapped = false
+    endif
+  endfor
+  assign option_properties = option_properties | split: ','
+  if all_options_mapped == false or option_properties.size == 0
+    assign option_properties = ''
+  endif
+-%}
+
 <script type="application/ld+json">
-  {{ product | structured_data }}
+  {
+    "@context": "https://schema.org",
+    "@type": {% if is_group %}"ProductGroup"{% else %}"Product"{% endif %},
+    "@id": {{ product_url | append: '#product' | json }},
+    "name": {{ product.title | json }},
+    "url": {{ product_url | json }},
+    {%- if description != blank %}
+      "description": {{ description | json }},
+    {%- endif %}
+    {%- if product.vendor != blank %}
+      "brand": { "@type": "Brand", "name": {{ product.vendor | json }} },
+    {%- endif %}
+    {%- liquid
+      # Same as Shopify's filter: the Shopify category, or the product type when uncategorized.
+      assign product_category = product.type
+      if product.category and product.category.name != blank and product.category.name != 'Uncategorized'
+        assign product_category = product.category.name
+      endif
+    -%}
+    {%- if product_category != blank %}
+      "category": {{ product_category | json }},
+    {%- endif %}
+    {%- if all_images != blank %}
+      "image": [{{ all_images }}],
+    {%- endif %}
+    {%- if is_group %}
+      "productGroupID": {{ product.id | append: '' | json }},
+      {%- if option_properties != blank %}
+        "variesBy": [{% for property in option_properties %}"https://schema.org/{{ property }}"{% unless forloop.last %}, {% endunless %}{% endfor %}],
+      {%- endif %}
+      "hasVariant": [
+    {%- endif %}
+
+    {%- for variant in product.variants -%}
+      {%- liquid
+        assign variant_url = shop.url | append: variant.url
+
+        assign barcode = variant.barcode | strip
+        assign barcode_residue = barcode | remove: '0' | remove: '1' | remove: '2' | remove: '3' | remove: '4' | remove: '5' | remove: '6' | remove: '7' | remove: '8' | remove: '9'
+        assign barcode_length = barcode.size | append: ''
+        assign valid_gtin = false
+        if barcode != blank and barcode_residue == blank and gtin_lengths contains barcode_length
+          assign valid_gtin = true
+        endif
+
+        assign price_rands = variant.price | divided_by: 100
+        assign price_cents = variant.price | modulo: 100 | prepend: '0' | slice: -2, 2
+        assign price = price_rands | append: '.' | append: price_cents
+
+        if is_group
+          assign variant_images = shared_images
+          if variant.featured_image
+            assign variant_images = variant.featured_image | image_url: width: 1920 | prepend: 'https:' | json
+            if shared_images_9 != blank
+              assign variant_images = variant_images | append: ',' | append: shared_images_9
+            endif
+          endif
+          # Same fallback as Shopify's filter when nothing else applies.
+          if variant_images == blank and product.featured_image
+            assign variant_images = product.featured_image | image_url: width: 1920 | prepend: 'https:' | json
+          endif
+        endif
+      -%}
+
+      {%- if is_group %}
+        {
+          "@type": "Product",
+          "@id": {{ variant_url | append: '#variant' | json }},
+          "name": {{ product.title | append: ' - ' | append: variant.title | json }},
+          {%- if variant_images != blank %}
+            "image": [{{ variant_images }}],
+          {%- endif %}
+          {%- if option_properties != blank %}
+            {%- for property in option_properties %}
+              {{ property | json }}: {{ variant.options[forloop.index0] | json }},
+            {%- endfor %}
+          {%- endif %}
+      {%- endif %}
+      {%- if variant.sku != blank %}
+        "sku": {{ variant.sku | json }},
+      {%- endif %}
+      {%- if valid_gtin %}
+        "gtin": {{ barcode | json }},
+      {%- endif %}
+        "offers": {
+          "@type": "Offer",
+          "@id": {{ variant_url | append: '#offer' | json }},
+          "url": {{ variant_url | json }},
+          "price": {{ price | json }},
+          "priceCurrency": {{ currency | json }},
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": {% if variant.available %}"https://schema.org/InStock"{% else %}"https://schema.org/OutOfStock"{% endif %}
+        }
+      {%- if is_group %}
+        }{% unless forloop.last %},{% endunless %}
+      {%- else -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if is_group %}
+      ]
+    {%- endif %}
+  }
 </script>
