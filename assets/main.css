@@ -5350,6 +5350,11 @@ body > .os-scrollbar {
   line-height: 18px;
 }
 
+/* Wishlist Engine updates data-total; hide the badge while the wishlist is empty, like the cart's. */
+.header__wishlist-count[data-total="0"] {
+  display: none;
+}
+
 .header__search {
   flex: 0 0 100%;
   order: 2;

@@ -148,6 +148,19 @@
         {%- endif -%}
       {%- endif -%}
 
+      {%- comment -%}
+        Wishlist Engine (app) launch point. Its app embed opens the wishlist on click of
+        .wishlist-page-widget and keeps every .wishlist-total-count (text and data-total)
+        up to date. Set the app's launch point type to "Add to your header menu".
+        The app's suggested h-wishlist-icon / wishlist-h-count classes are left out: they
+        only apply the app's own badge styling, which overrides the theme's cart-style badge.
+      {%- endcomment -%}
+      <a class="header__icon relative text-current wishlist-page-widget" href="/apps/wishlist">
+        {%- render 'icon-heart' -%}
+        <span class="visually-hidden">Wishlist</span>
+        <span class="header__cart-count header__wishlist-count absolute bg-theme-text text-theme-bg text-center wishlist-total-count" data-total="0" aria-hidden="true">0</span>
+      </a>
+
       <a class="header__icon{% if settings.cart_shaking and cart != empty %} header__icon--cart-shake has-motion{% endif %} relative text-current" id="cart-icon" href="{{ routes.cart_url }}"{% if settings.cart_shaking and cart != empty %} data-shake-frequency="{{ settings.cart_shaking_frequency }}"{% endif %}{% if settings.preload_links %} data-no-instant{% endif %}>
         {%- if settings.cart_icon == 'bag' -%}
           {%- render 'icon-bag' -%}
