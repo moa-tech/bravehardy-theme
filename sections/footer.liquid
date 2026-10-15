@@ -166,6 +166,11 @@
       </div>
     {%- endif -%}
 
+    {% comment %}Brave Hardy Change: the divider sits above the payment icons, not below them{% endcomment %}
+    {%- if section.blocks.size > 0 or section.settings.enable_country_selector or section.settings.enable_language_selector or section.settings.show_payment_icons -%}
+    <hr class="footer__hr"{% if settings.animations_enabled != "disabled" %} data-cc-animate{% endif %}>
+    {% endif %}
+
     {%- if section.settings.enable_country_selector or section.settings.enable_language_selector or section.settings.show_payment_icons -%}
       <div class="footer__meta grid grid-cols-1 lg:grid-cols-2 gap-x-theme gap-y-10"{% if settings.animations_enabled != "disabled" %} data-cc-animate{% endif %}>
         {%- if section.settings.show_payment_icons -%}
@@ -188,10 +193,6 @@
         {%- endif -%}
       </div>
     {%- endif -%}
-
-    {%- if section.blocks.size > 0 or section.settings.enable_country_selector or section.settings.enable_language_selector or section.settings.show_payment_icons -%}
-    <hr class="footer__hr"{% if settings.animations_enabled != "disabled" %} data-cc-animate{% endif %}>
-    {% endif %}
 
     <div class="footer__base grid grid-cols-1 lg:grid-cols-2 gap-x-theme gap-y-6 text-xs"{% if settings.animations_enabled != "disabled" %} data-cc-animate{% endif %}>
       <div>

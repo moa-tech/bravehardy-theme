@@ -118,7 +118,12 @@
 }
 
 /* Brave Hardy Change: uniform outlined boxes for the one-colour payment icons */
-.payment-icons--mono > li {
+.payment-icons--mono {
+  gap: 7px;
+  margin: 0;
+}
+.payment-icons.payment-icons--mono > li {
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,6 +134,17 @@
 }
 .footer__payment:only-child {
   grid-column: 1 / -1;
+}
+/* Brave Hardy Change: centre the payment icons and copyright when nothing sits beside them */
+.footer__payment:only-child .payment-icons {
+  justify-content: center;
+}
+.footer__base > :only-child {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+.footer__meta + .footer__base {
+  margin-top: calc(8 * var(--space-unit));
 }
 
 .footer__hr {
@@ -202,10 +218,6 @@
   .footer-col--not-collapsed + .footer-col--not-collapsed > .footer-block {
     padding-top: var(--row-gap);
     border-top: 1px solid rgba(var(--text-color)/0.2);
-  }
-  .footer__hr {
-    visibility: hidden;
-    margin-bottom: 0;
   }
   .footer__meta {
     --column-gap: calc(8 * var(--space-unit));
