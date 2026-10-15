@@ -171,11 +171,11 @@
         {%- if section.settings.show_payment_icons -%}
           <div class="footer__payment{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} lg:col-start-2 lg:row-start-1 footer__payment--right{% endif %}">
             <span class="visually-hidden">{{ 'sections.footer.payment_methods' | t }}</span>
-            {% comment %}Brave Hardy Change: harcode the payment types because we can't set them in the shop settings{% endcomment %}
-            {% assign enabled_payment_types = 'visa,master' | remove: ' ' | split: ',' %}
-            <ul class="payment-icons flex flex-wrap" role="list">
+            {% comment %}Brave Hardy Change: hardcode the payment types because we can't set them in the shop settings, and use our own one-colour icons{% endcomment %}
+            {% assign enabled_payment_types = 'visa,master,american_express,apple_pay,google_pay,capitec_pay,snapscan,scan_to_pay' | split: ',' %}
+            <ul class="payment-icons payment-icons--mono flex flex-wrap" role="list">
               {%- for type in enabled_payment_types -%}
-                <li>{{ type | payment_type_svg_tag: class: 'payment-icon' }}</li>
+                <li>{% render 'payment-icon', type: type %}</li>
               {%- endfor -%}
             </ul>
           </div>

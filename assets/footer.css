@@ -108,13 +108,27 @@
 .payment-icons > li:not(:last-child) {
   margin-inline-end: 7px;
 }
-.payment-icons svg {
+.payment-icons:not(.payment-icons--mono) svg {
   width: 40px;
   height: 24px;
 }
 
 .payment-icon {
   display: block;
+}
+
+/* Brave Hardy Change: uniform outlined boxes for the one-colour payment icons */
+.payment-icons--mono > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 38px;
+  border: 1px solid rgba(var(--text-color)/0.3);
+  border-radius: 6px;
+}
+.footer__payment:only-child {
+  grid-column: 1 / -1;
 }
 
 .footer__hr {
